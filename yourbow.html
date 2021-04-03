@@ -9,10 +9,45 @@
 		
 		<title> Your Bow | Bow Braver's Thesis </title>	
 
-		<!-- Function scripts that require early load.-->	
-		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
-		<script src = "/js/addFoot.js"></script>		
-		<script src = "/js/basic.js"></script>		
+		<!-- necessart stuff -->
+		<script src = "js/basic.js"></script>
+		<link rel="stylesheet" href="css/selfW3.css">	
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Proza+Libre:wght@400;500;600;700;800&display=swap">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script>
+	//polyfill stuff
+	function execPolyfill() {
+
+	(function(){
+	// CustomElementsV1.min.js v1 polyfill from https://github.com/webcomponents/webcomponentsjs/tree/v1/src/CustomElements/v1.
+	/*
+	 Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+	 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	 Code distributed by Google as part of the polymer project is also
+	 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+	*/
+	'use strict';(function(){function q(a){return l.test(a)&&-1===r.indexOf(a)}function e(){this.a=new Map;this.l=new Map;this.o=new Map;this.m=new Set;this.D=new MutationObserver(this.F.bind(this));this.f=null;this.L=!0;this.h=!1;this.g(document)}var g=document,f=window,r="annotation-xml color-profile font-face font-face-src font-face-uri font-face-format font-face-name missing-glyph".split(" "),l=/^[a-z][.0-9_a-z]*-[\-.0-9_a-z]*$/;e.prototype={J:function(a,b){function c(a){var b=m[a];if(void 0!==b&&
+	"function"!==typeof b)throw Error(d+" '"+a+"' is not a Function");return b}a=a.toString().toLowerCase();if("function"!==typeof b)throw new TypeError("constructor must be a Constructor");if(!q(a))throw new SyntaxError("The element name '"+a+"' is not valid.");if(this.a.has(a))throw Error("An element with name '"+a+"' is already defined");if(this.l.has(b))throw Error("Definition failed for '"+a+"': The constructor is already used.");var d=a,m=b.prototype;if("object"!==typeof m)throw new TypeError("Definition failed for '"+
+	a+"': constructor.prototype must be an object");var e=c("connectedCallback"),f=c("disconnectedCallback"),h=c("attributeChangedCallback");this.a.set(d,{name:a,localName:d,constructor:b,w:e,A:f,v:h,K:b.observedAttributes||[]});this.l.set(b,d);this.b(g.childNodes);if(e=this.o.get(d))e.resolve(void 0),this.o.delete(d)},get:function(a){return(a=this.a.get(a))?a.constructor:void 0},M:function(a){if(!l.test(a))return Promise.reject(new SyntaxError("The element name '"+a+"' is not valid."));if(this.a.has(a))return Promise.resolve();
+	var b={B:null};b.B=new Promise(function(a){b.resolve=a});this.o.set(a,b);return b.B},C:function(){this.h&&(console.warn("flush!!!"),this.m.forEach(function(a){this.s(a.takeRecords())},this))},H:function(a){this.f=a},g:function(a){a.c=new MutationObserver(this.s.bind(this));a.c.observe(a,{childList:!0,subtree:!0});this.h&&this.m.add(a.c)},I:function(a){a.c&&(a.c.disconnect(),a.c=null,this.h&&this.m.delete(a.c))},s:function(a){for(var b=0;b<a.length;b++){var c=a[b];"childList"===c.type&&(this.b(c.addedNodes),
+	this.G(c.removedNodes))}},b:function(a){for(var b=0;b<a.length;b++){var c=a[b];if(c.nodeType===Node.ELEMENT_NODE){this.I(c);c=g.createTreeWalker(c,NodeFilter.SHOW_ELEMENT,null,!1);do{var d=c.currentNode,e=this.a.get(d.localName);e&&(d.j||this.u(d,e,!0),d.j&&!d.i&&(d.i=!0,e&&e.w&&e.w.call(d)));d.shadowRoot&&this.b(d.shadowRoot.childNodes);if("LINK"===d.tagName){var f=function(){var a=d;return function(){a.removeEventListener("load",f);this.g(a.import);this.b(a.import.childNodes)}.bind(this)}.call(this);
+	d.import?f():d.addEventListener("load",f)}}while(c.nextNode())}}},G:function(a){for(var b=0;b<a.length;b++){var c=a[b];if(c.nodeType===Node.ELEMENT_NODE){this.g(c);c=g.createTreeWalker(c,NodeFilter.SHOW_ELEMENT,null,!1);do{var d=c.currentNode;if(d.j&&d.i){d.i=!1;var e=this.a.get(d.localName);e&&e.A&&e.A.call(d)}}while(c.nextNode())}}},u:function(a,b,c){a.__proto__=b.constructor.prototype;c&&(this.H(a),a.j=!0,new b.constructor,console.assert(null==this.f));c=b.K;if(b.v&&0<c.length)for(this.D.observe(a,
+	{attributes:!0,attributeOldValue:!0,attributeFilter:c}),b=0;b<c.length;b++){var d=c[b];if(a.hasAttribute(d)){var e=a.getAttribute(d);a.v(d,null,e)}}},F:function(a){for(var b=0;b<a.length;b++){var c=a[b];if("attributes"===c.type){var d=c.attributeName,e=c.oldValue,f=c.target,g=f.getAttribute(d);f.attributeChangedCallback(d,e,g,c.attributeNamespace)}}}};window.CustomElementsRegistry=e;e.prototype.define=e.prototype.J;e.prototype.get=e.prototype.get;e.prototype.whenDefined=e.prototype.M;e.prototype.flush=
+	e.prototype.C;e.prototype.polyfilled=e.prototype.L;e.prototype.enableFlush=e.prototype.h;var h=f.HTMLElement;f.HTMLElement=function(){var a=f.customElements;if(a.f){var b=a.f;a.f=null;return b}if(this.constructor)return a=a.l.get(this.constructor),g.b(a,!1);throw Error("unknown constructor. Did you call customElements.define()?");};f.HTMLElement.prototype=Object.create(h.prototype);Object.defineProperty(f.HTMLElement.prototype,"constructor",{value:f.HTMLElement});for(var h="Button Canvas Data Head Mod TableCell TableCol Anchor Area Base Body BR DataList Details Dialog Div DList Embed FieldSet Form Heading HR Html IFrame Image Input Keygen Label Legend LI Link Map Media Menu MenuItem Meta Meter Object OList OptGroup Option Output Paragraph Param Picture Pre Progress Quote Script Select Slot Source Span Style TableCaption Table TableRow TableSection Template TextArea Time Title Track UList Unknown".split(" "),
+	k=0;k<h.length;k++){var n=window["HTML"+h[k]+"Element"];n&&(n.prototype.__proto__=f.HTMLElement.prototype)}var t=g.createElement;g.b=function(a,b){var c=f.customElements,d=t.call(g,a),e=c.a.get(a.toLowerCase());e&&c.u(d,e,b);c.g(d);return d};g.createElement=function(a){return g.b(a,!0)};var u=g.createElementNS;g.createElementNS=function(a,b){return"http://www.w3.org/1999/xhtml"===a?g.createElement(b):u.call(document,a,b)};var p=Element.prototype.attachShadow;p&&Object.defineProperty(Element.prototype,
+	"attachShadow",{value:function(a){a=p.call(this,a);f.customElements.g(a);return a}});window.customElements=new e})();
+	}).call(this)
+	}
+
+	// Remove check when https://github.com/webcomponents/webcomponentsjs/issues/548 is fixed.
+	if (!!!window.customElements) {
+	  execPolyfill();
+</script>		
 		
 	</head>
 	
@@ -20,8 +55,149 @@
 	
 		<button onclick="topFunction()" id="topButton">Top</button>
 		
-		<!-- NAV Bar + Main img -->
-		<header-component></header-component>		
+<!-- NAV Bar + Main img; -->
+		<!-- Style Sheet Ref, slightly customized W3 scripts so it must be local-->
+		<!-- The Nav Bar -->
+		<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+			<div class="w3-container">
+				<h3 class="w3-padding-64">
+					<b>Bow Braver's<br>Thesis</b>
+				</h3>
+			</div>
+			
+			<div class="w3-bar-block">
+				
+				<a href="https://argush.github.io/Bow-Bravers-Thesis/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intro</a> 
+				<a href="summary.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Quick Summary</a> 
+				<a href="bowbraver.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bow Braver?</a>
+				
+				<a onclick="myAccFunc('accSkills')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Braver Skills <i class="fa fa-caret-down"></i></a> 
+				<div id="accSkills" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="skills.html#skills-explanation" class="w3-bar-item w3-button">Skills Explanation</a>
+					<a href="skills.html#acquisition-order" class="w3-bar-item w3-button">Acquisition Order</a>
+					<a href="skills.html#remianing-points" class="w3-bar-item w3-button">Remaining Points</a>
+					<a href="skills.html#the-trees" class="w3-bar-item w3-button">The Trees</a>
+				</div>
+
+				<a onclick="myAccFunc('accSubclass')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Subclass <i class="fa fa-caret-down"></i></a> 				
+				<div id="accSubclass" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="subclass.html#viable-ones" class="w3-bar-item w3-button">Viable Ones</a>
+					<a href="subclass.html#subs-toavoid" class="w3-bar-item w3-button">Subs to Avoid</a>
+					<a href="subclass.html#multipliers" class="w3-bar-item w3-button">Multipliers</a>
+					<a href="subclass.html#non-brbow" class="w3-bar-item w3-button">Non-Br Bow Strat</a>
+				</div>
+				
+				<a onclick="myAccFunc('accPA')" class="w3-bar-item w3-button w3-hover-white">Bow PA <i class="fa fa-caret-down"></i></a> 				
+				<div id="accPA" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="pa.html#general-info" class="w3-bar-item w3-button">General Info</a>
+					<a href="pa.html#pa-indepth" class="w3-bar-item w3-button">PA In-Depth</a>
+					<a href="pa.html#attack-range" class="w3-bar-item w3-button">Attack Range</a>
+					<a href="pa.html#complex-pa" class="w3-bar-item w3-button">Complex PA</a>
+					<a href="pa.html#palette-setup" class="w3-bar-item w3-button">Palette Setup</a>
+					<a href="pa.html#adapting-techs" class="w3-bar-item w3-button">Adapting Techs</a>
+				</div>
+				
+				<a onclick="myAccFunc('accBasics')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">The Basics <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBasics" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="thebasics.html#speed-bowstrat" class="w3-bar-item w3-button">Speed Bow Strat</a>
+					<a href="thebasics.html#bow-maneuvers" class="w3-bar-item w3-button">Bow Maneuvers</a>
+					<a href="thebasics.html#aiming-modes" class="w3-bar-item w3-button">Aiming Modes</a>
+					<a href="thebasics.html#keybind-notes" class="w3-bar-item w3-button">Keybind Notes</a>
+				</div>
+
+				<a onclick="myAccFunc('accBanish')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">The Banish <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBanish" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="thebanish.html#combos-explained" class="w3-bar-item w3-button">Combos Explained</a>
+					<a href="thebanish.html#the-damnedchart" class="w3-bar-item w3-button">The Damned Chart</a>
+					<a href="thebanish.html#side-notes" class="w3-bar-item w3-button">Side Notes</a>
+					<a href="thebanish.html#subclass-specifics" class="w3-bar-item w3-button">Subclass Specifics</a>					
+				</div>				
+				
+				<a onclick="myAccFunc('accBow')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Your Bow <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBow" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="#upgrading-101" class="w3-bar-item w3-button">Upgrading 101</a>
+					<a href="#what-do" class="w3-bar-item w3-button">What do?</a>
+					<a href="#the-lists" class="w3-bar-item w3-button">The Lists</a>
+					<a href="#weapon-ssa" class="w3-bar-item w3-button">Weapon SSA</a>
+				</div>	
+				
+				<a onclick="myAccFunc('accUnits')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Your Units <i class="fa fa-caret-down"></i></a> 				
+				<div id="accUnits" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="yourunits.html#selection-101" class="w3-bar-item w3-button">Selection 101</a>
+					<a href="yourunits.html#what-do" class="w3-bar-item w3-button">What do?</a>
+					<a href="yourunits.html#units-ssa" class="w3-bar-item w3-button">Units SSA</a>
+					<a href="yourunits.html#affixing" class="w3-bar-item w3-button">Affixing</a>
+				</div>	
+
+				<a onclick="myAccFunc('accEquip')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Others <i class="fa fa-caret-down"></i></a> 				
+				<div id="accEquip" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="others.html#extra-tools" class="w3-bar-item w3-button">Extra Tools</a>
+					<a href="others.html#rings-setup" class="w3-bar-item w3-button">Rings Setup</a>
+					<a href="others.html#crit-happens" class="w3-bar-item w3-button">Crit Happens</a>
+					<a href="others.html#mag" class="w3-bar-item w3-button">MAG</a>
+					<a href="others.html#drinks" class="w3-bar-item w3-button">Drinks</a>
+					<a href="others.html#food" class="w3-bar-item w3-button">Food</a>
+				</div>	
+								
+				<a onclick="myAccFunc('accOff')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Off-topics <i class="fa fa-caret-down"></i></a> 				
+				<div id="accOff" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="offtopic.html#pp-threshold" class="w3-bar-item w3-button">Why 200+ PP?</a>					
+					<a href="offtopic.html#ppefficiency-andyou" class="w3-bar-item w3-button">PP Efficiency & You</a>
+					<a href="offtopic.html#atk-todamage" class="w3-bar-item w3-button">ATK to Damage</a>		
+					<a href="offtopic.html#hybrid-braver" class="w3-bar-item w3-button">Hybrid Braver</a>		
+				</div>					
+				
+				<a href="gearexamples.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gear Examples</a>	
+
+				<a onclick="myAccFunc('accExtra')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Extras <i class="fa fa-caret-down"></i></a> 				
+				<div id="accExtra" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="extras.html#the-media" class="w3-bar-item w3-button">The Media</a>
+					<a href="extras.html#other-guides" class="w3-bar-item w3-button">Other Guides</a>	
+				</div>	
+
+				<a href="credits.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Credits</a>	
+			</div>					
+		</nav>
+		
+		<!-- The Top Bar -->
+		<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">	
+			<a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+			<b>Bow Braver's Thesis</b>
+		</header>
+		
+		<!-- Overlay on sidebar -->
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+		
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">
+			
+			<!-- Random Picture Carousel, add later.-->
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/argus-posing.png" alt = "1" width = "100%"><img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Archery</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Archery</h5>
+					<h3 class="w3-hide-medium w3-hide-small">Cranked to Eleven</h3>
+				</div>				
+			</div>
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/menacing-fight.png" alt = "2" width = "100%"><img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Bullshit</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Bullshit</h5>
+					<h3 class="w3-hide-medium w3-hide-small">To Its Core</h3>
+				</div>				
+			</div>
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/arnia-posing.png" alt = "3" width = "100%"><img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Practice</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Practice</h5>
+					<h3 class="w3-hide-medium w3-hide-small">And Git Gud</h3>
+				</div>				
+			</div>		
+		</div>		
+<!-- NAV Bar + Main img; -->		
 	
 		<!-- C O N T E N T Here -->
 		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
@@ -56,7 +232,7 @@
 					</p>
 					
 					<div class = "w3-center">
-						<image src="/img/pics/yourbow_bowlists.png" style = "width:75%;"></image>
+						<image src="img/pics/yourbow_bowlists.png" style = "width:75%;"></image>
 						<p><b>The Bullet Bow Upgrade Assistant Chart; March 2021.
 							<br>Supporting your best and worst decision, starting from EP1 to EP6.</b>
 						</p>
@@ -71,7 +247,7 @@
 					</p>					
 					
 					<div class = "w3-center">
-						<image src="/img/pics/yourbow_usablebow.png" style = "width:60%;"></image>
+						<image src="img/pics/yourbow_usablebow.png" style = "width:60%;"></image>
 						<p><b>Please.</b></p>
 					</div>
 
@@ -80,7 +256,7 @@
 					</p>
 
 					<div class = "w3-center">
-						<image src="/img/pics/yourbow_subweapons.png" style = "width:50%;"></image>
+						<image src="img/pics/yourbow_subweapons.png" style = "width:50%;"></image>
 						<p><b>Not The Main Weapon</b></p>
 					</div>	
 
@@ -95,11 +271,11 @@
 							There exists a crafting feature called “New Type Weapon Extension”. It lets you refine the lower rarity weapons multiple times to have higher attack stats, up to a certain cap based on the weapon’s category. 
 							For bullet bow, there are three bows in spotlight here: 
 							the all-class bow 
-							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/lambda_bigglow-v2.png"></span><b>Lambda Bigglow V2</b>, 
+							<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/others/lambda_bigglow-v2.png"></span><b>Lambda Bigglow V2</b>, 
 							the EN, New-type variant of 
-							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/dalz_varley.png"></span><b>Dalz Varley</b>, and 
+							<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/others/dalz_varley.png"></span><b>Dalz Varley</b>, and 
 							JP, Old-type variant of 
-							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/edel_arrow.png"></span><b>Edel Arrow</b>.
+							<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/others/edel_arrow.png"></span><b>Edel Arrow</b>.
 							<br><br>
 							Max extended bullet bow will have 2344 R-ATK as a result, almost on par with Nike Arcus that has 2365 R-ATK. Lambda Bigglow V2 becomes popular with non-Braver players wanting a solution to quicken Dark Falz Luther stage with its built-in Penetrating Arrow. The other two have an interesting Potential Ability - default for EN Dalz Varley and selectable “hidden” for JP Edel Arrow - that increases your damage output by 34% at max level during Rapid Fire.							
 							<br><br>
@@ -127,7 +303,7 @@
 						<tr>
 							<td style = "padding:16px 16px;">								
 								<div class = "w3-center">
-									<image src="/img/equipments/bow/lightweaver_cras_archer.png">
+									<image src="img/equipments/bow/lightweaver_cras_archer.png">
 									<p><b>Lightweaver Cras Archer</b></p>
 								</div>
 								<p class = "w3-center">
@@ -135,7 +311,7 @@
 								</p>
 								
 								<div class = "w3-center">
-									<image src="/img/equipments/bow/fluxio-rinzer_rulutea.png">
+									<image src="img/equipments/bow/fluxio-rinzer_rulutea.png">
 									<p><b>Fluxio/Rinzer Rulutea</b></p>
 								</div>
 								<p class = "w3-center">
@@ -153,7 +329,7 @@
 					
 					<p class = "w3-justify">
 						Besides, there are two more things that you should do for your weapon: make sure that the element is 
-						<image src="/img/techs/elements/light.png" id = "inline-img"><b>Light</b>						
+						<image src="img/techs/elements/light.png" id = "inline-img"><b>Light</b>						
 						at max value, and try your best to get it to the max grind of +30. You would prefer it to be +35 if that weapon is your “best weapon” or it has a good Special Ability or Augment Factor. Here is the explanation for it.
 					</p>
 					<ul class="w3-ul">
@@ -187,11 +363,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/lightweaver_cras_archer.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/lightweaver_cras_archer.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Lightweaver Cras Archer
 											</b></h3></th>
 										</tr>
@@ -210,7 +386,7 @@
 								</table>
 								<p class = "w3-justify">
 									At +35, the R-ATK value is 3167, causing Lightweaver Cras Ache to have the highest R-ATK value of all the bullet bows in PSO2. The weapon is the direct upgrade from 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/lightweaver_cras_archer.png"></span><b>Darkbanisher Ayer Archer</b>, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/lightweaver_cras_archer.png"></span><b>Darkbanisher Ayer Archer</b>, 
 									which has lesser R-ATK stats and does not support S5. <span class = "wpot">“Lightweaving Guardian”</span> has two parts.								
 									<ul>
 										<li>It gives the effect of Ayer's Potential Ability, <span class = "wpot">“Reincarnation of Fate”</span>, granting 12% damage increase, 20% PP Reduction, and recovering 20 PP every 10 seconds while equipped.</li>
@@ -229,7 +405,7 @@
 											</p>
 										</td>
 										<td class = "w3-center" style = "width:48%; padding-top: 16px;">
-											<image src="/img/gifs/yourbow_craspot.gif" style = "width:70%;"></image>
+											<image src="img/gifs/yourbow_craspot.gif" style = "width:70%;"></image>
 											<p>1.5 second interval; check the purple emblem beneath your character for it.</p>
 										</td>
 									</tr>
@@ -247,11 +423,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/fluxio-rinzer_rulutea.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/fluxio-rinzer_rulutea.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Fluxio/Rinzer Rulutea
 											</b></h3></th>
 										</tr>
@@ -294,7 +470,7 @@
 											</p>
 										</td>
 										<td class = "w3-center" style = "width:48%; padding:32px 32px;">
-											<image src="/img/pics/yourbow_fluxiopot.png" style = "width:80%;"></image>
+											<image src="img/pics/yourbow_fluxiopot.png" style = "width:80%;"></image>
 										</td>
 									</tr>
 								</table>							
@@ -309,11 +485,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/stil_arco.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/stil_arco.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Arco Stil
 											</b></h3></th>
 										</tr>
@@ -332,7 +508,7 @@
 								</table>							
 								<p class = "w3-justify">
 									At +35, the R-ATK value is 2968. Arco Stil is the upgrade version of 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/puras_arco.png"></span>Arco Puras, 
 									having higher base stats and improved Potential Ability called “Steadfast Might”, which works as follows.
 									<ul>
 										<li>It increases your damage by 16% by default.</li>
@@ -362,11 +538,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/liberate_bow.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/liberate_bow.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Liberate Bow
 											</b></h3></th>
 										</tr>
@@ -385,7 +561,7 @@
 								</table>							
 								<p class = "w3-justify">
 									At +35, the R-ATK value is 2851. Liberate Bow is <b>the upgraded version of 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/novel_bow.png"></span>Novel Bow</b>, adding S5 support, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/novel_bow.png"></span>Novel Bow</b>, adding S5 support, 
 									higher R-ATK stats, improved Potential Ability and granting a different SAF. <span class = "wpot">“Liberated Fang”</span> grants 16% damage increase, 
 									+20% Critical Strike Chance, and 15% PP Reduction. Also, Liberate Bow is one of the two sources of S5:Auxiliary Arrow.								
 									<br><br>
@@ -403,11 +579,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/lighstream_obligaxion.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/lighstream_obligaxion.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Lightstream Obligaxion
 											</b></h3></th>
 										</tr>
@@ -454,11 +630,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/million-krisa_lyrate.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/million-krisa_lyrate.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Million/Krisa Lyrate
 											</b></h3></th>
 										</tr>
@@ -499,11 +675,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/atlas_ex_agria.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/atlas_ex_agria.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Atlas Agria Ex
 											</b></h3></th>
 										</tr>
@@ -526,8 +702,8 @@
 									If that happens, it provides invincibility and heals you for a short moment. Due to SSA support, 
 									a certain combination of SSAs can give you massive damage boost, a good deal of PP Efficiency, or even act as a utility weapon. 
 									So, why not make it as a starter and begin your long-lasting journey with 
-									<span class = "ic-mid" id = "inline-img"><image src="/img/equipments/bow/val_agria.png"></span>Val Agria and 
-									<span class = "ic-mid" id = "inline-img"><image src="/img/equipments/bow/atlas_agria.png"></span>Atlas Agria?								
+									<span class = "ic-mid" id = "inline-img"><image src="img/equipments/bow/val_agria.png"></span>Val Agria and 
+									<span class = "ic-mid" id = "inline-img"><image src="img/equipments/bow/atlas_agria.png"></span>Atlas Agria?								
 									<br><br>
 									Furthermore, you can upgrade its potential to Plus <span class = "en-b">[Redux]</span> version, increasing the damage to 18%. Atlas Agria Ex remains relevant due to the death insurance while providing benefits from S1-S4 support.									
 								</p>
@@ -539,11 +715,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/austere_bougen-nt.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/austere_bougen-nt.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Austere Bougen-NT
 											</b></h3></th>
 										</tr>
@@ -577,11 +753,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/dim_bow.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/dim_bow.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/14_stars.png"></span>	
 												Dim Bow
 											</b></h3></th>
 										</tr>
@@ -603,7 +779,7 @@
 									Its Potential Ability, <span class = "wpot">“Darkened Blessing”</span>, gives you 12% increased damage while reducing 10% damage taken from everything in the game. 
 									Being buyable is the highlight of the bow, and when you get the better ones, keep it, especially the one with 8-slot affixes. 
 									You may need it for the Shoot VI SAF, or a sacrifice for 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras.
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/puras_arco.png"></span>Arco Puras.
 								</p>
 							</div>
 
@@ -613,11 +789,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/nike_arcus.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/nike_arcus.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/14_stars.png"></span>
 												Nike Arcus
 											</b></h3></th>
 										</tr>
@@ -647,7 +823,7 @@
 							
 								<p class = "w3-justify">
 									Speaking of 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/phobos_arcus.png"></span><b>Phobos Arcus, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/phobos_arcus.png"></span><b>Phobos Arcus, 
 									the original version</b>,
 									you can still get it by exchanging Leontina’s Certificate B at Leontina or as a drop from various XH+ quests, such as Guide of Creation. The weapon only supports S2, has Sentence Shoot (+20 R-ATK, +4 PP) as its SAF, but the color theme is black-cyan instead, which is cooler than Nike for sure!
 								</p>	
@@ -667,11 +843,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/nova_gaels.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/nova_gaels.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Gaels Nova
 											</b></h3></th>
 										</tr>
@@ -690,7 +866,7 @@
 								</table>							
 								<p class = "w3-justify">
 									It has 2578 R-ATK at +35. This is the revamped version of 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/orbit_gaels.png"></span>Gaels Orbit, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/orbit_gaels.png"></span>Gaels Orbit, 
 									which has lower R-ATK values, and lacks SSA support. You can choose its Potential Ability between <span class = "wpot">“Urgent Maneuver 1 or 2”.</span>
 									<ul>
 										<li><b>Version 1</b> increases your Natural PP Recovery by 200% while sheathed. When unsheathed, the natural recovery halts, but you gain 60% increased Attack PP Recovery, and 13% damage boost.</li>
@@ -712,11 +888,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/mirage_gaels.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/mirage_gaels.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/14_stars.png"></span>	
 												Gaels Mirage
 											</b></h3></th>
 										</tr>
@@ -749,11 +925,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/genon_ain.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/genon_ain.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Genon Ain
 											</b></h3></th>
 										</tr>
@@ -776,7 +952,7 @@
 								</p>
 								
 								<div class = "w3-center">
-									<image src="/img/gifs/yourbow_genondemo.gif" style = "width:30%;">
+									<image src="img/gifs/yourbow_genondemo.gif" style = "width:30%;">
 									<p><b>Yeah, it's pretty bonker if you ask me.</b></p>
 								</div>		
 								
@@ -802,7 +978,7 @@
 								</p>
 								
 								<div class = "w3-center">
-									<image src="/img/gifs/yourbow_genonabuse.gif" style = "width:30%;">
+									<image src="img/gifs/yourbow_genonabuse.gif" style = "width:30%;">
 									<p><b>The beginning of whole new world.</b></p>
 								</div>								
 							
@@ -828,11 +1004,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/hard_cross_bullet.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/hard_cross_bullet.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Hard Cross Bullet
 											</b></h3></th>
 										</tr>
@@ -867,10 +1043,10 @@
 								<table class="w3-table-all w3-striped w3-border">
 									<tr>
 										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
-											<image src="/img/gifs/yourbow_hcb-1.gif" style = "width:70%;"></image>
+											<image src="img/gifs/yourbow_hcb-1.gif" style = "width:70%;"></image>
 										</td>
 										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
-											<image src="/img/gifs/yourbow_hcb-2.gif" style = "width:70%;"></image>
+											<image src="img/gifs/yourbow_hcb-2.gif" style = "width:70%;"></image>
 										</td>
 									</tr>
 								</table>								
@@ -880,7 +1056,7 @@
 									<b>The 2-seconds delay can throw you off Combo Rhythms</b>, and having to decide the PA orders can be infuriating sometimes.
 									<br><br>
 									To make it worse, 
-									<span class = "ic-midlarge" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras 
+									<span class = "ic-midlarge" id = "inline-img"><img src = "img/equipments/bow/puras_arco.png"></span>Arco Puras 
 									requires the weapon as its material, so I don't think it is viable in the current days. It’s either the S1:Red Petal Flash 
 									<span class = "en-n">[Petalgleam]</span> SAF printer or a decent Halloween cosplay material.
 								</p>
@@ -892,11 +1068,11 @@
 									<thead>
 										<tr>
 											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
-												<image src = "/img/equipments/bow/quelle_vesper.png" style = "padding:16px;">
+												<image src = "img/equipments/bow/quelle_vesper.png" style = "padding:16px;">
 											</th>
 											<th class = "w3-center">
 											<h3><b>
-												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												<span class = "ic-midlarge" id = "inline-img"><img src = "img/icons/rarity/15_stars.png"></span>	
 												Quelle Vesper
 											</b></h3></th>
 										</tr>
@@ -925,10 +1101,10 @@
 								<table class="w3-table-all w3-striped w3-border">
 									<tr>
 										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
-											<image src="/img/gifs/yourbow_vesper-1.gif" style = "width:70%;"></image>
+											<image src="img/gifs/yourbow_vesper-1.gif" style = "width:70%;"></image>
 										</td>
 										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
-											<image src="/img/gifs/yourbow_vesper-2.gif" style = "width:70%;"></image>
+											<image src="img/gifs/yourbow_vesper-2.gif" style = "width:70%;"></image>
 										</td>
 									</tr>
 								</table>								
@@ -973,38 +1149,38 @@
 						<section>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>R-ATK Up <span class = "en-n">[Fortified  Ranged]</span></b>: +30 R-ATK; added to your character base R-ATK stat. Can be exchanged.
 								<br><br>
 								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.
 							</p>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>Shoot Boost <span class = "en-n">[Ranged Amp]</span></b>: +1% Damage for every 60 R-ATK affixed onto your weapon. Gain another +2% Damage at 200 R-ATK or more.
 								<br><br>
 								The 2% damage gained from reaching 200 R-ATK is multiplicative to the percentage you get per 60 R-ATK. Therefore, at 200 R-ATK, you get 5.06% (1.03 x 1.02) increased damage, rather than exactly 5% increased damage.
 							</p>
 					
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>Red Petal Flash <span class = "en-n">[Petalgleam]</span></b>: +3% Damage for 30 seconds after inflicting 450,000 damage; active when Red Aura appears and refreshed whean dealing that much damage again.
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>Augment Intent <span class = "en-n">[Augment Will]</span></b>: +0.5% Damage per Special Ability [Augment] affixed on the weapon. It caps at 4% on an 8-slot weapon. (2) is 0.75% Damage per se, capping at 6% on an 8-slot weapon.
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>Photon Balance</b>: +4% Damage for PA/Techniques, +8% PP Consumption. (2) is +6% Damage for PA/Techniques, +4% PP Consumption.
 								<br><br>
 								Get at least one PP Reduction SSA to offset the increase, regardless of the variant. More PP Consumption of Bow PAs can break your Banish Combo if you have low PP to begin with.
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<image src="img/icons/ssa/s1.png" id = "inline-img">
 								<b>Offensive Intent <span class = "en-n">[Aggressive Will]</span></b>: 2% damage increased. (2) is a 4%.
 							</p>
 
@@ -1013,29 +1189,29 @@
 						<button slot="title">S2 Slot</button>
 						<section>
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<image src="img/icons/ssa/s2.png" id = "inline-img">
 								<b>Skilled Intent <span class = "en-n">[Precision Will]</span></b>: +3% Critical Strike Damage. (2) is +4%.
 								<br><br>
 								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.
 							</p>	
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<image src="img/icons/ssa/s2.png" id = "inline-img">
 								<b>Photon Reduction <span class = "en-n">[Photon Descent]</span></b>: 10% PP Consumption Reduction. (2) is 13%, while (3) is 15% reduction.
 							</p>		
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<image src="img/icons/ssa/s2.png" id = "inline-img">
 								<b>Nature’s Reduction <span class = "en-n">[Petalsea Descent]</span></b>: Decrease PP Consumption by 12% when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active. (2) is 14%.							
 							</p>	
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<image src="img/icons/ssa/s2.png" id = "inline-img">
 								<b>Rainbow’s Intent <span class = "en-n">[Rainbow Will]</span></b>: +5% Damage when any Aura from S1 is active.							
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<image src="img/icons/ssa/s2.png" id = "inline-img">
 								<b>Skill Reduction <span class = "en-n">[Prowess in Descent]</span></b>: After a PA or Technique hits, PP Consumption is reduced for 30 seconds. Sometimes may greatly reduce PP Consumption. Has a Recast timer.							
 								<br><br>
 								A pale, blue stream aura engulfs your character upon activation. You have a 67% chance to get a 5% PP Reduction buff and a 33% chance for a 30% PP Reduction buff. The value results in ~12% PP Reduction on average. Peek at the PP bar when firing PA.
@@ -1046,34 +1222,34 @@
 						<button slot="title">S3 Slot</button>		
 						<section>
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Skilled Intent <span class = "en-n">[Precision Will]</span></b>: +4% Critical Strike Damage. (2) is 5%.
 								<br><br>
 								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.								
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Radiant Strike <span class = "en-n">[Lustrous Strike]</span></b>: +20% PP Recovery on attacks. (2) is 23%, while (3) is 35% instead.
 							</p>
 
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Nature’s Melody <span class = "en-n">[Petalsea Song]</span></b>: Increases damage every second up to 5% when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active. (2) is 7%.
 							</p>	
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Nature’s Radiance <span class = "en-n">[Lustrous Petalsea]</span></b>: +28% to Attack PP Recovery when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active currently.
 							</p>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Rainbow’s Reduction <span class = "en-n">[Rainbow Descent]</span></b>: Provides 20% PP Reduction while any of the S1 Auras is active.
 							</p>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<image src="img/icons/ssa/s3.png" id = "inline-img">
 								<b>Rainbow’s Reduction <span class = "en-n">[Rainbow Descent]</span></b>: Provides 20% PP Reduction while any of the S1 Auras is active.
 								<br><br>
 								This is one of the highest damage increase SSAs in the game. Note that it benefits more on some enemies where several parts are both “breakable” and “weak point”. As long as you put it on your secondary bow for breaking parts, it’s definitely a viable choice.
@@ -1084,26 +1260,26 @@
 						<button slot="title">S4 Slot</button>
 						<section>
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<image src="img/icons/ssa/s4.png" id = "inline-img">
 								<b>Radiant Response  <span class = "en-n">[Photon V(essel) Adaptation]</span></b>: PP Efficiency increases based on your Maximum PP.
 							</p>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<image src="img/icons/ssa/s4.png" id = "inline-img">
 								<b>Skilled Balance  <span class = "en-n">[Precise Balance]</span></b>: Reduce Critical Strike Chance by 50% but increase Critical Strike Damage by 6%.
 								<br><br>
 								Due to the huge penalty, be cautious when using it as BrHu, BrRa, BrSu, and BrLu. BrPh and BrEt can utilize it better because of the skills granting extra Critical Strike Chance.
 							</p>
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<image src="img/icons/ssa/s4.png" id = "inline-img">
 								<b>Harmonized Rainbow  <span class = "en-n">[Rainbow Balance]</span></b>: Decrease Natural PP Recovery and PP Consumption by 30% when any Aura from S1 is active.
 								<br><br>
 								Note that the Natural PP Recovery occurs at 5 PP per 1 second. That part of the SSA (3.5 PP per 1 second NPPR when active) barely affects Bullet Bow gameplay.
 							</p>							
 							
 							<p class = "w3-left">
-								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<image src="img/icons/ssa/s4.png" id = "inline-img">
 								<b>Raising Pursuit  <span class = "en-n">[Escalating Pursuit]</span></b> When a PA/Technique hits, track the amount of damage dealt within the next four seconds, and increase the damage of your next PA/Technique based on the damage dealt.							
 								<br><br>
 								Dealing damage will start a yellow aura buff and accumulate the damage you deal in the next 4 seconds, gradually changing to pale red color. When it is ready, the next PA/tech you use will deliver an additional single-target attack for 30% of the accumulated damage, capped at 250000. It goes on cooldown for 10 seconds afterward. Depending on the enemy’s location you attack, the site multiplier can increase the damage beyond 250000.								
@@ -1115,21 +1291,21 @@
 						<button slot="title">S5 Slot</button>
 						<section>
 							<p class = "w3-justify">
-								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<image src="img/icons/ssa/s5.png" id = "inline-img">
 								<b>Anthesis Cultivation <span class = "en-n">[Augment Bloom]</span></b>: Doubles the effects of all stat-based special abilities affixed on your weapon.
 								<br><br>
 								The stats you gain from Anthesis Cultivation doesn’t apply to you while you are in the lobby. Furthermore, the stats are added to your character stats, so it doesn’t synergize with S1:Shoot/Strike/Tech Boost for a massive increase. Also, it’s a “universal” SSA any class can use.
 							</p>							
 
 							<p class = "w3-justify">
-								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<image src="img/icons/ssa/s5.png" id = "inline-img">
 								<b>Mysterious Purpose <span class = "en-n">[Skillful Adept Will]</span></b>: Increase Critical Strike Chance by 20%. Critical Strike deals 2% more damage and recovers 1% of damage dealt as HP (capped at 30).
 								<br><br>
 								If you are a dedicated BrRa (especially that one), BrHu, or BrSu player, it may be better to take this over Auxiliary Arrow due to a very straightforward application. Note that the SSA is exclusive to Liberate Slash [Gunslash/Gunblade] and Lightweaver Cras Tier, so you may want to pull it out with affixing first before switching the weapon to bow, or anything else that you prefer.
 							</p>
 
 							<p class = "w3-justify">
-								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<image src="img/icons/ssa/s5.png" id = "inline-img">
 								<b>Auxiliary Arrow <span class = "en-n">[Homing Bolts]</span></b>: Summons a chasing bolt when a PA deals damage, further enhanced after a successfully avoiding attack with Step action.
 							</p>
 
@@ -1143,7 +1319,7 @@
 							  <div class="w3-container"  style = "background:white">
 
 								<div class = "w3-center">
-									<image src="/img/dogeph.jpg" style = "width:50%; padding:16px 16px; "></image>
+									<image src="img/dogeph.jpg" style = "width:50%; padding:16px 16px; "></image>
 								</div>			
 								
 								<p class = "w3-justify">
@@ -1228,14 +1404,14 @@
 					<div id="omit-ssa" class="w3-hide w3-border">
 					  <div class="w3-container"  style = "background:white">
 					  	<p class = "w3-left">
-							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<image src="img/icons/ssa/s1.png" id = "inline-img">
 							<b>White Snow Flash <span class = "en-n">[Snowgleam]</span></b>: +20% Attack PP Recovery for 30 seconds after spending 150 PP; active when White Aura appears.
 							<br><br>
 							Snowgleam is still a viable choice for the old-meta class combinations, which are BrHu, BrRa, and BrSu. You can combo it with some other SSAs for greater benefit. Still, it doesn’t give you damage compared to the Red.
 						</p>				
 
 					  	<p class = "w3-left">
-							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<image src="img/icons/ssa/s1.png" id = "inline-img">
 							<b>Collaborator Liberator 2 <span class = "en-n">[Comrade’s Blessing 2]</span></b>: Receive additional buffs based on the number of members in your party.
 							
 							<table class="w3-table-all w3-striped w3-border">
@@ -1259,21 +1435,21 @@
 						</p>
 						
 					  	<p class = "w3-left">
-							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<image src="img/icons/ssa/s1.png" id = "inline-img">
 							<b>Eclipsing Decay <span class = "en-n">[Crippling Erode]</span></b>: Attacks that hit an enemy have a 25% chance to inflict Jellen status; -15% ATK stats and lasts for 10 seconds.
 							<br><br>
 							This is exclusive for those that want to utilize Jellen in their gameplay without being Phantom, Hunter (w/ War Attrach) and Formel Luster. Combine with other sources of defense, and everything is less of a danger to you, while letting you reap the benefit of the Phrase Decay affix. Note that you have to keep hitting the enemy, and the SSA competes with better S1 and makes you think twice about making a weapon with Phrase Decay.							
 						</p>
 
 					  	<p class = "w3-left">
-							<image src="/img/icons/ssa/s2.png" id = "inline-img">
+							<image src="img/icons/ssa/s2.png" id = "inline-img">
 							<b>Heavenly Keeper 2 <span class = "en-n">[Sky-Earth Lucency 2]</span></b>: While on ground, boost Attack PP Recovery by 35% and Natural PP Recovery by 25%. While airborne, grants 15% PP Consumption Reduction.
 							<br><br>
 							The SSA still competes with the potent S2 ones, while forcing you to be more considerate about land and air movement. Bow is a ground weapon by default, but the “arrow-ballet” maneuver exists though. Some subclasses, such as BrRa and BrEt, may find this one helpful somehow.							
 						</p>
 						
 					  	<p class = "w3-left">
-							<image src="/img/icons/ssa/s4.png" id = "inline-img">
+							<image src="img/icons/ssa/s4.png" id = "inline-img">
 							<b>Support Extension <span class = "en-n">[Support Applification]</span></b>:: Shifta and Deband's maximum duration becomes 120 seconds.
 							<br><br>
 							Non-BrLu players can put it any backup weapon with S4 slot. With the introduction of S8:Sky Dance's Boon, you can start the quest with max duration buff and have easier time maintaining it throughout the quests. 
@@ -1283,16 +1459,16 @@
 					  	<p class = "w3-left">
 							And… the most cursed combo of all that I regret telling my friend who is a  Formel Luster main, which will spark some weird as heck idea for Bow Braver out there. I’m gonna regret talking about this one for sure.
 							<br><br>
-							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<image src="img/icons/ssa/s1.png" id = "inline-img">
 							<b>Lethal Intent <span class = "en-n">[Will of the Dying]</span></b>: +4% damage but lose 5% of your HP every 20 second, and  
-							<image src="/img/icons/ssa/s2.png" id = "inline-img"><image src="/img/icons/ssa/s3.png" id = "inline-img">
+							<image src="img/icons/ssa/s2.png" id = "inline-img"><image src="img/icons/ssa/s3.png" id = "inline-img">
 							<b>Cursed Radiance <span class = "en-n">[Lucent Adversity]</span></b>: Recovers 15% of maximum PP when you take damage.
 							<br><br>
 							The combo generates PP every 20 seconds out of thin air or from getting slapped by any kind of damage. The combination forces the player to find a reliable way to periodically recover the lost HP while introducing a whacky playstyle. Such examples are the “100% Uptime Luster” or “Tank Bow” using BrEt to abuse it. Again, it may not be a worthy trade-off with the better S1-S3 options, yet no one is going to stop you from using it… until the effect set you up for an accidental suicide. 							
 						</p>
 						
 						<div class = "w3-center">
-							<image src="/img/dogeph.jpg" style = "width:50%;"></image>
+							<image src="img/dogeph.jpg" style = "width:50%;"></image>
 							<p><b>Use it at your own risk.</b></p>
 						</div>						
 						
@@ -1405,13 +1581,19 @@
 		</div>		
 		<!-- End of Content---->	
 
-		<!--Footer Part-->
-		<footer-component></footer-component>		
+<!--Footer Part; no DOM memes as usual...-->
+		<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:120px">
+				<p class="w3-right">Powered by 
+					<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+					and the cursed soul of the guide writer UwU.
+				</p>
+		</div>
+<!--Footer Part; no DOM memes as usual...-->		
 		
-		<!-- Function scripts that require late load.-->
-		<script src = "/js/topScroll.js"></script>
-		<script src = "/js/mytabs.js"></script>
-		<script src = "/js/carousel.js"></script>
+		<!-- Function scripts that require late load. Should have been WEBPACK KEKW-->
+		<script src = "js/topScroll.js"></script>
+		<script src = "js/mytabs.js"></script>
+		<script src = "js/carousel.js"></script>
 		
 	</body>
 </html>
