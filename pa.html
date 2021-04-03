@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<!-- Meta Shits -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		
+		<title> Photon Arts | Bow Braver's Thesis </title>	
+
+		<!-- Function scripts that require early load.-->	
+		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
+		<script src = "/js/addFoot.js"></script>		
+		<script src = "/js/basic.js"></script>				
+	</head>
+	
+	<body>	
+	
+		<button onclick="topFunction()" id="topButton">Top</button>
+		
+		<!-- NAV Bar + Main img -->
+		<header-component></header-component>		
+	
+		<!-- C O N T E N T Here -->
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
+
+			
+			<div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="intro">
+				<div class= "w3-center">					
+					<h1 class="w3-xxxlarge w3-text-green"><b>Bow Photon Arts</b></h1>
+					<p class="w3-opacity"><i>It all comes down to projectiles.</i></p>			
+				</div>
+				
+				<div id="general-info">					
+					<h1 class="w3-text-green"><b>General Info</b></h1>
+					<p class = "w3-justify">
+						Bullet Bow has a total of 11 Photon Arts with the following names. 
+						This section will tell you how Bow Braver deals against enemies, along with deeper details for each of them. 
+						<a href = "https://github.com/SynthSy/PSO2-Dictionary/wiki/Photon-Arts-&-Techniques#Compound_Bow" target = "_blank" class = "link">
+						Courtesy to Synthsy and his team for the translation.</a>
+					</p>	
+					<table class="w3-table-all w3-striped w3-border w3-centered">
+						<tr>
+							<th class = "w3-border">JP Names</th>
+							<th class = "w3-border">EN Fan Translation</th>
+							<th class = "w3-border">EN Official Name</th>
+						</tr>
+						<tr>
+							<td class = "w3-border">マスターシュート</td>
+							<td colspan = "2">Master Shot</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">ペネトレイトアロウ</td>
+							<td>Penetrating Arrow</td>
+							<td>Piercing Arrow</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">トレンシャルアロウ</td>
+							<td colspan = "2">Torrential Arrow</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">グラヴィティポイント</td>
+							<td>Gravity Point</td>
+							<td>Gravitic Vortex</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">カミカゼアロウ</td>
+							<td colspan = "2">Kamikaze Arrow</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">シャープボマー</td>
+							<td>Sharp Bomb</td>
+							<td>Strike Bomber</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">ラストネメシス</td>
+							<td colspan = "2">Final Nemesis</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">トリットシューター</td>
+							<td>Tritt Shooter</td>
+							<td>Kickshot Combo</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">バニッシュアロウ</td>
+							<td colspan = "2">Banishing Arrow</td>
+						</tr>						
+						<tr>
+							<td class = "w3-border">ミリオンストーム</td>
+							<td colspan = "2">Million Storm</td>
+						</tr>						
+						<tr>
+							<td class = "w3-border">チェイスアロウ</td>
+							<td>Chase Arrow</td>
+							<td>Chaser Arrow</td>
+						</tr>
+					</table>
+
+					<p class = "w3-justify">
+						The maximum level of Photon Arts is 17, having higher power while consuming less PP for some. Higher levels of enemies drop higher level disks, and every max-level Photon Arts can be obtained through Excube Shop Exchange, if it’s available on your server. Otherwise, get them from enemies drop and player stores.
+						<br><br>
+						Besides, it is possible to customize your Photon Arts into “Type-Zero (T0)” or <span class = "en-n">“Zero”</span> through the 
+						terminal inside My Room (Personal Quarter), altering the behavior and modifying the stats. 
+						<b>There are two bullet bow Photon Arts that you can customize, which are Sharp Bomb 
+						<span class = "en-n">[Strike Bomber]</span> and Trit Shooter 
+						<span class = "en-n">[Kickshot Combo].</span></b>
+						<br><br>
+					</p>						
+					
+					<p class = "w3-justify">
+						<h3><b>Usage Basics</b></h3>
+						Despite having that many PAs, Bow Braver gameplay revolves around 6 Photon Arts. When your PP is low, you will fire a charged Normal Attack to recover it while keeping your damage.
+					</p>
+
+					<table class="w3-table-all w3-border">
+						<tr>
+							<th class = "w3-center" colspan = "2">
+								<p>
+									<img src = "/img/pa/bow/sharp_bomb-t0.png" id = "inline-img">Sharp Bomb T0, 
+									<img src = "/img/pa/bow/penetrate_arrow.png" id = "inline-img">Penetrate Arrow, 
+									<img src = "/img/pa/bow/master_shot.png" id = "inline-img">Master Shot
+									<br>
+									<img src = "/img/pa/bow/banishing_arrow.png" id = "inline-img">Banishing Arrow, 
+									<img src = "/img/pa/bow/chase_arrow.png" id = "inline-img">Chase Arrow,  
+									<img src = "/img/pa/bow/final_nemesis.png" id = "inline-img">Final Nemesis
+								</p>
+							</th>								
+						</tr>
+						<tr>
+							<th class = "w3-green w3-center">Bossing</th>
+							<th class = "w3-teal w3-center">Mobbing</th>							
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:16px 16px;">
+								<ul>
+									<li>Use Sharp Bomb T0 or Penetrate Arrow to hit multiple enemies.</li>
+									<li>Other PAs can help, such as Gravity Point and Torrential Arrow can help for greater area coverage.</li>
+								</ul>
+							</td>
+							<td style = "padding:16px 16px;">
+								<ul>
+									<li>Use Banishing Arrow + other PA and loop Banish Combo until it dies.</li>
+									<li>Use Chase Arrow to amplify your damage or chase it.</li>
+									<li>Time your Final Nemesis for free damage on the boss.</li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+
+					<p class = "w3-justify">
+						For 
+						<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/trit_shooter_t0.png"></span>Trit Shooter T0, 
+						<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/million_storm.png"></span>Million Storm, and 
+						<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/kamikaze_arrow.png"></span>Kamikaze Arrow, 
+						they do have their uses, but you will rely on the 6-8 PAs above due to its practicality. We also use a Katana PA too, but solely for moving around in quests.
+					</p>
+
+					<table class="w3-table-all w3-striped w3-border w3-centered">
+						<tr>
+							<td style = "width:48%; padding:16px 16px;">
+								<p>
+									<img src = "/img/pa/katana/asagiri_rendan.png" id = "inline-img">
+									<b>Asagiri-rendan <span class = "en-n">[Morning Mistreaver]</span></b> 
+									<br><br>
+									Use it to move around quickly. Cancel the slashing animation with Guard or Step to go even faster.
+								</p>
+							</td>
+							<td style = "width:52%; padding:16px 16px;">
+								<div>
+									<image src="/img/gifs/pa_asagirirendan.gif" style = "width:60%;"></image>
+								</div>	
+							</td>
+						</tr>
+					</table>
+
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
+				</div>
+
+				<div id="pa-indepth">					
+					<h1 class="w3-text-green"><b>PA In-depth</b></h1>
+					<p class = "w3-justify">
+						Here are the explanations for all PAs: properties, explanation, and even how to use them. While you are at it, a YouTuber named Blac to Basics has made a short video explaining bow Photon Arts. 
+						<a href = "https://www.youtube.com/watch?v=SA8AOSE2ox8&lc=UgysXT1qVrFG3cGeNxl4AaABAg.98cKhsIbwjY98dMIwXrcsl" target = "_blank"
+						class = "link">Check it out!</a>
+						Most of the things there are correct though. The faults are probably on my side because of JP language defiency and being careless during the editing.		
+					</p>	
+					
+					<p class = "w3-justify">
+						Also, compared to the Google Doc version (whether you have seen it or not), Frame Data section has been merged into each individual PA, so the list below are the things you should know before proceeding. 
+						<ul>
+							<li>Because several bow Photon Arts can be charged, they are affected by Bow Charge Bonus skill which reduces their charge time and the PP cost. <span class = "bcb">Those values are in the regular parenthesis formatted with blue text.</span></li>
+							<li>
+								All bow Photon Arts have two terms coined by me to explain the frames: <b>Firing Animation Frames (FAF) and Charging Animation Frames (CAF)</b>. All frame numbers for each PA are written in equation based on those that.
+								<ul>
+									<li><b>FAF</b> refers to the animation frames that you character fires the arrows to commit to that attack.</li>
+									<li><b>CAF</b> refers to the animation frames required to make that PA becomes "charged", causing them to behave differently, such as doing more damage or do more hits.</li>
+								</ul>
+							</li>
+							<li>Most of the data are taken from JP sWiki, a peek at a certain Bow Braver player's document from long time ago, and my personal findings. They should help for those that are hellbent on math though.</li>
+						</ul>
+					</p>
+	
+					<br>
+					<fancy-tabs>
+						<button slot="title" selected>Banishing Arrow</button>
+						<section>
+							
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/banishing_arrow.png" id = "inline-img"><br>
+										Fire an arrow that can be detonated by further attacks.<br>Charge to increase blast size.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_1-banishingarrow.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as combination and multi-targeting PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('banish-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="banish-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">30 F</td>
+												<td class = "w3-border">36 <span class = "bcb">(29)</span> + 19 F</td>
+												<td class = "w3-border">100</td>
+												<td>50 <span class = "bcb">(45)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border" colspan = "2">100 (Explode for 50% [65% w/ JA] of the damage accumulated over 3 seconds)</td>
+													<td colspan = "4">Deals no damage on impact.<br>DPS and DPP vary based on what PAs goes into it.</td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*Banishing Arrow is unaffected by Stance Charge’s damage multiplier.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								This is the most important Photon Arts for Bow Braver, especially against bosses. You damage output sways heavily by this PA alone.
+								<br><br>
+								Firing a spherical marker and taking a short moment to arm, Banishing Arrow stays on the enemy for 10 seconds, and only one can persist at any given time. If the enemy with it takes any damage that you do, it will start the three-seconds detonation timer, accumulating the damage from the follow-up attacks. The explosion occurs afterward, dealing 50% of the accumulated damage, or 65% if you fired it with Just Attack.
+								<br><br>
+								There are two important things to remember about Banishing Arrow. The first thing is that the following attacks can trigger the Photon Arts: bow Normal Attacks, other bow Photon Arts, offensive Techniques, Braver’s Snatch Step, MAG’s offensive Photon Blast, and MAG’s Technique-based auto-attack action. The second, only Just Attack Bonus and enemy’s Site Multiplier affect the explosion damage of Banishing Arrow.
+								<br><br>
+								Adding to the bullshit above, charging the PA increases the projectile speed and explosion radius. Movement key input causes you to slide after firing it as well while giving i-frames.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Combo with other PA to deal massive damage to an enemy. Refer to the Banish Combo section later on.</li>
+									<li>Dealing damage to two parts of a bigger enemy at the same time.</li>
+									<li>Use it to help in clearing a large pack of lesser enemies if necessary.</li>
+								</ul>
+							</p>						
+						</section>
+						
+						<button slot="title">Penetrate Arrow</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/penetrate_arrow.png" id = "inline-img"><br>
+										Fire an arrow with penetrating properties.<br>Charge to increase power and its size.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_2-penetratearrow.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as damage and utility PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('penetrate-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="penetrate-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">20 F</td>
+												<td class = "w3-border">36 <span class = "bcb">(29)</span> + 19 F</td>
+												<td class = "w3-border">733</td>
+												<td>30 <span class = "bcb">(25)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">535 [73%]</td>
+													<td class = "w3-border">733 [100%]</td>
+													<td class = "w3-border">1615</td>
+													<td class = "w3-border">800 <span class = "bcb">(916)</span></td>
+													<td class = "w3-border">17.8 <span class = "bcb">(21.4)</span></td>
+													<td>24.4 <span class = "bcb">(29.3)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								Penetrate Arrow is one of the two main damaging Photon Arts for Bow Braver. As the name suggests, the Photon Arts can go through enemies and it can hit them at least twice.
+								<br><br>
+								The distance between you and the targeted location often determines whether it can hit at least twice or not. By average, staying 2.5 Step Distance (~8.75 in-game meters) from your enemies will guarantee it. You can also hit humanoid enemies twice with Penetrate Arrow as well. Apart from that, parts of a larger enemy can be hit by the Photon Arts more than twice, such as the arms of Dark Falz Elder, Profound Darkness and Gomorath. Keep in mind that “hitting twice doesn’t always double your damage” due to your firing angle and the appearance of the enemies though.
+								<br><br>
+								Charging also increases the size of the arrow, letting it hit enemies in a wider area, but can interfere with the multi-hit property. Movement key input causes you to slide after firing it as well while giving i-frames. Note that Penetrate Arrow does not have damage attenuation.								
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Works well against a group of scattered enemies in a long or narrow corridor-like area. Make sure to line them up.</li>
+									<li>Dump it on most bosses, along with Banish Combo, for a huge amount of damage as long as it hits twice or more.</li>
+									<li>Quickly kite multiple enemies at the same time; in any direction.</li>
+								</ul>
+							</p>
+						</section>
+						
+						<button slot="title">Master Shot</button>		
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/master_shot.png" id = "inline-img"><br>
+										Fire several arrows at once.<br> Charge to increase the number of arrows and its speed.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_3-mastershot.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as damage and utility PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('master-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="master-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">20 F</td>
+												<td class = "w3-border">60 <span class = "bcb">(48)</span> + 19 F</td>
+												<td class = "w3-border">1424</td>
+												<td>25 <span class = "bcb">(20)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">684<br>[3 hits x 16%]</td>
+													<td class = "w3-border">1424<br>[5 hits x 20%]</td>
+													<td class = "w3-border">2052</td>
+													<td class = "w3-border">1082 <span class = "bcb">(1275)</span></td>
+													<td class = "w3-border">27.4 <span class = "bcb">(34.2)</span></td>
+													<td>57 <span class = "bcb">(71.2)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								Master Shot is the second main damaging Photon Arts for Bow Braver. By default, Master Shot fires three arrows, but charging further increases the damage and the arrow count to five. Additionally, charged Master Shot travels faster. Regardless of the mode you use, Master Shot has a target seeking property and will move toward it as long as the target is in your reticle, or you are locking-on to it.
+								<br><br>
+								Be aware that Master Shot can miss the target if it moves erratically. Movement key input causes you to slide after firing it as well while giving i-frames. Note that Master Shot has damage attenuation.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Dealing and maintaining damage against a single enemy, especially an aggressive one, while also kiting it around.</li>
+									<li>“Shotgunning” an enemy that you doubt whether it can be hit more than twice with Penetrate Arrow or not.</li>
+									<li>Often used with Banishing Arrow as a combo.</li>
+								</ul>
+							</p>						
+						</section>
+						
+						<button slot="title">Sharp Bomb T0</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/sharp_bomb-t0.png" id = "inline-img"><br>
+										Fire explosive arrow from mid-air.<br>Charge to increase power and blast size.<br>Control flip direction with Forward/Backward keys.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_4-sharpbombt0.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as dodging and damaging PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('sb0-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="sb0-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">69 F</td>
+												<td class = "w3-border">60 <span class = "bcb">(48)</span> + 66 F</td>
+												<td class = "w3-border">At most 2213</td>
+												<td>At least 30 <span class = "bcb">(25)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">1107 [50%]</td>
+													<td class = "w3-border">2213 [100%]</td>
+													<td class = "w3-border">962</td>
+													<td class = "w3-border">1054 <span class = "bcb">(1165)</span></td>
+													<td class = "w3-border">31.6 <span class = "bcb">(36.9)</span></td>
+													<td>63.2 <span class = "bcb">(73.8)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+									<br><span>**Default version of this PA is unusable in today's content, so we are skipping it.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								This is the “crafted version” of the normal Sharp Bomb, adding a charging mechanic, increased explosion radius, higher explosion damage, allow movement input, and providing invincibility frames during its air-hanging animation.
+								<br><br>
+								The explosive payload will often follow the locked-on target or your aiming reticle despite your movement input. Be careful that you are vulnerable and locked in the animation for a moment after firing it. Additionally, the explosion from Sharp Bomb Type-Zero lingers for around one seconds, damaging any enemy that accidentally goes by.
+								<br><br>
+								Note that Sharp Bomb Type Zero does not have damage attenuation.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Nuking a group of lesser enemies, often killing them in a couple uses.</li>
+									<li>Dodging attacks. Period.</li>
+									<li>Being mobile while sniping a group of enemies or boss from afar.</li>
+									<li>Commonly used with Banishing Arrow as a combo.</li>
+								</ul>
+							</p>						
+						
+						</section>
+						
+						<button slot="title">Chase Arrow</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/chase_arrow.png" id = "inline-img"><br>
+										Stock up to 3 backup arrows; react to other PAs and charged Techniques.
+									</td>
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as enhancer and chaser PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('chase-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="chase-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">40 F</td>
+												<td class = "w3-border">N/A</td>
+												<td class = "w3-border">661</td>
+												<td>15</td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border" colspan = "2">661</td>
+													<td class = "w3-border" colspan = "2">992</td>
+													<td colspan = "2">44.1</td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA cannot be charged and has unique functions compared to the rest.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								Unlike other bow Photon Arts, you cannot attack enemies directly with Chase Arrow. Upon using it, you will stock up to three void arrows, snapshotting the damage bonus from Just Attack, but use your current R-ATK for damage calculation.
+								<br><br>
+								Whenever your other bow Photon Arts, including the subsequent Chase Arrow (itself), or charged offensive Techniques hit an enemy, the attack will be fired automatically. Chase Arrow prioritizes the location that your attacks hit, and can be blocked by the parts of the enemy as well. Be wary of your current PP and position if you wish to use the attack to maintain your damage against them.
+							</p>
+							
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:34%;"><image src="/img/gifs/pa_5-chasearrow-1.gif" style = "width:80%;"></image></td>
+									<td style = "width:33%;"><image src="/img/gifs/pa_5-chasearrow-2.gif" style = "width:80%;"></image></td>
+									<td style = "width:33%;"><image src="/img/gifs/pa_5-chasearrow-3.gif" style = "width:80%;"></image></td>
+								</tr>
+								<tr>
+									<th>Stocking the arrows</th>
+									<th>Bow PA triggers it.</th>
+									<th>Charged Tech triggers it.</th>
+								</tr>								
+							</table>
+							
+							<p class = "w3-justify">
+								Chase Arrow also locks you in mid-air when you use it, and it does not have damage attenuation or range limitation as long as you can set it. Regardless, Chase Arrow is considered to be an “enhancer” for Bow Braver’s attack rotation, rather than being the attack itself.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Use it with your next PA or Banish Combo to deal significantly more damage. For instance, firing Final Nemesis with 3 Chase Arrows, or adding it to any Banish Combo that you can think of.</li>
+									<li>Chase an extremely mobile or out-of-bound enemy from a safe location.</li>
+								</ul>
+							</p>						
+						</section>
+
+						<button slot="title">Final Nemesis</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/final_nemesis.png" id = "inline-img"><br>
+										Focus your mind and fire the ultimate shot, an arrow that pierces everything.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_6-finalnemesis.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as situational burst PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('fn-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="fn-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">190 F</td>
+												<td class = "w3-border">N/A</td>
+												<td class = "w3-border">3846</td>
+												<td>30</td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border" colspan = "2">3846</td>
+													<td class = "w3-border" colspan = "2">1215</td>
+													<td colspan = "2">128.2</td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA cannot be charged.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								Final Nemesis is the hardest hitting bullet bow Photon Arts if you aim and fire it at the right target. During the 3-second winding up animation, you can adjust your aim to your liking, or else cancel it the moment the light flashes on your bow.
+								<br><br>
+								The Photon Arts also lift you up high enough to completely avoid some ground-based attacks, while also locks you in the air. Be careful as enemy attacks can interrupt you during the preparation. Note that Final Nemesis has damage attenuation.								
+							</p>
+							
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Instantly deleting lesser/weakened enemies from the field.</li>
+									<li>Deal a huge amount of damage to break an enemy part or even fasten certain phases of the boss. You can also pre-cast it.</li>
+									<li>Hitting anything that is quite far from your location, while the other classes are standing there watching you do it. Manual aim only.</li>
+									<li>Seldomly used in Banish Combo, as well as Chase Arrow for nuking.</li>
+								</ul>
+							</p>
+						</section>
+
+						<button slot="title">Gravity Point</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/gravity_point.png" id = "inline-img"><br>
+										Use a special arrow to create a gravitational field.<br>Charge to make the gravity stronger.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_7-gravitypoint.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as crowd control and enemy management PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('grav-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="grav-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">20 F</td>
+												<td class = "w3-border">36 <span class = "bcb">(29)</span> + 19 F</td>
+												<td class = "w3-border">877</td>
+												<td>20 <span class = "bcb">(15)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">588<br>[7% hit; 20% x 3 black hole hits]</td>
+													<td class = "w3-border">877<br>[8% hit; 23% x 4 black hole hits]</td>
+													<td class = "w3-border">1764</td>
+													<td class = "w3-border">957 <span class = "bcb">(1096)</span></td>
+													<td class = "w3-border">29.4 <span class = "bcb">(39.2)</span></td>
+													<td>43.9 <span class = "bcb">(58.5)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								The Photon Arts is mostly used for grouping up a pack of enemies. While the suction force may not be as strong as Ranger’s Gravity Grenade or Zondeel, it makes up by being spammable. The impact damage of Gravity Points attenuates when firing from long distance. However, the damage from the suction effect is unaffected by the damage attenuation.							
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>If no one in your MPA cares to group the enemy for easier clearing, help them. Gravity Point can be spammed so fast it can prevent lesser enemies from moving around.</li>
+									<li>You can also move the enemy with it as well. Plan ahead on where you want them to be together for the others to nuke the shit out of them.</li>
+									<li>It can be used to deal damage against certain bosses if needed.</li>
+								</ul>
+							</p>						
+						
+						</section>
+
+						<button slot="title">Torrential Arrow</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/torrential_arrow.png" id = "inline-img"><br>
+										Target an area for a rain of arrows.<br>Charge to increase the number of arrows.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_8-torrentialarrow.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as mobbing and enhancer PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('torrent-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="torrent-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">20 F</td>
+												<td class = "w3-border">60 <span class = "bcb">(48)</span> + 19 F</td>
+												<td class = "w3-border">1261</td>
+												<td>20 <span class = "bcb">(15)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">656<br>[4 hits x 13%]</td>
+													<td class = "w3-border">1311<br>[8 hits x 13%]</td>
+													<td class = "w3-border">1968</td>
+													<td class = "w3-border">996 <span class = "bcb">(1174)</span></td>
+													<td class = "w3-border">32.8 <span class = "bcb">(43.7)</span></td>
+													<td>65.6 <span class = "bcb">(87.4)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								There are many things that you should know about it. Uncharged Torrential Arrow deals four hits of damage and stays for one second, while the charged version deals eight hits and stays over three seconds instead. The distance between you and your target also determines the time it takes for the Photon Arts to land, starting from one second at close range up to 2.2 seconds at maximum range and beyond.
+								<br><br>
+								While it may sound weird, the hit judgement seems to evaluate from top to bottom and has a larger area of effect than its visual. You can aim Torrential Arrow yourself with the targeting outline or the lock-on mode. Note that the Photon Arts does not have damage attenuation.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Keeping lesser enemies at bay in conjunction with Gravity Point.</li>
+									<li>Hitting enemies from above, especially those with frontal shields.</li>
+									<li>Taking down certain enemies at a higher elevation.</li>
+									<li>Using the PA with Banish Combo for extra damage.</li>
+								</ul>
+							</p>							
+						</section>
+
+						<button slot="title">Trit Shooter T0</button>
+						<section>
+						
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/trit_shooter_t0.png" id = "inline-img"><br>
+										Deliver a series of kicks on the spot then fires several arrows.<br>Charge for more attacks. You are able to move.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_9-tritshottert0.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as situational, sustained damage PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('trit-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="trit-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">66 F</td>
+												<td class = "w3-border">60 <span class = "bcb">(48)</span> + 180 F</td>
+												<td class = "w3-border">At most 4914</td>
+												<td>At least 30 <span class = "bcb">(25)</span></td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">1818 [37%]</td>
+													<td class = "w3-border">4963 [101%]</td>
+													<td class = "w3-border">1732</td>
+													<td class = "w3-border">1241 <span class = "bcb">(1306)</span></td>
+													<td class = "w3-border">49.9 <span class = "bcb">(59.1)</span></td>
+													<td>136.1 <span class = "bcb">(161.3)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.</span>
+									<br><span>**Default version of this PA is unusable in today's content, so we are skipping it.</span>
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								This is a “crafted version” of the regular Trit Shooter, granting extra attacks with even more damage. You can control the direction of Trit Shooter Type-Zero with directional input, moving your character forward while doing so except when used in the air.
+								<br><br>
+								Despite incorporating melee attacks, the Photon Arts scales the damage purely from your current R-ATK. The arrows fired from the attack are similar to Master Shot but without its homing property. And yes, the arrows have damage attenuation, but the usage range of it means you can safely ignore the damage penalty.
+								<br><br>
+								Note that you can cancel the attack animation after every bow shot.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Due to its very long animation, Trit Shooter is mostly used as a last resort among Bullet Bow PA. If your Rapid Shoot is still on cooldown and you are running low on PP, feel free to use it.</li>
+									<li>Rarely used with Banishing Arrow as a combo. Deals a respectable amount of damage by the way.</li>
+								</ul>
+							</p>						
+						
+						</section>
+
+						<button slot="title">Million Storm</button>
+						<section>
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/million_storm.png" id = "inline-img"><br>
+										Fire countless arrows that pierce the enemy. Continues as long as the button is held.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_10-millionstorm.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as situational damaging and mobbing PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('ms-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="ms-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" style = "width:50%;">Frames</th>
+												<th>Power</th>
+												<th>PP Cost</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" col>
+													24 F to enter firing pose. 27 F to exit firing pose. 
+													<br>Deals damage every 14 F
+												</td>
+												<td class = "w3-border">2326</td>
+												<td>Starts from 25</td>
+											</tr>
+											
+										</table>
+									</div>		
+									<br>
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered" >
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td class = "w3-border" colspan = "2">2326<br>(Cannot be charged. Each hit is 10%.)</td>
+													<td class = "w3-border" colspan = "2">2s Hold (36 PP): 700<br>10s Hold (100 PP): 919<br>20s Hold (180 PP): 956</td>
+													<td colspan = "2">2s Hold: 64.6<br>10s Hold: 116.3<br>20s Hold (180 PP): 129.2</td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA cannot be charged and behave differently from the other bullet bow Photon Arts.</span>
+									
+									<p class = "w3-justify">
+										Also, DPS and calculation of the PA differ from the rest. The number of “996.8” is “Upfront Damage” using the common formula. The 20 seconds of 956, however, use an alternate formula, alongside a slight frame variance possibly from unexpected technical errors.
+									</p>
+									<table class = "w3-table-all w3-border w3-centered">
+										<tr>
+											<td style = "width:50%;">
+												<b>Common DPS Calculation<br></b>
+												(Actual Power / Frames Hit) x 60
+											</td>
+											<td style = "width:50%;">
+												<b>Channeling Attack DPS Calculation</b><br>
+												[{(Time as Frames - Prep. Animation Frames) / Frames Hit} x Actual Power]/ Time as Seconds												
+											</td>
+										</tr>										
+									</table>
+									<br>									
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								Million Storm doesn’t fire countless arrows toward the enemies, but rather, dealing damage to any enemies in a set interval as long as they stay in the visual cylinder. There is a preparing animation for the attack, and it roots your in place as long as you hold it. Exiting animation also exists, and you can always use Step to cancel the animation of Million Storm.
+								<br><br>
+								Note that the Photon Art also has damage attenuation at its maximum range.
+							</p>
+							
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Use it during PSE Burst. It’s even better if Techers present in your MPA. Regardless, Penetrate Arrow, Torrential Arrow, Sharp Bomb T0, Cerulean Ballista, and even bow Charged Normal Attack can do you better.</li>
+								</ul>
+							</p>							
+						
+						</section>
+
+						<button slot="title">Kamikaze Arrow</button>
+						<section>
+							<!-- Description and GIF -->
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:48%; padding:16px 16px;">
+										<img src = "/img/pa/bow/kamikaze_arrow.png" id = "inline-img"><br>
+										Use yourself as the arrow in a truly desperate attack.<br>Charge to increase damage.
+									</td>
+									<td style = "width:48%; padding:16px 16px;" rowspan = "2">
+										<image src="/img/gifs/pa_11-kamikazearrow.gif" style = "width:60%;"></image>
+									</td>	
+								</tr>
+								<tr>
+									<td style = "padding:16px 16px">Used as situational damaging or traversal PA.</td>
+								</tr>
+							</table>
+						
+							<!-- Numbers part based on each PA. RIP CSS meme. -->	
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('kz-numbers')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey" id="clickthis">								
+								The Numbers & Frames</button>
+							</div>
+							<div id="kz-numbers" class="w3-hide w3-border">
+								<div class="w3-container">
+									
+									<!-- Frames -->
+									<br>
+									<div = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<tr>
+												<th class = "w3-border" colspan = "2">Frames</th>
+												<th colspan = "2">Defaults</th>
+											</tr>
+											<tr>
+												<td class = "w3-border" style = "width:25%">Normal</td>
+												<td class = "w3-border" style = "width:25%">Charged</td>
+												<td class = "w3-border" style = "width:25%">Power</td>
+												<td style = "width:25%">PP Cost</td>
+											</tr>
+											<tr>
+												<td class = "w3-border">92 / 63 F</td>
+												<td class = "w3-border">100 <span class = "bcb">(80)</span> + 60 / 32 F</td>
+												<td class = "w3-border">1493</td>
+												<td>30 <span class = "bcb">(25)</span></td>
+											</tr>
+											
+										</table>
+									</div>
+									<br>
+									
+									
+									<!-- Damage & Stuff -->
+									<div class = "w3-responsive">
+										<table class = "w3-table-all w3-border w3-centered">
+											<thead>
+												<tr>
+													<th colspan="6">Damage Property*</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class = "w3-border" colspan = "2" style = "width:34%;">Actual Power<br>[Behavior + %]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per Second<br>[(Actual Power/Frames) x 60]</td>
+													<td class = "w3-border" colspan = "2" style = "width:33%;">Damage Per PP<br>[Actual Power/PP Cost]</td>
+												</tr>
+												<tr>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td class = "w3-border">Charged</td>
+													<td>Normal</td>
+													<td>Charged</td>
+												</tr>
+												<tr>
+													<td class = "w3-border">985<br>[40% Rush + 26% Kick]</td>
+													<td class = "w3-border">2239<br>[90% Rush + 60% Kick]</td>
+													<td class = "w3-border">642 / 938</td>
+													<td class = "w3-border">839 / 1017 <br><span class = "bcb">(959 / 1199)</span></td>
+													<td class = "w3-border">32.8 <span class = "bcb">(39.4)</span></td>
+													<td>74.6 <span class = "bcb">(89.5)</span></td>
+												</tr>		
+											</tbody>
+										</table>
+									</div>										
+									<br>
+									<span>*This PA can be charged. If you want to apply Stance Charge, multiply the value by 1.1 to DPS and DPP columns.
+									<br><br>
+									Note that the value behind the slash is when the PA is used <b>against enemy with Super Armor, aka, cannot be flinch/stagger from your attacks.
+									</b></span>
+									
+								</div>
+							</div>							
+						
+							<!-- PA Explanation; Variant -->
+							<p class = "w3-justify">
+								As desperate as it sounds, you are vulnerable to everything while dashing forward to the targeted enemy, even stopping at any obstacles if hit. Otherwise, Kamikaze Arrow will always launch you horizontally based on your movement input. It also has two-part attacks: the diving scales the damage with your current R-ATK, and the somersault kick scales with your current S-ATK instead.
+								<br><br>
+								Kamikaze Arrow does not have damage attenuation, but it does have limited travel range. <b>Also, if the rush part of the PA hits lesser enemy, your character will stick to and hard stagger it for a brief moment BEFORE somersaulting back.</b>
+								Larger enemies such as bosses will cause your character to somersault immediately after hitting it instead.
+							</p>
+						
+							<!-- How 2 use it; OG-->
+							<p class = "w3-justify">
+								<b>How would you use it?</b>
+								<ul>
+									<li>Use it as a last resort against certain enemies.</li>
+									<li>Rarely used with Banish Combo, just be mindful of what you are fighting against at the moment.</li>
+								</ul>
+							</p>						
+						</section>						
+					</fancy-tabs>			
+					
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">				
+				</div>	
+
+				<div id="attack-range">					
+					<h1 class="w3-text-green"><b>Attack Range</b></h1>
+					<p class = "w3-justify">
+						“How far can Bullet Bow attacks and PA can go in PSO2?”. Well, the Internet can’t really answer you that so I’ve decided to do some questionable testing procedure and use my personal experiences to tell you about it. Here’s the Bullet Bow Photon Arts attack range.
+					</p>
+
+					<div class = "w3-center">
+						<image src="/img/pics/pa_attackrange.png" style = "width:75%;"></image>
+						<p>
+							Estimated Bow Attack Range Chart, Aug. 2019, experimented by Argus.<br>
+							It is a visualization of how far you can attack things with the bullet bow.<br>
+							You do not need to measure the exact distance before firing! (1 Step = ~3.5 meters.)<br>
+						</p>
+					</div>	
+
+					<p class = "w3-justify">
+						In real fights, you won’t be “stepping” and make a perfect distance judgment. When you see your damage drops, say using Master Shot, it’s either you are too far away or you miss your JA. When you're ~8-9 Steps away from an enemy, you can’t lock on to it.
+					</p>
+
+					<p class = "w3-justify">
+						As you can see from the above, several Bullet Bow attacks can hit things reliably up to ~18 Steps away from your current position. However, most encounters will have you fighting less than that distance. Adding to that, Bullet Bow effective range usually starts from at least 2 Steps distance away from any enemy.
+					</p>
+					<ul class = "w3-ul">
+						<li>First, it prevents Final Nemesis and Penetrate Arrow projectiles from pointing upward.</li>
+						<li>Second, your Master Shot can have more space to fly.</li>
+						<li>Third, staying way too close to the enemy occasionally will get yourself killed or interrupted, unless it’s downed.</li>
+					</ul>
+					<p class = "w3-justify">
+						Keeping yourself within 5 steps away from your enemy guarantees that most PA will deal full damage unless it decides to move off-map. Below is a reference using Codotta Idetta and its arena in Trace of Darkness.
+					</p>
+
+					<div class = "w3-center">
+						<image src="/img/pics/pa_rangeexample.png" style = "width:40%;"></image>
+						<p><b>The enemy is “not too big and not too small on your screen”.</b></p>
+					</div>		
+					
+					<p class = "w3-justify">
+						For the other weird cases...
+					</p>
+					<ul class = "w3-ul">
+						<li>Trit Shooter, T0 or not, is a bit different. It’s too hard to measure the range of fired arrows, but their damage drops after ~8 Steps from the enemy. You would use it at point-blank range, so no one cares.</li>
+						<li>Bullet Bow normal attack is somewhat different. 
+						You can aim higher to compensate for the arrow drop against very far away enemies, and yes, it can travel very, very far.
+						</li>
+						<li>Chase Arrow's actual range is infinite. As long as you can set it up, you will be able to hit that enemy no matter where it is.</li>
+					</ul>
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">						
+				</div>		
+
+
+				<div id="complex-pa">					
+					<h1 class="w3-text-green"><b>Complex PA</b></h1>
+					
+					<div class = "w3-center" style = "padding: 16px 16px;">
+						<image src="/img/gifs/pa_cpa.gif" style = "width:30%;"></image>
+						<br>						
+					</div>	
+					
+					<table class = "w3-table-all w3-border w3-centered">
+						<tr>
+							<td style = "width:20%">
+								<img src = "/img/icons/others/cpa.png" id = "inline-img">
+								<br>Cerulean Ballista</td>
+							<td>Root yourself in place and fire powerful projectiles toward the enemies, 
+							blasting them with unparalleled photonic force. Movement input on activation can switch
+							the mode between <b>Focus and Scatter.</b></td>
+						</tr>
+						<tr>
+							<td colspan = "2">
+								<b>Situational Nuke | Power Value: 48681 | Consume 1 Stock</b>
+							</td>
+						</tr>						
+					</table>
+				
+					<p class = "w3-justify">
+						Bow Braver has access to one of the most devastating attacks in PSO2. Before diving deeper, 
+						here is the summarized information about the attack that you should know. 
+						And really, EN server, you gonna name it <span class = "en-n">[Build Up PA]</span>?
+					</p>
+					<ul>
+						<li>After reaching level 60, visit Koffie/Cofy to receive the quest, if it’s there on your server. CPA becomes available after quest completion, and you can put it in either subpalette or bow’s weapon palette.</li>
+						<li><span class = "warn">The attack is exclusive to a Braver equipped with a bullet bow.</span> Other classes and weapons cannot use it 
+						unless allowed in a specific quest, such as "Rush" class setup in Challenge Quest: Calamity.</li>
+						<li><b>CPA does not consume PP, but a 
+						<span class = "ic-mid" id = "inline-img"><img src = "/img/pics/pa_stocks.png"></span>“Stock” 
+						instead.</b> You accumulate it while attacking, up to 3 by default. Completing additional quests from Koffie will increase it to a maximum of 6.</li>
+						<li>Enemy level, damage dealt, the speed of doing so, and the amount of time spent in quest affect Stock accumulation. 
+						<b>It will take around one minute to accumulate one Stock</b>, regardless of the weapon rarity.</li>
+						<li>Your current total attack stat, site multiplier, enemy’s attribute weakness, enemy’s DEF value, Critical Strike, and Perfect Resistance (1 damage dealt) affect the final damage of Complex Photon Arts.</li>
+					</ul>					
+
+					<br>
+					<fancy-tabs>
+						<button slot="title" selected>Focus Mode</button>
+						<section>
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:50%;"><image src="/img/gifs/pa_focus-1.gif" style = "width:60%;"></image></td>
+									<td style = "width:50%;"><image src="/img/gifs/pa_focus-2.gif" style = "width:60%;"></image></td>
+								</tr>
+							</table>
+							<p class = "justify">
+								<b>Cerulean Ballista will use this mode if there is no movement input upon activation.</b> Sending the lightning bolt projectile, it explodes on the target with 20% of the CPA power value for 5 hits (100%, 48681). Note that it can hit multiple enemies that are tightly packed together, and your aiming mode can affect the targeting of this mode. Also, you will lose the attacks if you switch another weapon or die before the projectile hits something.							
+								<br><br>
+								It takes 142 Frames to execute, while the arrow bolt has ~80 Frames delay before landing on a target. The maximum range of Focus mode is ~42 meters, and firing it without anything in your sight will either drop the CPA in front of you 
+								or the location of your crosshair within its maximum range.Focus mode hits close to the explosion damage of most Barrage Banisher Combos (The Long Ones).
+							</p>	
+						
+						</section>
+						
+						<button slot="title">Scatter Mode</button>
+						<section>
+							<table class = "w3-table-all w3-border w3-centered">
+								<tr>
+									<td style = "width:50%;"><image src="/img/gifs/pa_scatter-1.gif" style = "width:60%;"></image></td>
+									<td style = "width:50%;"><image src="/img/gifs/pa_scatter-2.gif" style = "width:60%;"></image></td>
+								</tr>
+							</table>
+							<p class = "justify">
+								<b>Cerulean Ballista will use this mode if there is a movement input upon activation.</b> The attack now fires a barrage of projectiles in cone (despite it’s strafing visual), dealing damage to all targets in the area for 66% of the CPA power value (32129). It’s worth mentioning that Scatter mode, while having a limited vertical range, can often hit everything that appears on your screen. Enemies orientation can affect the targeting of this mode as well.
+								<br><br>
+								It takes only 138 Frames to execute with a maximum range of ~28 meters.
+							</p>								
+						</section>
+					</fancy-tabs>
+					
+					<p class = "w3-justify">
+						Other properties that are shared between the modes are:
+					</p>
+					<ul class = "w3-ul">
+						<li>1) Cerulean Ballista does not trigger Banishing Arrow and Chase Arrow, but triggers S5:Auxiliary Arrow and interacts with the damage accumulation and the attack of S4:Raising Pursuit.</li>
+						<li>2) <b>Both modes require direct Line of Sight toward the target.</b> Otherwise, the CPA will deal NO DAMAGE to them.</li>						
+						<li>3) Both modes grant Frontal Guard Frames upon activation (the lightning visual and sounds) similar to how Katana Just Guard functions.
+						It is followed by a brief period of invincibility, while also providing Super Armour until your character fires the arrow.
+						<span class = "warn">Mistiming the attack can lead to an accidental suicide</span>, and your character are still vulnerable to stun and time-freeze effect!</li>
+						<li>4) It is possible to cancel the post-firing animation with Step.</li>
+						<li>5) <b>Both modes also push your character back slightly</b> by ~0.8 Step Distance (~2.8 meters), regardless of elevation. Be careful against certain fights.</li>
+						<li>6) Any effects apply through JA will work with CPA, such as Etoile’s JA Critical skill. It will not gain any extra damage, following the CPA damage rule.</li>
+						<li>7) The JA circle may disappear after finishing CPA animation due to lagging or you didn’t use it initialy with JA.</li>
+						<li>8) You can slowly rotate your character during the preparation animation to adjust the firing direction, especially with Scatter mode.</li>
+					</ul>		
+					
+					<p class = "w3-justify">
+						Think of the CPA as of the “Final Nemesis 2.0(TM)” that activates faster, more versatile, and can clear most minor enemies in one input. The slight delay after firing it and the learning process can be somewhat annoying, but you will get comfortable with it eventually.  Therefore, keep calm, aim with care, and get creative with it.
+					</p>					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">	
+				</div>				
+
+
+				<div id="palette-setup">					
+					<h1 class="w3-text-green"><b>Palette Setup</b></h1>
+					<p class = "w3-justify">
+						This is my personal playstyle, and you can adjust it to however you like. Back in the part about the preparation before playing Bullet Bow Braver, I did say something about “Button Layout”. Shoutout to that guy who made it.
+					</p>	
+
+					<div class = "w3-center">
+						<image src="/img/pics/pa_palettelayout.jpg" style = "width:50%;"></image>
+					</div>					
+
+					<p class = "w3-justify">
+						With 3-Button Layout, you now have 6 slots to put your attacks in. <b>One of them is always 
+						<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/bow_normal_attack.png"></span>
+						Bullet Bow Normal Attack</b>, and you are free to set your PA to whatever binding that you prefer. 
+						Just make sure that you have the following PAs in your main weapon palette, so you can handle most contents.
+					</p>						
+					
+					<table class = "w3-table-all w3-border w3-centered">
+						<tr>
+							<th style = "width:34%;">Must-have against everything</td>
+							<th style = "width:33%;">Situational usage or sub-palette</td>
+							<th style = "width:33%;">Unnecessary or can be a niche</td>
+						</tr>
+						<tr>
+							<td>Penetrate Arrow, Sharp Bomber T0, Banishing Arrow, Master Shot</td>
+							<td>Final Nemesis, Chase Arrow, Torrential Arrow, Gravity Point</td>
+							<td>Trit Shooter T0, Kamikaze Arrow, Million Storm</td>
+						</tr>
+					</table>	
+					<div class = "w3-center" style = "padding: 16px 16px;">
+						<image src="/img/pics/pa_palette-1.png" style = "width:18%;"></image>
+						<image src="/img/pics/pa_palette-2.png" style = "width:19%;"></image>
+					</div>
+					
+					<ul>
+						<li>If you put Chase Arrow in the Sub-Palette, it now displays the current number of backup arrows you have ready. Thus, you can manage it better, but you still need to count them.</li>
+						<li>With Su or Ph sub, you can put supportive Techniques in your weapon palette. It can help save up some slots.</li>
+					</ul>
+					<div class = "w3-center" style = "padding: 16px 16px;">
+						<image src="/img/pics/pa_palette-3.png" style = "width:35%;"></image>
+					</div>					
+					
+
+					<p class = "w3-justify">
+						Speaking of the sub-palette, it depends on which subclass you use. You can adjust it however you like to fit your playstyle and preference. The general rule is as followed:
+					</p>					
+					<div class = "w3-center">
+						<image src="/img/pics/pa_palette-4.png" style = "width:60%;"></image>
+						<p><b>A loosely created rule/template.</b></p>
+					</div>
+					<ul>
+						<li>Chase Arrow (if put here), Rapid Shoot, and Stance should be close to your movement keys for faster access. Otherwise. just find the setting that you feel comfortable in.</li>
+						<li>If you want more Bullet Bow PA, I suggest Gravity Point, Torrential Arrow, or even Final Nemesis. It will expand your options.</li>
+						<li>Don’t forget to add Complex Photon Arts to your slot as well!</li>
+						<li>Note that you can use more than one sub-palette if you have anything you need, such as Dark Blast, Photon Blast, and any consumables.</li>
+					</ul>					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">						
+				</div>		
+
+
+				<div id="adapting-techs">					
+					<h1 class="w3-text-green"><b>Adapting Techs</b></h1>
+					<p class = "w3-justify">
+						Playing BrPh or BrSu means that you have access to Techniques, and lots of them are good. Some are already mentioned, but having an entry for it is better. As I do not primarily play Force or Techer, I will explain them based on my experience, observation, and pulling things from the wiki/visiphone.
+					</p>
+
+					
+					<fancy-tabs>
+						<button slot="title" selected>Support</button>
+						<section>
+							<p class = "w3-justify">
+								All of them are chargeable, field-based Techniques. Casting any of them will remove the existing field except for Zondeel. Most of the time, you would tap them once instead of charging.
+							</p>
+
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/fire_shifta.png" id = "inline-img"> Shifta</b></h4>
+								Cast a fiery aura that increases your damage. Charge to create a field that buff anyone within. Shifta increases your base attack value by 19.7%. Each pulse emitted from Shifta extends the duration by 15 seconds, and only the highest effect applies to you (commonly from Techers). Consider it as a quick damage boost during any fights and to maintain Techer’s buff by yourself.								
+								<br><br>
+								<b>Recommended Customization: Multi 3  <span class = "en-n">[Abundant 3]</span></b>
+							</p>
+							<br>
+							
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/ice_deband.png" id = "inline-img"> Deband</b></h4>
+								Cast a frosty aura that increases your defense. Charge to create a field that buff anyone within. Deband increases your base defense value by 19.7%. It functions similar to Shifta, where each pulse extends the duration by 15 seconds and only the highest effect applies to you (commonly from Techers). Use it before the start of any dangerous fight to reduce damage taken, and of course, maintaining Techer’s buff by yourself.
+								<br><br>
+								<b>Recommended Customization: Multi 3 <span class = "en-n">[Abundant 3]</span></b>
+							</p>
+							<br>							
+							
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/lightning_zondeel.png" id = "inline-img"> Zondeel</b></h4>
+								Create a lightning field that drags nearby enemies into it. Charge to increase its range and duration. Although we have bow’s Gravity Vortex, Zondeel remains useful for katana as a method to group up enemies together. Most large bosses and infected enemies are immune to the effect. The field stays for 1.5 seconds uncharged and 3 seconds if charged.
+								<br><br>
+								<b>Recommended Customization: Fierce 3 <span class = "en-n">[Dire 3]</span></b>
+							</p>
+							<br>
+							
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/light_resta.png" id = "inline-img"> Resta</b></h4>
+								Cast a light-trailed aura to heal yourself. Charge to create a field with increased healing power. You don’t have to bring any -mate items anymore as long as you have PP to spend. Tapping it once should be enough to quickly recover your HP from heavy attacks.
+								<br><br>
+								<b>Recommended Customization: Efficient 3 <span class = "en-n">[Potent 3]</span></b>
+							</p>
+							<br>
+
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/light_anti.png" id = "inline-img"> Anti</b></h4>
+								Cast a light-trailed aura to remove Status Effect from yourself. Charge to create a cleansing field. Anti can remove all elemental Status Effect (Burn, Freeze, Shock, Poison, Mirage and Panic) and Injuries (reduced Maximum HP) from you, except Stun, Jellen, and Weak Bullet. You can deploy it early with charging, if you expect to get hit by Freeze. Otherwise, save your friend from it.
+								<br><br>
+								<b>Recommended Customization: Efficient 3 <span class = "en-n">[Potent 3]</span></b>
+							</p>
+							<br>
+
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/wind_zanverse.png" id = "inline-img"> Zanverse</b></h4>
+								Deploy a small wind field that deals damage as you attack. Charge to increase its range and duration. Zanverse always deals 20% of the damage you have done as long as you are standing in it, with an interval of one second, as wind-element damage. The field stays for 1.5 seconds uncharged and 5 seconds if charged. Whenever a good opportunity arises, deploy it before attacking for extra damage and a chance of inflicting Mirage Status Effect.
+								<br><br>
+								<b>Recommended Customization: Concentrated 3 <span class = "en-n">[Intense 3]</span></b>
+							</p>
+							<br>	
+
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/dark_megiverse.png" id = "inline-img"> Megiverse </b></h4>
+								Deploy a small darkened field that recovers 25% of damage dealt as your HP. Charge to increase its range and duration. The recovery effect only applies if you are standing within the field. Megiverse is a good alternative to Resta, providing more healing potential at a cost of extra input. The field stays for 1.5 seconds uncharged and 5 seconds if charged.
+								<br><br>
+								<b>Recommended Customization: Concentrated 3 <span class = "en-n">[Intense 3]</span></b>
+							</p>							
+						</section>
+						
+						<button slot="title">Movement</button>
+						<section>
+							<p class = "w3-justify">
+								There are two options here. While chaining Step Kick with bow or dashing around with Asagiri-rendan with katana are better, you may need other movement options in some fights.
+							</p>
+							
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/fire_safoie.png" id = "inline-img"> Safoie Type-0 (Zero Safoie)</b></h4>
+								This is the customized version of Safoie. On used, performing a long, fiery dash toward the target with vertical tracking, stopping at any target you hit first. You can also use to scale slant walls in various quests, or as a chase tool for those that despise the katana PA called “Shunka-shunran”. Try to aim for the customization result with low added PP.								<br><br>
+							</p>									
+							
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/lightning_ilzonde.png" id = "inline-img"> Ilzonde</b></h4>
+								On used, bolt forward through all enemies while also dealing the damage. While being less PP efficient compared to Safoie, you move faster with it.
+								<br><br>
+								<b>Recommended Customization: Supercharged 3 <span class = "en-n">[Voltaic 3]</span></b>
+							</p>									
+							
+						</section>
+						
+						<button slot="title">Defense</button>
+						<section>
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/ice_nabarta.png" id = "inline-img"> Nabarta Type-0 (Zero Nabarta)</b></h4>
+								This is the customized version of Narbarta. On used, conjures an exploding ice barrier in front of you that drains PP over time, blocking the incoming enemy attacks. Hold the PA to block more attacks. If you successfully block an attack, it grants you a brief period of invincibility similar to Kanata Just Guard. It’s your last line of defense when all else fails.
+							</p>
+						</section>
+
+						<button slot="title">Offense</button>
+						<section>
+							<p class = "w3-justify">
+								<h4><b><img src = "/img/techs/light_grant.png" id = "inline-img">Grants and 
+								<img src = "/img/techs/ice_ilbarta.png" id = "inline-img">Ilbarta are the preferred options.</b></h4>
+								They can hit the enemies behind obstruction and you can use it to trigger Chase Arrow for some meme strategy. While the concept of Magebow has ceased to exist, a Banishing Arrow Combo made of either Techniques can work to a degree, until you accidentally steal the 7th Ilbarta hit from the local Tech users somehow...
+								<br><br>
+								<b>Recommended Customization: Brilliant 3 <span class = "en-n">[Radiant 3]</span> for Grant, 
+								Ice Fang 3 <span class = "en-n">[Glacial 3]</span> for Ilbarta.</b>								
+							</p>								
+						</section>
+
+					</fancy-tabs>					
+	
+					<p class = "w3-justify">
+						Although the guide used to mention inflicting status effects through the use of techniques, 
+						it’s not really our job to do such a thing when you can use weapons to do so instead. 
+						Regardless, it’s ok to know about them, and you can always check 
+						<a href = "https://docs.google.com/spreadsheets/d/1uxxYnOpQNlUkZoHhQSbZyA5k4_QOYbUSixr7ku2iaYM/edit#gid=0"
+						target = "_blank" class = "link">Cathy’s Handy Status Effect Spreadsheet</a>
+						to see how each major enemy reacts to them. My suggestion? A local Force user who is my acquaintance once recommended the followings if things go south:
+					</p>					
+					
+					<table class = "w3-table-all w3-border w3-centered">
+						<tr>
+							<td class = "w3-border" style = "width:34%;">
+								<img src = "/img/icons/status/burn.png" id = "inline-img"><b>Burn</b><br>
+								Use <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/fire_nafoie.png"></span>Nafoie.
+							</td>
+							<td class = "w3-border" style = "width:33%;">
+								<img src = "/img/icons/status/freeze.png" id = "inline-img"><b>Freeze</b><br>
+								Use <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/ice_rabarta.png"></span>Rabarta.
+							</td>
+							<td style = "width:33%;">
+								<img src = "/img/icons/status/shock.png" id = "inline-img"><b>Shock</b><br>
+								Use the <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/lightning_nazonde.png"></span>Nazonde-
+								<span class = "ic-mid" id = "inline-img"><img src = "/img/techs/lightning_zondeel.png"></span>Zondeel combo.
+							</td>
+						</tr>
+						<tr>
+							<td class = "w3-border">
+								<img src = "/img/icons/status/mirage.png" id = "inline-img"><b>Mirage/Blind</b><br>
+								Use <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/wind_zanverse.png"></span> Zanverse w/ rapid-hit attacks.
+							</td>
+							<td class = "w3-border">
+								<img src = "/img/icons/status/panic.png" id = "inline-img"><b>Panic</b><br>
+								Use <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/light_nagrant.png"></span>Nagrant.
+							</td>
+							<td>
+								<img src = "/img/icons/status/poison.png" id = "inline-img"><b>Poison</b><br>
+								Use <span class = "ic-mid" id = "inline-img"><img src = "/img/techs/dark_gimegid.png"></span>Gimegid or 
+								<span class = "ic-mid" id = "inline-img"><img src = "/img/techs/dark_ramegid.png"></span>Ramegid T0
+							</td>
+						</tr>
+					</table>
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
+				</div>	
+			
+			
+			</div>				
+		</div>		
+		<!-- End of Content---->	
+
+		<!--Footer Part-->
+		<footer-component></footer-component>		
+		
+		<!-- Function scripts that require late load.-->
+		<script src = "/js/topScroll.js"></script>
+		<script src = "/js/mytabs.js"></script>
+		<script src = "/js/carousel.js"></script>
+	</body>
+</html>

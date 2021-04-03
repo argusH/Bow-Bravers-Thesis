@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<!-- Meta Shits -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		
+		<title> Off-topics | Bow Braver's Thesis </title>	
+
+		<!-- Function scripts that require early load.-->	
+		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
+		<script src = "/js/addFoot.js"></script>		
+		<script src = "/js/basic.js"></script>		
+		
+	</head>
+	
+	<body>	
+	
+		<button onclick="topFunction()" id="topButton">Top</button>
+		
+		<!-- NAV Bar + Main img -->
+		<header-component></header-component>		
+	
+		<!-- C O N T E N T Here -->
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
+
+			
+			<div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="intro">
+				<div class= "w3-center">					
+					<h1 class="w3-xxxlarge w3-text-green"><b>Off-topics</b></h1>
+					<p class="w3-opacity"><i>It's ok to know. Then, it's up to you.</i></p>			
+				</div>
+				
+				
+				<!-- better to move here -->
+				<div id = "pp-threshold">
+				
+					<h1 class="w3-text-green"><b>Why 200+ PP?</b></h1>
+
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_ppjoke.png" style = "width:70%;"></image>
+					</div>	
+				
+					<p class = "w3-justify">
+						The main concern about Bow Braver (and the validity of both the guide and my tryhard attempts), is the amount of PP you actually need to get going with the weapon, especially when it comes to the Banish Combo. There are two main reasons though.
+					</p>	
+					<p class = "w3-justify">
+						<h3>#1 The Existence of Phantom</h3>
+						The value for PP threshold originally stems from Phantom subclass, arrived in the early EP6 update of the JP server. 
+						Regardless of your server, you should have read about two skills that scale directly with your PP: Critical Stream and Photon Stream. 
+						<span class = "warn">Both are the reasons why 200 PP becomes the “generally accepted” value, and accidentally a good starting point.</span>
+						<ul class = "w3-ul">
+							<li>Level 5 Photon Stream now gives you 10% damage bonus, which is the highest value you can get.</li>
+							<li>Level 5 Critical Stream now gives you 5% Critical Strike damage, which is the highest value you can get. Additionally, you get a 40% Critical Strike Chance as well, so capping the value is much easier.</li>
+						</ul>					
+					</p>
+					
+					<br>
+					<p class = "w3-justify">
+						<h3>#2 Getting a Good Combo Running is costly</h3>
+						If you have read through the Banish Combo section, or even the damn combo chart, you should have seen that some of the “stronger” combos may require a huge amount of PP. Take a look at the image below.
+					</p>
+					
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_pprotation.png" style = "width:70%;"></image>
+						<p>Higher PP lets you do more damage for some reasons... still, it's often the long ones.</p>
+					</div>	
+					
+					<p class = "w3-justify">
+						I believe that there’s 
+						<a href = "https://www.reddit.com/r/PSO2/comments/g2jiee/looking_for_advice_from_veteran_bow_braver_main/fnmyhsd/"
+						target = "_blank" class = "link">a redditor’s post</a> 
+						who explains about it many times better than me, and I recommend you to read it. Higher PP allows you to chain multiple Banish Combo, increase the PA limits for them, fix your combo on the fly, and even let you add Chase Arrow or Torrential Arrow. Bow Braver doesn’t feel that good when playing at a low PP threshold. It’s manageable regardless.
+						<br><br>						
+						Moreover, affixing units to have a lot of PP can be difficult sometimes. Therefore, getting any bow or special abilities/augments that gives 
+						<b>“PP Cost Reduction”</b>, can help. Let’s use the above example again.
+					</p>
+
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_reductionrotation.png" style = "width:70%;"></image>
+						<p>See any difference now?</p>
+					</div>				
+					
+					<p class = "w3-justify">
+						Apart from PP Cost Reduction, you can get Attack PP Recovery and Natural PP recovery from other sources to smoothen the gameplay even more. 
+						Due to Rapid Shoot <span class = "en-n">[Rapid Fire]</span>, PP Cost Reduction takes priority first as to how much it eases your PP threshold for combos and gearing process. 
+					</p>		
+					
+					<br>					
+					<p class = "w3-justify">
+						<h3>#2.5 Bullet bow charged Normal Attack exists.</h3>
+						Since I used to start fresh in the EN server just like everyone (except the fact that I played it for too long in the JP server), I also find myself struggling. Looking back at Bow Maneuver, Rapid Shoot lets Bow Braver quickly recover PP, so why don’t we add the charged Normal Attack to your combo? Let’s take a look at another example.						
+					</p>					
+					
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_chargedrotation.png" style = "width:70%;"></image>
+					</div>	
+
+					<p class = "w3-justify">
+						The image shows “pure potency” though, and your actual damage varies based on your gear and subclass choice. 
+						Bow Braver is pretty much all about PP management or <b>Mathematic Mini-Game but you also have to shoot at things</b>: calculate your PP spending and recovery to maximize the output!
+						<br><br>
+						<b>Even with low PP, options exist, and you should improvise, adapt and overcome.</b>	
+					</p>	
+
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
+				</div>	
+
+				<!-- Skill Tree jump point -->		
+				<div id = "ppefficiency-andyou">
+				
+					<h1 class="w3-text-green"><b>PP Efficiency & You</b></h1>				
+					<!-- Sample Text -->
+					
+					<button onclick="myAccFunc('efficiency-summary')" class="w3-button w3-light-grey w3-block w3-left-align w3-dark-grey" id="clickthis">Summary</button>					
+					<div id="efficiency-summary" class="w3-hide w3-border">
+					  <div class="w3-container">
+						<p class = "w3-justify">
+							Bow Braver actually needs at most FOUR (4) sources of PP Reduction: one from Shifta Drink, 1-2 from your weapon’s Potential Ability or the SSAs combined, and one more from your subclasses if applicable. Number wise, it’s 22%-43% of PP Reduction.
+							<br><br>
+							Attack PP Recovery plays an important role in smoothen your Banish Combo rotation, but can lead to excess PP amount recovered. Besides, Natural PP Recovery barely does anything to you. Depending on your subclass choice and investment in getting more max PP, you have many options to tailor the efficiency that can work for you, despite the damage SSAs trade-off.
+						</p>
+					  </div>
+					</div>
+					
+					<p class = "w3-justify">
+						Many are wondering about the “actual explanation” behind the claim of getting at least 22% PP Reduction along with 4.5 PP per 1% Reduction trade-off. Also, why the hell does one retard man tell the world that “hey, get at least 250 PP (from 200 PP, wtf?) to play Bow Braver or you risk suffering” or something like that? Here’s why.
+						<br><br>
+						The finding started a long time ago when I tried to find a proper amount of max PP and PP Reduction to make Bow BrPh plays smoother. Well, BrPh was the better option back then until BrEt takes the stage with those pros showing you how it’s done. The concept was never realized until recently that I came up with a theory called <b>“The Two-Third Rule”.</b>						
+					</p>					
+
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_twothirdrule.png" style = "width:80%;"></image>
+						<p><b>"What the fuck is this?" - Probably You.</b></p>
+					</div>			
+
+					<p class = "w3-justify">
+						In reality, You cannot dump your whole PP bar for a combo since you need a reserve PP for surviving. Also, stacking massive amounts of PP Reduction (50-70% or more) doesn't give you more damage either since there exists this illusive <b>"PP Efficiency Equilibrium"</b> from the interaction between PP Reduction, Attack PP Recovery together with Bow’s Rapid Fire buff, Natural PP Recovery, flat regen from some sources, and your max PP.
+						<br><br>
+						One can stack a fuck load of PP and ditch efficiency outright, only to find out that he performs exactly the same as another person that have a moderate amount of PP with some PP Reduction along with Attack & Natural PP Recovery. That’s one example of many possible scenarios.
+						<br><br>
+						As such, there should be a good amount of Reduction, right? That kind of number to explain why literally every single Bow Braver pros out there can live by just Shifta Drink w/ 10% PP Reduction, Cras Weapon pot and Etoile's average PP Reduction from Same Arts PP Save and Tech Arts Count Bonus! Welcome to the most cursed spreadsheet of all time.
+					</p>	
+
+					<p class = "w3-center">
+						<a href = "https://docs.google.com/spreadsheets/u/1/d/1RqoXASBKhOZx82WT_fLKywPMHFKG-_7Bh3vj8beSlnQ/edit" target = "_blank" class = "link">
+						Systematic Bullshit Approach to Bow Braver’s PP Efficiency Assessment.</a>
+						<br>
+						And please, do make a copy of it. Sorry for blocking the edit since I have to recheck it sometimes.
+					</p>
+
+					<p class = "w3-justify">
+						It runs on some arbitrary numbers and threshold by judging from how well you can run the 8 Penetrate Arrows combo while Rapid Fire is active with various bullshit heuristics and logic I made up to support them.
+					</p>
+					
+					<p class = "w3-justify">
+					One factual thing about it is that Bow Charge Bonus (-5 PP for chargeable PA) effectively increases your PP Reduction! 
+					<b>Therefore, you rarely need to go over 43% (50% net) and having at least 20-22% (~25% net) should be good enough. And of course, 250 PP to cover 
+					the default cost of the combo.</b> The class combination with easy access to Attack and Natural PP Recovery can get less Reduction as well, 
+					and that's why BrPh works for bow despite the lower damage multiplier while BrLu temporarily becomes a god at High Voltage stage.					
+					</p>
+					
+					<p class = "w3-justify">	
+						Besides, getting a bit more of PP from gears, often another 10-20 from your current setup also helps covering that fraction of PP you will find yourself in spamming the combo. There's so many ways to deal with PP problems as Bow Braver TODAY that the explanation here becomes... less relevant to a degree.
+						<br><br>
+						<b>The value stated above is often up to FOUR sources of PP Reduction from anywhere applicable</b>, mainly your Shifta Drink, weapon, and subclass. If you want to go beyond that, I strongly recommend using “multi-stats” SSA such as S1:Collaborator Liberator 2, S2:Heavenly Keeper 2 or S4: Radiant Response. It will make your gameplay much more enjoyable but sacrificing SSAs that give you damage can hurt you in the long run, both the number and your behavior toward the decision making of Banish Combos.
+					</p>						
+							
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_solutiontopp.png" style = "width:80%;"></image>
+						<p><b>Solution in ONE image</b></p>
+					</div>									
+					
+					<p class = "w3-justify">
+						A special mention here is Fluxio/Rinzer Rulutea that provides +100 PP when the buff is active. It can be treated as “bootleg substitute for 22% PP Reduction”. Be careful when using it as it can affect your perception toward the number and PP bar! That’s it. That’s all!
+					</p>						
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
+				</div>
+
+				<!-- Skill Tree jump point -->		
+				<div id = "atk-todamage">
+				
+					<h1 class="w3-text-green"><b>ATK to Damage</b></h1>				
+					
+					<button onclick="myAccFunc('atk-summary')" class="w3-button w3-light-grey w3-block w3-left-align w3-dark-grey" id="clickthis">Summary</button>					
+					<div id="atk-summary" class="w3-hide w3-border">
+					  <div class="w3-container">
+						<p class = "w3-justify">
+							Bullet Bow’s R-ATK is so damn high that the amount of R-ATK we need for damage difference can be higher than every other class. 
+							<br><br>
+							To keep it simple, the amount of R-ATK needed for 1% more damage can be as low as 45 R-ATK (or even lower than that) during the early EP1-3, and scale upward to 85 R-ATK (or more) in the end of EP6
+							<br><br>
+							Averaging it at 60 - 65 R-ATK for 1% damage remains a somewhat good approximation and for explaining numbers. And yes, generalization is never a good thing.
+						</p>
+					  </div>
+					</div>
+					
+					<p class = "w3-justify">
+						Well, the madlad has done it (and I’m a month late to realize that). Your resident Community Advisor Exa has had 
+						enough of your questions regarding “how much ATK you need to get that 1% more damage so I can do the upgrades without hesitation”. 
+						We (actually he) hereby present you <a href = "https://blead.github.io/pso2percent/" class = "link" target = "_blank">“The Website”.</a>
+					</p>
+					
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_atkexample.png" style = "width:80%;"></image>
+						<p>Using Arnia’s current gear in EP6, getting ~87 R-ATK for 1% damage is extremely expensive, to the point that affixing for HP and PP is better. But hey, with the right amount of money and dedication, we can get everything. I don’t have it...</p>
+					</div>						
+
+					<p class = "w3-justify">
+						Think about it, Lightweaver Cras Archer, possibly the best bullet bow of EP6, has a staggering 3167 R-ATK. It’s pretty much the reason why getting a better bow with higher R-ATK takes priority over units affixing and upgrading. I mean, upgrading your units is inevitable, but the damage difference is way more noticeable after you have switched to the better weapon.
+						<br><br>
+						Take your time to read about the specifications about each input field and see how much ATK you will need to get them.
+						I feel bad sucking at math, but that’s that. <b>Also, I will assume the average of 60 R-ATK to explain how other sources 
+						of attack boost can influence your damage.</b>
+					</p>					
+
+					<table class="w3-table-all w3-striped w3-border">
+						<tr>
+							<th>Sources</th>
+							<th>Not-so-accurate, expected Increase</th>							
+						</tr>
+						<tr> <!-- you gonna have a field day with CSS LMAO-->
+							<td style = "width:48%; padding:32px 32px;">S5: Anthesis Cultivation</td>
+							<td style = "padding:32px 32px;">You can expect at least 1% damage increases per 60 extra attack stat you would gain. 
+							<b>Therefore, make sure that you weapons have enough affix slots where you can get at least 200 attack stats from it.(3% or more)</b></td>
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:32px 32px;">Stat Up in Class Skill Tree</td>
+							<td style = "padding:32px 32px;">Shooting Up (1) should give around a 1% damage increase. (2) would be 1.5% and (3) would be 2%.</td>
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:32px 32px;">Unit SSA (S6, S7, S8)</td>
+							<td style = "padding:32px 32px;"><b>S7:R-ATK UP 2 and S7:Attack Up 2 should gives around 1% damage increase to the corresponding attack type.</b> 
+							For other SSA, you need to combine them, such as S6 and S8 for the same increment.
+							Other SSAs can indirectly increase the damage uptime, such as S7:Glowing Grace or S8:Sky Dance’s Boon.</td>
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:32px 32px;">Phrase Weak and Phrase Decay (2% and 5%)</td>
+							<td style = "padding:32px 32px;">It can be considered as ~60 and ~100 additional R-ATK to your weapon. The results come from considering the situation where either can apply. (2 for Phrase Weak and 3 for Phrase Decay). I don’t recommend stacking them.</td>
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:32px 32px;">Timed Ability Bonus</td>
+							<td style = "padding:32px 32px;">Every +60 you can get while in a specific location is at least 1% increase to your damage output.</td>
+						</tr>
+						<tr>
+							<td style = "width:48%; padding:32px 32px;">Flat Attack Buff (Skill and Food)</td>
+							<td style = "padding:32px 32px;">
+								Such as:
+								<ul>
+									<li><b>Maxed Rapid Shoot Up 1 & 2 gives you ~8% damage alongside other related buffs.</b></li>
+									<li>Ration w/ R-ATK increases your damage by ~0.5%.</li>
+									<li>Meat Stir-fried gives you a ~1.6% damage increase.</li>									
+								<ul>
+							</td>
+						</tr>			
+					</table>				
+					
+					<p class = "w3-justify">
+						Affixing for damage and PP is still the thing that you should do. However, put in some HP in your ability/augment planning as well. Considering that various abilities/augments that come in EP6 now have HP and some PP stick to it, you can always drop some damage to keep yourself alive. Hence, staying longer to do more damage with less fear of dying.
+					</p>						
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
+				</div>	
+
+				<!-- Skill Tree jump point -->		
+				<div id = "hybrid-braver">
+				
+					<h1 class="w3-text-green"><b>Hybrid Braver</b></h1>				
+					<!-- Sample Text -->
+					<p class = "w3-justify">
+						After seeing a JP Bow Braver obtain the Forever Loner title from Endless Quest: Memories Beyond Solo, we can all agree that Braver is always viable with either bow or katana. It’s more of my suggestions for those that want to have options: what should you do?
+					</p>
+					<br>
+					<p class = "w3-justify">
+						<h3><b>Know thyself, know thy weapons.</b></h3>
+						I believe that you have read through Ahri’s guide and (maybe not) my guide already. Despite having entirely different mechanics, 
+						stat scaling and approach to combat, <b>both weapons are created to cover the weakness of each other.</b> 
+						However, a very proficient Braver always finds a workaround, and you can see them in many YouTube videos.
+					</p>
+					
+					<table class="w3-table-all w3-striped w3-border">
+						<tr>
+							<th class = "w3-green" style = "width:25%;">Topics</th>
+							<th class = "w3-red" style = "width:25%;">Bow</th>							
+							<th class = "w3-red" style = "width:25%;">Katana</th>							
+						</tr>
+						<tr>
+							<td>Damage rotation</td>
+							<td>Banish Combo(Barrage , Precision, and adjust-on-the-fly)</td>
+							<td>Double-PA Loop(PA-only or with Normals)</td>
+						</tr>
+						<tr>
+							<td>Execution Speed</td>
+							<td>Slow to somewhat fast</td>
+							<td>Very Fast</td>
+						</tr>
+						<tr>
+							<td>PP Consumption</td>
+							<td>Varied</td>
+							<td>Medium to low</td>
+						</tr>
+						<tr>
+							<td>Attack Reach</td>
+							<td>Any distance; prefer medium</td>
+							<td>Close - medium</td>
+						</tr>
+						<tr>
+							<td>Attack Type</td>
+							<td>Range</td>
+							<td>Strike/Melee</td>
+						</tr>
+						<tr>
+							<td>Unique Mechanics</td>
+							<td>Chargeable and nonchargeable Photon Arts</td>
+							<td>Counters and Katana Gear/Focus</td>
+						</tr>					
+						<tr>
+							<td>Single Target</td>
+							<td>Extremely Good</td>
+							<td>Good</td>
+						</tr>						
+						<tr>
+							<td>AoE Capability</td>
+							<td>Mediocre</td>
+							<td>Very Good</td>
+						</tr>
+						<tr>
+							<td>At its peak when...</td>
+							<td>Rapid Shoot is active and having high PP left</td>
+							<td>Counters, Katana Combat, Gear released</td>
+						</tr>	
+						<tr>
+							<td>At its bottom when...</td>
+							<td>Rapid Shoot is on cooldown and running out of PP</td>
+							<td>Enemies are far from reach and empty Gear.</td>
+						</tr>							
+						
+					</table>					
+					
+					<p class = "w3-justify">
+						I may have omitted a lot of things here, but whatever. Instead of finding the ways to counteract the lows of either weapon, you just switch to another weapon! Note that the weapon that you have chosen since the first hours of playing Braver can cause some hesitation on when to actually use the other, which brings to the next point.
+					</p>
+					
+					<br>
+					<p class = "w3-justify">
+						<h3><b>Just switch when the other would outperform.</b></h3>
+						When it comes to clearing a large group of enemies, Katana is probably the winner here. Most of katana’s AoE attacks originate from your character, not point-and-shoot like the bullet bow, unless you are sniping them from afar that rushing to the target is not the best option. You can get creative, to be honest. However, when it comes to a single target, especially bosses, the priorities are...
+						<ul class="w3-ul">
+							<li>1) If Penetrate Arrow can hit that enemy at least twice and your Rapid Shoot is up, just use Bow.</li>
+							<li>2) If you can perform Katana Counters at least once or twice against an enemy in a short amount of time, or your Rapid Shoot is on the cooldown, just use Katana.</li>
+							<li>3) Otherwise, switch the weapon based on how comfortable you are, distance between you and the target, and whether it has an attack resistance mechanic or not.</li>							
+						</ul>
+						<br>
+						I’m going to take the numbers of the common Katana rotation from Ahri’s guide and show how well Katana can perform. I’m also excluding obvious multipliers from skills, Katana Gear released state buff and such to make it somewhat fair and less of a hassle.
+					</p>
+					
+					<fancy-tabs>
+						<button slot="title" selected>Katana</button>
+						<section>
+							<table class="w3-table-all w3-striped w3-centered">
+								<tr>
+									<th class = "w3-green" style = "width:30%;">Photon Arts</th>
+									<th class = "w3-red">PA Power w/ Gear</th>
+									<th class = "w3-red">Frames Taken</th>							
+									<th class = "w3-red">PP Cost</th>							
+								</tr>
+								<tr>
+									<td>Sakura-endo T0<br>[Zero Cherry Blossom Finale]</td>
+									<td>1932*</td>
+									<td>52 F</td>
+									<td>25*</td>
+								</tr>
+								<tr>
+									<td>Gekka-zakuro<br>[Lunar Flourishing]</td>
+									<td>1155</td>
+									<td>22 F</td>
+									<td>12</td>
+								</tr>
+								<tr>
+									<td>Max Gear Counter<br>(Normal + Edge + Skills)</td>
+									<td>5390</td>
+									<td>~42 F</td>
+									<td>0<br>(Recovers 15 PP)</td>
+								</tr>								
+							</table>
+							<p class = "w3-left">
+								*Max Craft Sakura-endo T0. And yes, I omitted Hatou Rindou.
+							</p>							
+						</section>
+						
+						<button slot="title">Bow</button>
+						<section>
+							<table class="w3-table-all w3-striped w3-border w3-centered">
+								<tr>
+									<th class = "w3-green" style = "width:30%;">Photon Arts</th>
+									<th class = "w3-red">PA Power</th>
+									<th class = "w3-red">Frames Taken</th>							
+									<th class = "w3-red">PP Cost</th>							
+								</tr>
+								<tr>
+									<td>Banishing Arrow</td>
+									<td>100<br>(1.65x of damage dealt)</td>
+									<td>30 F</td>
+									<td>45**</td>
+								</tr>
+								<tr>
+									<td>Uncharged Penetrate Arrow</td>
+									<td>535<br>(1070 for double hit)</td>
+									<td>24 F</td>
+									<td>25**</td>
+								</tr>
+								<tr>
+									<td>Uncharged Master Shot</td>
+									<td>684</td>
+									<td>24 F</td>
+									<td>20**</td>
+								</tr>
+								<tr>
+									<td>Final Nemesis</td>
+									<td>3846</td>
+									<td>190 F</td>
+									<td>30</td>
+								</tr>
+								<tr>
+									<td>Chase Arrow<br>[Chaser Arrow]</td>
+									<td>661</td>
+									<td>40 F (Stocked can be 0 F)</td>
+									<td>15</td>
+								</tr>								
+							</table>
+							<p class = "w3-left">
+								*Not including Torrential Arrow and Auxiliary Arrow. The first can be hard to use regularly and the second is just too complicated and fluctuates based on the combo.
+								<br>
+								**Affected by Bullet Bow Charge Bonus
+							</p>		
+						</section>						
+
+					</fancy-tabs>
+					
+					<p class = "w3-justify">
+						Assuming that Bow and Katana users can do their usual things, the chart for comparison is going to look like the image below. It’s intriguing.
+					</p>
+
+					<div class = "w3-center">
+						<image src="/img/pics/offtopics_rotationcompare.png" style = "width:100%;"></image>
+					</div>	
+					
+					<p class = "w3-justify">
+						If you combine three Chase Arrows with Final Nemesis and six Penetrate Arrows, you are looking at a 270 PP combo with 20,210 potency, but takes forever to execute. Despite all of the changes that have occurred over years, bullet bow’s PP Consumption remains a depressing issue.
+						<br><br>
+						Looking at the brighter side, there are a few instances that let you abuse Counters, such as fighting against Omega Masquerade and Siva. Therefore, Katana is weaker when those situations don't happen, unless you create one by getting closer.
+						<br><br>
+						Speaking of gearing, the trend of affixes during EP6 have shown that we are leaning toward “compound affixes”, 
+						the ones that give all attack stats and maybe PP, HP or DEF. Lots of units now give similar stat as well, 
+						so embracing the hybrid playstyle has never been more viable than ever.
+						<b>Just remember that Hybrid is always optional, not mandatory.</b> 
+						Playing two weapons means you are sacrificing the specialty of each weapon for versatility...
+						<br><br>
+						...meaning that you might not be able to reach the full potential of either since they both can do literally the same thing these days.						
+					</p>
+					
+				</div>		
+			</div>
+		</div>		
+		<!-- End of Content---->	
+
+		<!--Footer Part-->
+		<footer-component></footer-component>		
+		
+		<!-- Function scripts that require late load.-->
+		<script src = "/js/topScroll.js"></script>
+		<script src = "/js/mytabs.js"></script>
+		<script src = "/js/carousel.js"></script>
+	</body>
+</html>

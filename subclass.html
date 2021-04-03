@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<!-- Meta Shits -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		
+		<title> Subclass | Bow Braver's Thesis </title>	
+
+		<!-- Function scripts that require early load.-->	
+		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
+		<script src = "/js/addFoot.js"></script>		
+		<script src = "/js/basic.js"></script>		
+		
+	</head>
+	
+	<body>	
+	
+		<button onclick="topFunction()" id="topButton">Top</button>
+		
+		<!-- NAV Bar + Main img -->
+		<header-component></header-component>		
+	
+		<!-- C O N T E N T Here -->
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
+
+			
+			<div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="intro">
+				<div class= "w3-center">					
+					<h1 class="w3-xxxlarge w3-text-green"><b>Subclass</b></h1>
+					<p class="w3-opacity"><i>The Other Class that Helps You</i></p>			
+				</div>		
+				
+				<!-- Skill Tree jump point -->		
+				<div id = "viable-ones">				
+					<h1 class="w3-text-green"><b>Viable Ones</b></h1>
+					<p class = "w3-center">
+						There are SIX viable subclasses for Bow Braver, which are as followed:
+					</p>	
+
+					<table class="w3-table-all w3-striped w3-border w3-card-4">
+						<tr>
+							<th class="w3-center" style = "width:48%;">Old-Meta Subclass</th>
+							<th class="w3-center">New-Meta Subclass</th>							
+						</tr>
+						<tr>
+							<td class="w3-center" style = "width:48%;">Hunter, Ranger, and Summoner</td>
+							<td class="w3-center">Phantom, Etoile, and Luster</td>
+						</tr>
+					</table>
+					
+					<br>
+					
+					<p class = "w3-justify">
+						These classes offer useful tools and skills that enhance your gameplay, either reinforcing the strength of Bow Braver or fixing its problem. Hunter, Ranger, and Summoner subclasses will help you learn the different styles of Bow Braver while being relevant later on. For Phantom and Etoile, consider them to be a direct improvement. For Luster, I personally think of it to be the “fusion” of Phantom and Etoile.
+					</p>
+					
+					<div class = "w3-center">
+						<image src="/img/pics/subclass_overview.png" style = "width:80%;">
+						<p><b>What you can expect from each subclass.</b></p>
+					</div>
+					<p class = "w3-center">
+						Check each tab to see the details about each class combination.
+					</p>	
+					
+					
+					<fancy-tabs>
+						<button slot="title" selected>
+							<img src = "/img/icons/classes/hunter.png" id = "inline-img"><br>Hunter
+						</button>
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								Hunter subclass (BrHu) is simple, flexible, and universal. It will carry you from the first day of playing PSO2 until you reach the point where Hunter’s defense turns into a burden. There will be times that BrHu will betray you and your guts.
+							</p>
+						
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>	
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/hunter/fury_stance.png"></span>Fury Stance 
+												grants you unconditional damage multipliers, up to ~1.6x. That value includes a bonus from performing Just Attack.</li>
+											<li>
+												Very high survivability from 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/hunter/automate_halfline.png"></span>Automate Halfline and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/hunter/iron_will.png"></span>Iron Will and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/hunter/massive_hunter.png"></span>Massive Hunter</li>
+											<li>
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/hunter/fury_critical.png"></span>
+												Fury Critical allows capping your Critical Strike Chance when combining with other items and skills.</li>
+											<li>You can play extremely aggressive with Hunter as the subclass.</li>
+											<li>You can use the same skill tree for any other classes that you want to have Hunter as its subclass.</li>
+										</ul>
+									
+									</td>
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>Hunter’s defense is a double-edged sword. You will be less likely to dodge attacks, or even forget that you can die.</li>
+											<li>Defensive skills can't solve everything. Iron Will is inconsistent and Automate Halfline will drain your -mate items. It’s just a mate-ter of time.</li>
+											<li>You cannot use Techniques.</li>
+											<li>Etoile subclass seems to provide more than Hunter later.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+							
+							<br>
+							<h2>The Build</h2>
+							
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_huntertree.png" style = "width:80%;">
+								<p><b>A example of possible Hunter Skill Trees</b></p>
+							</div>
+							
+							<p class = "w3-left">
+								As a subclass, we are taking everything that improves Just Attack usage alongside Fury Stance for unconditional damage boost. The points spent in Fury Critical will depend on whether you want to save skill points on Braver and Hunter, or making the tree to be compatible for other classes.							
+								<br><br>
+								For the defensive options from Hunter, we choose Automate Halfline, Flash Guards, and Massive Hunter for the sake of consistency. 75% chance of cheating death from Iron Will can backfire in various situations, and since we attack things from range, it also counts as a form of defensive measure. However, some can shift the points from Flash Tech Guard and grab both Iron Will (also Never Give Up) and Automate Halfline for maximum safet								
+								<br><br>
+								Therefore, pick your poison. If you plan on using a katana to a degree, taking a point in Healing Guard works wonders. Grab High Level Bonus Hu whenever possible, and you can neglect the rest of the skill tree.								
+							</p>						
+						</section>
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/ranger.png" id = "inline-img"><br>Ranger
+						</button>
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								Ranger subclass will let you experience the DAMAGE, but in exchange for enemy knowledge, situational awareness, and precision. In the right situation, along with support from the others, BrRa can be a powerhouse. Otherwise, the performance consistency fluctuates, going so low it turns into a deadweight.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/weak_hit_advance.png"></span>Weak Hit Advance and either 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/standing_snipe.png"></span>Standing or 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/moving_snipe.png"></span>Moving Snipe grants you 
+												a massive amount of range damage multipliers, up to ~1.85x. 
+												<span class = "ic-mid" id = "inline-img"><b>The value here is the average of the best and the worst cases of those skills.</b></li>
+											<li>Access to utility skills, which are 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/gravity_bomb.png"></span>Gravity Bomb, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/stun_grenade.png"></span>Stun Grenade, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/upper_trap.png"></span>Upper Trap, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/poison_trap.png"></span>Poison Trap 
+												for PP Recovery and general usage.
+											</li>
+											<li>
+												You also get 125 R-ATK from 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/shooting_up.png"></span>Shooting UP 1 & 2.</li>
+											<li>Access to 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/weak_bullet.png"></span>Weak Bullet and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/ranger/power_bullet.png"></span>Power Bullet for extra buffs.</li>
+											<li>BrRa can also help you cruise through the lower difficulties content while maintaining respectable damage in higher ones.</li>
+										</ul>
+									</td>
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>The class lacks skills that increase Critical Strike Chance.</li>
+											<li>Ranger does not provide any defensive skills.</li>
+											<li>It can be extremely challenging to play BrRa effectively these days due to enemy design and behavior.</li>
+											<li>Weak Bullet utilization can heavily interfere with your gameplay. Use it with caution, especially after having Braver Combination.</li>
+											<li>You cannot use Techniques.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+
+							<br>
+							<h2>The Build</h2>
+
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_rangertree.png" style = "width:80%;">
+								<p><b>A stable Ranger subclass Skill Trees</b></p>
+							</div>
+
+							<p class = "w3-left">
+								As a subclass, grab every single skill that provides damage, prioritizing Weak Hit Advances, Standing Snipes, and Moving Snipe first. When the necessary skills are taken, the skill tree is very straightforward. Besides, the remaining points should be enough to grab things restricted for using main-class Ranger.
+								<br><br>
+								Grenades will act as a portable PP recovery tool on 15-seconds cooldown, while traps become the extras gadget against a variety of bosses, especially any that are weak to poison status effect. Speaking of bullets, we only need a single point in Weak Bullet to trigger Power Bullet buff, or for periodic bursts. There will be times that the Rangers are absent from your raid party, and BrRa can act as a target painter. Regardless of your approach to it, keep in mind that bullet utilization will interfere with Braver Combination.
+								<br><br>
+								Grab High Level Bonus Ra when you can, then fill up the points in stats and other skills such as Killing Bonus and First Hit. Investing in Dive Roll skills are recommended for those that really want to use Assault Rifle. Ask yourself.
+							</p>						
+						</section>
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/summoner.png" id = "inline-img"><br>Summoner
+						</button>		
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								Summoner subclass has proven to be a decent subclass for Bow Braver, providing both offensive and defensive skills to fight against everything the game wants to throw at you. As one would (never) say “within all the good things lies at least one bad thing”, BrSu is the greatest source of frustration that has ever existed in PSO2.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/point_assist.png"></span>Point Assist, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/all_attack_bonus.png"></span>All Attack Bonus, and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/pet_element_weak_hit.png"></span>Pet Element Weak Hit grants you up to ~1.75x damage multipliers… against a single target.
+											</li>
+											<li>Tons of stats from the skill tree. 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/pp_up.png"></span>+15 PP, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/all_def_and_dex_up.png"></span>+200 All-DEF	, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/all_atk_up.png"></span>+200 All-Attack and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/hp_up.png"></span>+120 HP. 
+											</li>
+											<li><span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/summoner/hp_restorate.png"></span>HP Restorate, at max level, can keep you alive through any encounters.</li>
+											<li>You have access to Techniques and the supportive ones are very useful, such as Shifta, Resta, and Anti.</li>
+										</ul>
+									</td>
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>The class lacks skills that increase Critical Strike Chance.</li>
+											<li>Having to use Techniques can be overwhelming and may cause problems in PP management, and can get you killed if used at the wrong moment.</li>
+											<li>Point Assist can be extremely annoying to use, even dubbed as cancerous by Summoner players themselves. You have to keep track of its duration and reapply it until the enemy dies. It’s even worse against enemies with breakable parts.</li>
+											<li>Phantom subclass proves to be better later on.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+
+							<br>
+							<h2>The Build</h2>
+
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_treesummoner.png" style = "width:80%;">
+								<p><b>A example of generic Summoner subclass Skill Tree</b></p>
+							</div>
+
+							<p class = "w3-left">
+								Because we can never use pets when having Summoner as a subclass, anything that gives stats and damage becomes the point sinkers for us. The recommendation is that you should grab the skills that increase your damage output first before working on the rest. All Attack Bonuses, All Attack Ups, Point Assist, Support Fire, and Pet Element Weak Hit (yes, it applies to you but at half the effect compared to pets) are the top priority.
+								<br><br>
+								Feel free to decide what skills to take with the remaining seven points. PB Advance and Quick Recovery may become useful later, and never, ever forget to take High Level Su Bonus whenever possible.
+							</p>						
+						</section>
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/phantom.png" id = "inline-img"><br>Phantom
+						</button>
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								“The better Summoner subclass”, said by someone I’ve known. By making some sacrifices on firepower and sturdiness, BrPh improves the mobility and handling of Bow Braver, while giving extra benefits from stacking your max PP. Despite its viability in today’s content, Phantom has never meant to be the subclass that works well in general for bow braver since the start.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>Gain access to techniques, and use it even faster due to  
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/sprint_tech_charge.png"></span>Sprint Tech Charge and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/tech_short_charge.png"></span>Tech Short Charge.
+											</li>
+											<li>Because Bow Braver is quite a PP-intensive class, Phantom helps us greatly with PP scaling/efficiency skills: 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/photon_stream.png"></span>Photon Stream, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/critical_stream.png"></span>Critical Stream, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/pp_high_up.png"></span>+20 PP, and  
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/phantom_pp_restorate.png"></span>Phantom PP Restorate.
+											</li>
+											<li>With high enough PP, you will have TWO Stances worth of Critical Strike Chance added from Critical Stream, allowing you to permanently cap your Critical Strike Chance when combined with other sources in the game.</li>
+											<li><span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/phantom/phantom_mag.png"></span>Phantom Mag exists. The rate is 1:1, so you will get 200 additional R-ATK for investing in DEX MAG.</li>
+											<li>BrPh also allows (better) Hybrid playstyle with Katana. In fact, it works better for Katana Braver!</li>
+										</ul>
+									</td>
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>This class gives quite a low range damage multiplier, totaling at ~1.57x. Expect to see everything die slower, forcing you to play faster, abuse the PP support, and even have to use a katana.</li>
+											<li>Having Techniques added to your game can be overwhelming. In the Phantom case, you may have to rely on it even more.</li>
+											<li>Be prepared to spend A LOT to make minor adjustments to the point that you start regretting, especially for pure Bow Braver. Better spend them on BrEt or even BrLu!</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+
+							<br>
+							<h2>The Build</h2>
+
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_treephantom.png" style = "width:80%;">
+								<p><b>The Phantom-as-subclass Skill Tree</b></p>
+							</div>
+
+							<p class = "w3-left">
+								You only need 47 points for Phantom subclass skill tree, and you are reading the sentence correctly. The majority of skills cater toward the three weapons of Phantom and its core mechanics: katana, assault rifle, rod, and Mark. It is recommended that you should check the Phantom guides elsewhere to see what skills must be prioritized first.
+								<br><br>
+								Photon Stream and Critical Stream converts a percentage of your PP into additional bonuses. Since we have maxed out both skills, remember the following maths:
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border">
+								<tr>
+									<th class = "w3-blue w3-center">Photon Stream</th>
+									<th class = "w3-teal w3-center">Critical Stream</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:32px 32px;">
+										Multiply the value of your PP with 0.05 to get the damage bonus. 200 PP should give you 10% damage, hitting the cap instantly.
+									</td>
+									<td>
+										<ul>
+											<li>Multiply the value of your PP with 0.2 to get the additional Critical Strike Chance. 200 PP should give you 40%, while 250 PP will be 50%, equivalent to two stances of main and subclass.</li>
+											<li>Multiply the value of your PP with 0.03 to get the Critical Strike Damage. It caps at 5%, and having at least 200 PP guarantees it.</li>
+										</ul>										
+									</td>
+								</tr>
+							</table>							
+							<p>
+								Quick note: Step Roll Advance gives the same effect as level 4 Step Advance. Therefore, don’t put points in that skill on your Braver tree							
+							</p>							
+							
+						</section>		
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/etoile.png" id = "inline-img"><br>Etoile
+						</button>						
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								Etoile subclass is often considered to be the straight upgrade from BrHu, and the go-to for Bow Braver. Consistent defense and innate PP Reduction are what Bow Braver has been seeking for the whole time! However, several skills of Etoile demands more awareness and can lead to some… unintended gameplay.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>Despite having a low range multiplier, other conditional multipliers of Etoile cause the value to start roughly at ~1.59x.</li>
+											<li>If Hunter subclass makes you tanky, the Etoile subclass turns you into a fucking siege tank due to 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/damage_balancer.png"></span>Damage Balancer, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/standing_massive.png"></span>Standing Massive, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/etoile_boost.png"></span>Etoile Boost, and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/etoile_hp_restorate.png"></span>Etoile HP Restorate.
+											</li>
+											<li>Bullet Bow playstyle can greatly benefit from 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/same_arts_pp_save.png"></span>Same Arts PP Save and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/tech_arts_count_bonus.png"></span>Tech Arts Count Bonus, 
+												either with Banish Combo or just using PAs in general: reduced PP cost and increased damage for PA variation.
+											</li>
+											<li>Apart from that, you get 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/pp_up.png"></span>+10 PP, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/hp_up.png"></span>+50 HP, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/all_def_and_dex_up.png"></span>+50 DEF/DEX and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/etoile/all_atk_up.png"></span>+50 All-ATK. Good stuff.
+											</li>
+										</ul>
+									</td>
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>Same Arts PP Save and Teach Arts Count Bonus can sway your damage output and wreck your PP management strategy.</li>
+											<li>You can't use Technique. Supportive ones are as good as ever, yet its absence may let you focus more on bow gameplay.</li>
+											<li>Damage Balancer will spoil you really hard. Beware.</li>
+											<li>Although Flat Attack Bonus allows a very whacky bow playstyle and setup by neglecting Just Attack in favor of faster execution speed, it can have a great impact on your behaviour later. </li>
+											<li>If you want to main Etoile later, expect yourself to buy an additional skill tree for it as we are dropping lots of points from Main Class skills.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+
+							<br>
+							<h2>The Build</h2>
+
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_treeetoile.png" style = "width:80%;">
+								<p><b>A example of possible Etoile-as-subclass Skill Trees</b></p>
+							</div>
+
+							<p class = "w3-left">
+								As a subclass, focus on taking every skill that boost your damage output first and grab the defensive skills afterward. Flat Attack Bonus greatly improves your PA usage, alongside with Same Arts PP Save and Tech Arts Count Bonus. Stats skills come last, and take All Attack Up and PP Up over the rest first.
+								<br><br>
+								The biggest question of BrEt lies in the level of Same Arts PP Save: how many points does one need to invest in? In general Bow Braver gameplay, you only need five points, so that it takes less number of PA to hit the max value of PP Reduction. Only cap Same Arts PP Save if you are certain that you can utilize it properly. The table below - originated from my spreadsheet - will show you roughly how much reduction Etoile can give you as Bow Braver.
+							</p>						
+						
+							<table class="w3-table-all w3-striped w3-border">
+								<tr>
+									<th>Level 1</th>
+									<th>Level 2</th>
+									<th>Level 3</th>
+									<th>Level 4</th>
+									<th>Level 5</th>
+									<th>Level 6</th>
+								</tr>
+								<tr>
+									<th>12% Less</th>
+									<th>16% Less</th>
+									<th>22% Less</th>
+									<th>24% Less</th>
+									<th>25% Less</th>
+									<th>~21% Less</th>
+								</tr>
+							</table>						
+						
+							<p class = "w3-left">
+								Feel free to spare some points for Etoile HP Restorate should you prefer, and grab High Level Bonus ET when you can. Oh, and a quick note: Step Roll Advance gives the same effect as level 4 Step Advance skill. Therefore, do not put points in Step Advance on your Braver tree.
+							</p>
+						
+						</section>	
+
+						<button slot="title">
+							<img src = "/img/icons/classes/luster.png" id = "inline-img"><br>Luster
+						</button>
+						<section>
+							<h2>Overview</h2>
+							<p class = "w3-left">
+								Luster subclass breaks the convention by introducing “Luster Voltage”, the most overloaded skill ever in PSO2. Besides a plethora of buffs that the Voltage provides, BrLu has access to a variety of skills that greatly improve the gameplay of Bow Braver. Alas, the fixation on Luster Voltage inevitably becomes the downfall of this class combination.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-card-4">
+								<tr>
+									<th class = "w3-green">The Goods</th>
+									<th class = "w3-red">The Bads</th>							
+								</tr>
+								<tr>
+									<td style = "width:48%; padding:0 32px;">
+										<ul>
+											<li>Similar to Phantom, Luster provides ~1.57x damage multiplier at start.</li>
+											<li>Access to 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/luster_voltage.png"></span>
+												Luster Voltage, the most overloaded skill ever existed in PSO2 with only one condition: keep hitting your enemy. Increased Damage, Critical Strike Chance, 
+												Damage Mitigation, HP/PP Recovery, Cooldown Reduction; 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/voltage_addon.png"></span>you name it.</li>
+											<li>Tons of beneficial skills that shouldn’t have existed, such as 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/killing_restorate.png"></span>Killing Restorate, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/complete_rest.png"></span>Complete Rest, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/amplified_assist.png"></span>Amplified Assist , and 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/tech_arts_high_pp_save.png"></span>
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/tech_arts_ja_multi_bonus.png"></span>
+												TAJA ones.
+											</li>
+											<li>Bunch of stats: 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/hp_up.png"></span>HP Up, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/pp_up.png"></span>PP Up, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/all_atk_up.png"></span>ATK Up, 
+												<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/luster/all_def_and_dex_up.png"></span>and DEF Up.
+											</li>
+											<li>Gunslash is now a viable backup weapon after being dead for 8 years. If a bow and a katana are not enough, then why not a gunslash too?</li>
+										</ul>
+									</td >
+									<td style = "padding:0 32px;">
+										<ul>
+											<li>Because everything revolves around Luster Voltage, when it is below 500, BrLu feels lackluster and miserable to play. Better make yourself acquainted with seeing Voltage reset every now and then!</li>
+											<li>Tech Arts JA Multi Bonus (PA cycling), Tech Arts PP High Save (3rd and 4th PA order), and Voltage accumulation will heavily influence your playstyle. Be warned!</li>
+											<li>You might need another skill tree for main-class Luster because we drop tons of points from Styles.</li>
+											<li>You cannot use Technique, and that's... ok?</li>
+											<li>Despite being capable of using Gunslash, you won’t even be able to use it effectively, to be honest. You’d better play Luster if you really, really, really fancy it.</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+
+							<br>
+							<h2>The Build</h2>
+
+							<div class = "w3-center">
+								<image src="/img/pics/subclass_treeluster.png" style = "width:80%;">
+								<p><b>A example of possible Luster-as-subclass Skill Trees</b></p>
+							</div>
+
+							<p class = "w3-left">
+								To make a Luster subclass skill tree, you may need to drop the points from Styles (Formel, Zandi, and Baran) and Lu Weapon Bonuses. We will be sinking tons of points in offensive and utility skills that Luster has, mainly All Attack Bonus Lu, Shifta Gauge Boost and Tech Arts PP High Save.
+								<br><br>
+								Adding to that, please take all the skills related to Luster Voltage, so we can get the most out of it. We can’t achieve the same accumulation speed as Luster or some other class combinations using Luster as sub. Speaking of the Voltage Bonus skill, It’s necessary to learn Shifta and Deband, preferably level 17, in order for the Voltage to buff you at every 100 points. Otherwise, it won’t activate. You also need to learn Anti, any level, for High Voltage (500+) to cleanse the status effect from your character. While in that state, you are also immune to most status effects except Stun.
+								<br><br>
+								Various skills are left behind for you to decide whether you want to max it or not. The example skill tree above should work just fine though. Don’t forget to grab High Level Bonus Lu once you have reached level 80+. Step Roll Advance gives the same effect as level 4 Step Advance skill so, do refrain from putting points in Step Advance on your Braver tree.	
+							</p>			
+
+							<br><br>
+							<h2>Gunslash Shenanigan</h2>
+							
+							<p class = "w3-left">
+								Luster has a unique skill called “Sub Luster GS Boost” which provides extra damage multipliers for both striking [melee] and shooting [range] damage done with Gunslash PA. Among those class combinations, BrLu has an impressive multiplier number, making the weapon somewhat viable.
+							</p>
+
+							<table class="w3-table-all w3-striped w3-border w3-centered">
+								<tr>
+									<th>Striking Multiplier: 190% (1.9x)</th>
+									<th>Shooting Multiplier: 185% (1.85x)</th>
+								</tr>
+							</table>							
+
+							<p class = "w3-left">
+								Even though your Gunslash can do things now, being a secondary or even tertiary weapon, BrLu is probably the worst contender for it. (or even deemed as a cursed “off-meta” option). Taking Gunslash out for quick slices or shots is fine, but making it the “last of all last” option because of your disdain toward bow (or katana) is probably not a good idea.
+								<br><br>
+								The “high power” aspect of Gunslash BrLu relies heavily on utilizing Weak [Precision] Stance. If the enemy doesn’t bring one out, then you are in a rough spot. Gunslash can hit real hard, and I can’t deny that. BUT, Braver skill tree caters Bow and Katana, boosting its performance with weapon skills and stance while giving you a small amount of defense. Gunslash barely gets anything besides the Stances and interferes with the Braver Combination effect as well.
+								<br><br>
+								Speaking of which, other class combinations can do you better. They are 
+								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/hulu.png"></span>HuLu with its extreme defenses, 
+								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/filu.png"></span>FiLu with massive strike-boosting skills and Limit Break [Overload] usage, and the generally accepted 
+								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/telu.png"></span>TeLu with access to enhanced supportive Techniques alongside the goodies of Luster. Adding to that, Gunslash gameplay is often “striking-oriented”, where most of Gunslash PA works well in close quarter combat, despite some having a split or pure range damage scaling. You will need to learn about their properties to see which PA should be chained together for optimal rotation.
+								<br><br>
+								Today, both of Braver weapons perform exceptionally for Braver these days, and many video examples out there have proved it. While no one can stop you from using it, do expect Gunslash BrLu to be inferior in practice compared to other options. Again, no one’s gonna force you to follow the “meta”. You may even find success with it.
+							</p>
+							
+						</section>							
+					</fancy-tabs>
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">					
+				</div>		
+
+				<div id = "subs-toavoid">				
+					<h1 class="w3-text-green"><b>Subs to Avoid</b></h1>
+					<p class = "w3-justify">
+						For the rest, they are usable but they either have difficult conditions to fulfill as Bow Braver or the skills are inferior to justify being viable today. The following combination worked in the past, and it is time to stop.
+						<br><br>
+						What? You are asking about NGS viability? This is the OG PSO2 though.
+					</p>					
+					
+					<fancy-tabs>
+						<button slot="title" selected>
+							<img src = "/img/icons/classes/fighter.png" id = "inline-img"><br>Fighter
+						</button>
+						<section>
+							<p class = "w3-left">
+								Fighters are famous for their absurd modifiers and stats numbers that significantly boost their damage: the Slayers skills, the TAJA (Tech Art Just Attack) skills, and the stances. Adding to that, it has a bunch of striking damage boosts. However, we whack our enemies with the arrows, not the bow. And, to get the most of Fighter, you are dropping your health to 50% or 25% for max bonuses, getting a good position to enable stances, and cycling Photon Arts. Hope that the lady of luck is on your side while you are surviving in higher difficulty. 
+								<br><br>
+								Most BrFi I used to see were short-lived to tell the tale unless they played Katana Braver… or FiBr with the dedicated supporters.
+							</p>
+						</section>
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/force.png" id = "inline-img"><img src = "/img/icons/classes/techer.png" id = "inline-img"><br>
+							Force/Techer
+						</button>
+						<section>
+							<p class = "w3-left">
+								I believe that it was TeBr and FoBr instead. One of my veteran friends who have played PSO2 JP server since Day 1 told me about it. In summary...
+							</p>
+							<ul class = "w3-ul">
+								<li>During the early release of Braver, the bullet bow was considered to be a “garbage tier weapon”: awful support skills and ousted by katana.</li>
+								<li>Instead of following the typical Banish Combo Rotation and firing arrows, old day bow players were playing “Mage-bow”: using Rapid Shoot to recover PP while slinging Techniques. For example, dumping seven Ilbartas into a Banishing Arrow, follow with Folmegian. It was pretty broken back then, and the PP usage was as high as today’s bow.</li>
+								<li>As a result, if I recall the story correctly, it’s the reason for the nerf where Banishing Arrow disappears whenever you switch to a different bow. Also, Compound Technique cooldown was adjusted shortly after.</li>
+							</ul>
+							
+							<p class = "w3-left">
+								After a couple changes to the bow skill tree over time and better weapons introduced, the class combination becomes obsolete. If I have to exacerbate, you get nothing from the Force and Techer. Please refrain from using either in most quests, except for leveling purposes.							
+							</p>							
+						</section>
+						
+						<button slot="title">
+						<img src = "/img/icons/classes/gunner.png" id = "inline-img"><br>Gunner
+						</button>		
+						<section>
+						
+							<p class = "w3-left">
+								Dubbed as the game-breaker, BrGu was one of the popular class combinations back in the old days of the PSO2 JP server. The ridiculous multiplier of Chain Finish and its interaction with bow attack rotation were responsible for the harshest adjustment to Bow Braver. Let me explain.
+							</p>
+							<ul class = "w3-ul">
+								<li>Chain Finish used to apply to every class, and a 100-counts Chain Trigger activation will cause your PA in the next three seconds to deal five times the regular damage. (2.0 x 2.5 from Chain Trigger and Chain Finish)</li>
+								<li>Banishing Arrow used to take 100% of the damage you have done, along with any modifier applicable to it. So, everything hits 10 times harder. That definitely doesn't sound broken... yeah...</li>
+								<li>Combining the two properties above, a platoon of BrGu can obliterate any raid boss in the game. It was a complete mess.</li>
+							</ul>
+							
+							<p class = "w3-left">
+							The tactic was effective, yet problematic to the game, which resulted in two adjustments. First, Chain Finish is main-class-exclusive, cutting the multiplier to half for any Gunner-as-subclass usage. Second, Banishing Arrow takes 50% of the damage you have done, has 2.5x PP cost (20 => 50), and takes JA and site multiplier to boost the power. Still, I cannot deny that Gunner skills do improve Bow Braver gameplay, but our combat range exceeds Gunner’s in most situations. Our Banish Combo can compete with Chain Trigger burst combo to a degree, so playing BrGu is detrimental rather than beneficial.
+							</p>						
+						
+						</section>
+						
+						<button slot="title">
+							<img src = "/img/icons/classes/bouncer.png" id = "inline-img"><br>Bouncer
+						</button>
+						<section>
+							<p class = "w3-left">
+								It should take a moment for you to realize that you get nothing from the Bouncer skills through a quick observation. It exists to support Dual Blades and Jet Boots combat. Despite being a hybrid weapon class similar to us, Bouncers tend to use both to keep their damage output optimal unless using certain class combinations, while Braver can choose one weapon and do fine. The field skills look promising, but you can use rings instead. The stance is reassuring, but our damage goes to the enemies’ weak point, and we utilize supportive techniques rather than the offensive ones. The MAG skills stack, but it doesn’t give you more R-ATK (RNG power)
+								<br><br>
+								Going BrBo is pretty much torturing your soul, and you will gravely regret many life decisions doing so. The Bouncer Master, Master of all Bouncers doesn’t approve this - AT ALL.								
+							</p>						
+						</section>
+					</fancy-tabs>
+					
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">					
+				</div>
+
+				<div id = "multipliers">				
+					<h1 class="w3-text-green"><b>Multipliers</b></h1>
+					
+					<p class = "w3-justify">
+						Here is the “rough mathematics” for the recommended subclasses: damage multiplier number applying to a single attack. Click here for the link to the spreadsheet where you can make a copy and adjust them.					
+					</p>
+					<div class = "w3-center">
+						<image src="/img/pics/subclass_multipliers.png" style = "width:80%;">
+						<p>
+							<a href = "https://docs.google.com/spreadsheets/d/1lLs4_4UpAPW-zhCMZDMh5OqWhnKx-d_HvN_lteAfKtQ/edit#gid=0" target = "_blank" class = "link">You wouldn't want to hit the spreadsheet, would you?</a>
+						</p>
+					</div>			
+					
+					<p class = "w3-justify">
+					What can you imply or learn from here?
+					</p>	
+					
+					<ul class = "w3-ul">
+						<li>1) Just Attack is so damn important in this game. You will deal significantly less damage NOT performing Just Attack for any attack or PA. First Art JA Addition is actually a free damage boost as long as you pace your PA usage. It is the thing you are doing every now and then. Please, be consistent with it, even going with BrEt.</li>
+						<li>2) The Initial setting for the table is the "ideal conditions" that you will find yourself doing so. For example, you can't always expect to hit a full health enemy for Ranger’s First Hit, unless you are fighting it alone and your MAG doesn't screw you first. Therefore, it's a no most of the time.
+							<br><br>	
+						You can see drastic changes if you tinker with those conditions. I'm not saying that the subclass is just shit from the number viewpoint alone. I'm saying that "you should do your best to get that 'ideal conditions' for max damage output.”</li>
+						<li>3) Chargeable PA is very strong by itself and is further enhanced through Stance Charge skill. Despite the damage, you just can't charge every attack. More about that in the Photon Art section.</li>					
+					</ul>
+					
+					<p class = "w3-justify">
+					In summary, at this date, I would say the following:
+					</p>	
+
+					<table class="w3-table-all w3-striped w3-border w3-centered">
+							<tr>
+								<th class = "w3-border">General Gameplay</th>
+								<th class = "w3-border">EQ Boss Hunting</th>							
+								<th>Solo/4-Man Quests</th>							
+							</tr>
+							<tr>
+								<td class = "w3-border">BrHu, BrPh, BrEt</td>
+								<td class = "w3-border">BrRa, BrSu, BrEt</td>
+								<td>BrHu, BrPh, BrEt</td>
+							</tr>
+						</table>
+
+					<p class = "w3-justify">
+						BrLu, while works fine in most contents, requires extended fights and weapon knowledge for Voltage accumulation to maximize its use. Therefore, take your time to think, and pick the one that works for you.
+					</p>	
+					
+					<div class = "w3-center">
+						<image src="/img/pics/subclass_themeta.png" style = "width:60%;">
+						<p>
+							The image describes the current days of Bow Braver just fine.
+							<br>
+							While BrPh and BrLu work, the easiest option is always BrEt.
+						</p>
+					</div>
+				<hr class="w3-round w3-center" style="width:100%; border:5px solid green">					
+				</div>			
+				
+				<div id = "non-brbow">				
+					<h1 class="w3-text-green"><b>Non-Br Bow Strat</b></h1>
+					<p class = "w3-justify">
+						"Hey, why the heck should I follow the meta thing you (or the general consensus) have made, Argus?", said someone. "Can't I just go XX-Br and play bow? You know, I don't like Braver, and I want to explore things in my way. You and your thesis can't stop me!" 
+						<br><br>
+						Unfortunately, that was the things of the past, like, 3 episodes ago or so if my memory of friends' story are still intact. Weapon Extension system exist so that you can make some older, low-rarity bow a bit more powerful again. And, of course, the iconic skills of many class only work if set as your main class.
+						<br><br>
+						It's just that there are TWO skills that, in my opinion, are integral to Bow Braver these days that using XX-Br is considered to be a huge mistake, regardless of your experience with PSO2. <b>Braver Combination carries your Critical Strike Chance and enable dual weapon plays, while Bow Charge Bonus massively improve bow handling that no other classes can match Braver.</b>
+					</p>
+				</div>
+				<table class = "w3-table w3-border w3-centered">
+					<tr>
+						<td style ="width:50%;"><image src="/img/pics/subclass_skill-1.png" style = "width:80%; padding:16px 16px;"></td>
+						<td><image src="/img/pics/subclass_skill-2.png" style = "width:80%; padding:16px 16px;"></td>
+					</tr>
+				</table>	
+				
+				<p class = "w3-justify">
+					Complex <span class = "en-b">[Build Up]</span> Photon Arts - Cerulean Ballista - also exists. It's absurdly powerful, being exclusive to Braver equpping the bullet bow. So yeah, with all of those reasons I've given you so far...
+					<b>Do you really believe that playing XX-Br as Bow Braver is going to be better than the viable class combinations shown high up in this section? I hope not at this point.</b>
+					<br><br>
+					Well... some may actually work, but... EP6 contents won't let you get away with it that easily though.					
+				</p>
+				
+			
+			</div>		
+		</div>
+		<!-- End of Content---->	
+
+		<!--Footer Part-->
+		<footer-component></footer-component>		
+		
+		<!-- Function scripts that require late load.-->
+		<script src = "/js/topScroll.js"></script>
+		<script src = "/js/mytabs.js"></script>
+		<script src = "/js/carousel.js"></script>
+	</body>
+</html>

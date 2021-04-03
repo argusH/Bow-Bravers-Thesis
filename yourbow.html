@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+	<head>
+		<!-- Meta Shits -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		
+		<title> Your Bow | Bow Braver's Thesis </title>	
+
+		<!-- Function scripts that require early load.-->	
+		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
+		<script src = "/js/addFoot.js"></script>		
+		<script src = "/js/basic.js"></script>		
+		
+	</head>
+	
+	<body>	
+	
+		<button onclick="topFunction()" id="topButton">Top</button>
+		
+		<!-- NAV Bar + Main img -->
+		<header-component></header-component>		
+	
+		<!-- C O N T E N T Here -->
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
+
+			
+			<div class="w3-container w3-content w3-padding-64" style="max-width:1200px" id="intro">
+				<div class= "w3-center">					
+					<h1 class="w3-xxxlarge w3-text-green"><b>Your Bow</b></h1>
+					<p class="w3-opacity"><i>It fires arrows. Lots of arrows.</i></p>			
+				</div>
+				
+
+				<div id = "upgrading-101">
+					<h1 class="w3-text-green"><b>Upgrading 101</b></h1>
+					
+					<p class = "w3-justify">
+						Like other weapons, PSO2 offers a plethora of bullet bows for you to choose from. Regardless of the server you are playing, 
+						the best bullet bow that you should use will fall into the following <b>priority rules:</b>					
+					</p>
+					<ul class = "w3-ul">
+						<li><b>1) It has the highest rarity, which is 15*.</b> The bows with that rarity have absurd amounts of range attack power, and anything below them either become obsolete, or turn into materials for later uses.</li>
+						<li><b>2) It has the slots for S-Class Special Abilities <span class = "en-n">[S-class Augment]</span></b>, 
+						which means you can put in a special affix augment that gives you PP Reduction to improve your gameplay, or even more damage!</li>
+						<li><b>3) It has favorable Potential Ability.</b> If the weapons are in the same category, you would pick anything that follows 2) first. Otherwise, prioritize the one with more versatile Potential Ability first, follow by damage increase and maybe PP Reduction if possible.</li>
+					</ul>
+
+					<p class = "w3-justify">
+						I recommend you to check 
+						<a href = "https://pso2.arks-visiphone.com/wiki/Simple_Bullet_Bows_List" target = "_blank" class = "link">this link for JP</a> and 
+						<a href = "https://pso2na.arks-visiphone.com/wiki/Bows_List" target = "_blank" class = "link">this link for EN</a> to see the information about every bow that PSO2 has in each server, including the stats, requirement, Potential Ability, S-Class Special Abilities/Augment slots available, and the possible drop location. If you have played other MMOS, then your question would be “what is the best bow I can use though?” 
+						<b>Let me try to explain by using the chart below.</b>
+					</p>
+					
+					<div class = "w3-center">
+						<image src="/img/pics/yourbow_bowlists.png" style = "width:75%;"></image>
+						<p><b>The Bullet Bow Upgrade Assistant Chart; March 2021.
+							<br>Supporting your best and worst decision, starting from EP1 to EP6.</b>
+						</p>
+					</div>
+
+					<p class = "w3-justify">
+						Although EN server did introduce various weapon series differently from JP server, you can expect everything in the chart to be available at this point. Sooner or later, you will find yourself using one eventually. 
+						Depending on your current playing status in PSO2, you may be using a different bullet bow based on the episode that you start 
+						or left. <b>Because we all arrive at EP6, anything that exists before the episode is either obsolete or turned into aux weapon.</b>
+						<br><br>
+						As such, the chart will probably look like the image below. The magic trick to find out what’s the best weapon is now unnecessary. Besides, you may have to make and use some of them through the course of EP6.
+					</p>					
+					
+					<div class = "w3-center">
+						<image src="/img/pics/yourbow_usablebow.png" style = "width:60%;"></image>
+						<p><b>Please.</b></p>
+					</div>
+
+					<p class = "w3-justify">
+						Apart the mainstream ones, there are other bow following the image below. They are PP Recovery Weapon is considered to be “The Charger”. For the last two, Hard Cross Bullet and Quelle Vesper, they have questionable Potential Abilities that make them atrocious in practice, but again, they serve as a placeholder when you can’t get the better bow.					
+					</p>
+
+					<div class = "w3-center">
+						<image src="/img/pics/yourbow_subweapons.png" style = "width:50%;"></image>
+						<p><b>Not The Main Weapon</b></p>
+					</div>	
+
+					<p class = "w3-justify">
+						Last but not least, ignore Weapon Extension. We don’t need it for a bow. What, you aren’t (Bow) Braver but want something that can make yourself useful in the Dark Falz Luther fight? C’mon.
+					</p>
+
+					<button onclick="myAccFunc('efficiency-summary')" class="w3-button w3-light-grey w3-block w3-left-align w3-dark-grey" id="clickthis">But... but why? What's the reason?</button>					
+					<div id="efficiency-summary" class="w3-hide w3-border">
+					  <div class="w3-container">
+						<p class = "w3-justify">
+							There exists a crafting feature called “New Type Weapon Extension”. It lets you refine the lower rarity weapons multiple times to have higher attack stats, up to a certain cap based on the weapon’s category. 
+							For bullet bow, there are three bows in spotlight here: 
+							the all-class bow 
+							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/lambda_bigglow-v2.png"></span><b>Lambda Bigglow V2</b>, 
+							the EN, New-type variant of 
+							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/dalz_varley.png"></span><b>Dalz Varley</b>, and 
+							JP, Old-type variant of 
+							<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/others/edel_arrow.png"></span><b>Edel Arrow</b>.
+							<br><br>
+							Max extended bullet bow will have 2344 R-ATK as a result, almost on par with Nike Arcus that has 2365 R-ATK. Lambda Bigglow V2 becomes popular with non-Braver players wanting a solution to quicken Dark Falz Luther stage with its built-in Penetrating Arrow. The other two have an interesting Potential Ability - default for EN Dalz Varley and selectable “hidden” for JP Edel Arrow - that increases your damage output by 34% at max level during Rapid Fire.							
+							<br><br>
+							Here's the problem: New-type weapon extension is extremely expensive that you could have used that money for other weapon series or units affixing. These lower rarity weapons are also the prime candidates for Reaper and Slayer affix, stackable for massive amounts of damage multiple against enemies with specific elemental weakness and type.
+							<br><br>
+							The affixing process can be arduous to make that OP weapon just to absolutely annihilate one type of enemy. 
+							While it used to be a viable weapons in the past for a moment, the existence of end-game 15* weapons have proved to be much better,
+							offering SSA <span class = "en-n">[SGA]</span> slots with even more bonker Potential Abilities. Oh, we do need some PP Reduction as well, and those older weapons can’t give you that stats.							
+							<br><br>
+							Therefore, don’t even bother with weapon extension at this point... especially as Braver; whatever your main weapon is.
+						</p>
+					  </div>
+					</div>					
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">	
+				</div>
+				
+				<div id = "what-do">
+					<h1 class="w3-text-green"><b>What do?</b></h1>
+					
+					<table class="w3-table-all w3-striped w3-border">
+						<tr>
+							<th class = "w3-center">Both Servers and the end-game of EP6</th>
+						</tr>
+						<tr>
+							<td style = "padding:16px 16px;">								
+								<div class = "w3-center">
+									<image src="/img/equipments/bow/lightweaver_cras_archer.png">
+									<p><b>Lightweaver Cras Archer</b></p>
+								</div>
+								<p class = "w3-center">
+									It has FIVE SSA slots and free PP reduction! Work on this weapon if you want to main or play Bow Braver to a degree. OR...								
+								</p>
+								
+								<div class = "w3-center">
+									<image src="/img/equipments/bow/fluxio-rinzer_rulutea.png">
+									<p><b>Fluxio/Rinzer Rulutea</b></p>
+								</div>
+								<p class = "w3-center">
+									This is an alternative due to how easy you can get. Its Potential Ability is stupidly strong for Bow Braver, and can be repurposed as CPA fodder.
+									<b>Do prioritize Cras over this though.</b>
+								</p>								
+							</td>	
+						</tr>
+					</table>
+					
+					<p class = "w3-justify">
+						<b>Other viable alternatives include Darkbanisher Ayer Archer, Arco Stil, and Liberate Bow.</b>
+						For your secondary weapons, choose between Genon Ain and Gaels/Nova Mirage.
+					</p>					
+					
+					<p class = "w3-justify">
+						Besides, there are two more things that you should do for your weapon: make sure that the element is 
+						<image src="/img/techs/elements/light.png" id = "inline-img"><b>Light</b>						
+						at max value, and try your best to get it to the max grind of +30. You would prefer it to be +35 if that weapon is your “best weapon” or it has a good Special Ability or Augment Factor. Here is the explanation for it.
+					</p>
+					<ul class="w3-ul">
+						<li>1) Despite fighting against various enemies, 
+						<b>Dark Falz/Falzspawn enemies remain your greatest threat. They are weak to Light-based attacks.</b> 
+						The higher your Light element value is, the more elemental damage you get, which is added to your damage calculation. The value caps at 50 for those below 13* and 60 for 13* weapons and above. 
+						Avoid getting multiple copies for different elements to save cost! Most of your damage comes from weapon attack stats, and elemental damage is a bonus.</li>
+						<li>2) Weapons obtained from the exchange shop or the Collection File (usually), will have <b>a grind limit of +30, which is fine for Level 3 Potential Ability.</b> You need to extra copies or farm it until it drops to reach +35 grind limit, which grants you Augment Factors. It can ease the affixing process, or give you some unique augments you can’t find anywhere.</li>						
+					</ul>
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">	
+				</div>
+
+				<div id = "the-lists">
+					<h1 class="w3-text-green"><b>The Lists</b></h1>
+					
+					<p class = "w3-justify">
+						This section will explain why each Bullet Bow appears in the chart above goes in to the different tiers.
+					</p>
+					
+					<fancy-tabs>
+						<button slot="title" selected>The Best</button>
+						<section>
+						
+							<p class = "w3-left" style = "background:white; border-radius: 3px; padding: 12px 12px; ">
+								Consider them the “strongest weapon” you can get at the current date, especially the theme weapon of that episode. You can’t go wrong making at least one of these ballistic weapons and do fine.
+							</p>						
+						
+							<div> <!--Cras Archer-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/lightweaver_cras_archer.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Lightweaver Cras Archer
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, S3, S4 and S5<br>
+											<span class = "saf">Provides S5:Auxiliary Arrow as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Rumble in The Primordial Glare of the Void [Face of the Abyss] EQ and Divide Quests for materials.<br>Use them to create Darkbanisher Ayer first (or drop), then visit Zieg for the upgrade afterward.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>
+								<p class = "w3-justify">
+									At +35, the R-ATK value is 3167, causing Lightweaver Cras Ache to have the highest R-ATK value of all the bullet bows in PSO2. The weapon is the direct upgrade from 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/lightweaver_cras_archer.png"></span><b>Darkbanisher Ayer Archer</b>, 
+									which has lesser R-ATK stats and does not support S5. <span class = "wpot">“Lightweaving Guardian”</span> has two parts.								
+									<ul>
+										<li>It gives the effect of Ayer's Potential Ability, <span class = "wpot">“Reincarnation of Fate”</span>, granting 12% damage increase, 20% PP Reduction, and recovering 20 PP every 10 seconds while equipped.</li>
+										<li><b>When you perform three Normal Attacks, the weapon form changes and persists for 30 seconds.</b> Switching will reset it.</li>
+									</ul>		
+								</p>
+								<table class="w3-table-all w3-striped w3-border">
+									<tr>
+										<td class = "w3-center" style = "width:48%; padding:32px 32px;">
+											<p class = "w3-justify">
+											It has 30 seconds Recast Time, meaning that you need to equip it for at least 30 seconds to enable the transform.
+											<br><br>
+											The Potential Ability now grants 18.72% (6% more) damage increase, 30% damage mitigation, and knockback immunity.
+											<br><br>
+											<span class = "warn">Note that Rapid Shoot does not make Normal Attack counts as three. It only counts the “firing arrow” animation, aka, actual THREE Normal Attacks.</span>										
+											</p>
+										</td>
+										<td class = "w3-center" style = "width:48%; padding-top: 16px;">
+											<image src="/img/gifs/yourbow_craspot.gif" style = "width:70%;"></image>
+											<p>1.5 second interval; check the purple emblem beneath your character for it.</p>
+										</td>
+									</tr>
+								</table>								
+								<p class = "w3-justify">
+									<b>Lightweaver Cras Ache remains one of the best bullet bows at the current state of EP6</b>, even with the existence of Fluxio/Rinzer Rulutea. 
+									With up to five SSA slots available, Bow Braver can have damage and PP Efficiency S-class Special Abilities affixed with minimal trade-off. 
+									Although the weapon transformation part can be annoying, you will get used to it eventually.								
+								</p>
+							</div>
+							
+							<br><br>
+							<div> <!--Fluxio/Rinzer-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/fluxio-rinzer_rulutea.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Fluxio/Rinzer Rulutea
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S4, and S5<br>
+											<span class = "wpot">Both provides Ether Factor as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+											Fluxio: Title reward from clearing encounters in Challenge Quest: Calamity. Visit Zieg for the weapon category switch if needed.
+											<br>
+											Rinzer: Weapon Badge 2021 exchange and possible drop from UH quest primarily featured in 20th Anniversary Event.											
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									At +35, the R-ATK value is 3073. Fluxio and Rinzer Rulutea comes with one of the most impressive 
+									Potential Ability ever existed in PSO2: <span class = "wpot">Glittering Fang</span>, which works as follows:
+									<ul>
+										<li>Increase your damage by 13%.</li>
+										<li>Whenever your <b>first</b> attack in the quest hits an enemy, Glittering Fangs provides additional bonus for 20 seconds. The timer refreshes every time you have done 1.5 million points of damage.</li>
+											<ul>
+												<li>Increased your damage by another 8% (multiplicative to 13%).</li>												
+												<li>Reduced the damage taken from enemies by 20%.</li>												
+												<li><b>+100 PP to your maximum PP.</b></li>												
+											</ul>
+										<li>Switching to other weapons removes the effect and requires you to deal enough damage to trigger it again.</li>
+									</ul>									
+								</p>							
+								<table class="w3-table-all w3-striped w3-border">
+									<tr>
+										<td class = "w3-center" style = "width:48%; padding:32px 32px;">
+											<p class = "w3-justify">
+												Besides, after 8 years of being in services, SEGA has finally bestowed us with the greatest function of all time. Literally.
+												<h2><b>BUFF TIMER BAR</b></h2>
+												Yeah, it is hard to make one.
+											</p>
+										</td>
+										<td class = "w3-center" style = "width:48%; padding:32px 32px;">
+											<image src="/img/pics/yourbow_fluxiopot.png" style = "width:80%;"></image>
+										</td>
+									</tr>
+								</table>							
+								<p class = "w3-justify">
+									The weapon is stupidly strong, <b>even allowing katana mains to opt it as a CPA fodder with S5: Anthesis Cultivation <span class = "en-n">[Augment Bloom]</span></b>. Still, the weapon falls short compared to Lightweaver Cras Archer’s innate PP Reduction and full SSA support. If you really want a highway to end-game content, go for it. And uh, the Rinzer’s black looks cooler than Fluxio’s white though.
+								</p>							
+							</div>
+							
+							<br><br>
+							<div> <!--Stil-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/stil_arco.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Arco Stil
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, S3 and S5<br>
+											<span class = "saf">Provides Shoot VI as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Get your ass into Divide Quest and farm the materials, alongside a couple 14-15* weapons.<br>You start with Arco Puras and Zieg can help with that.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									At +35, the R-ATK value is 2968. Arco Stil is the upgrade version of 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras, 
+									having higher base stats and improved Potential Ability called “Steadfast Might”, which works as follows.
+									<ul>
+										<li>It increases your damage by 16% by default.</li>
+										<li>At that value, the lightning effect engulfs you, granting the combined effects of all Puras weapon types Potential Ability:</li>
+											<ul>
+												<li>40% Damage Reduction</li>												
+												<li>20 PP Recovered every 10 seconds</li>												
+												<li>60% increased Natural PP Recovery</li>												
+												<li>Super Armour (immune to flinch and knockback)</li>												
+											</ul>
+										<li><span class = "warn">When hit, the damage value reduces by 3%, limiting at 10%.</span></li>
+										<li><b>As long as you don’t get hit afterward, you slowly gain 0.4% increased damage per second, capping back at 16%.</b></li>
+									</ul>									
+								</p>						
+							
+								<p class = "justify">
+									Although the defensive property of Stil Arco (the series in particular) is powerful, 
+									<b>the decision to make it can vary based on your selected server</b> and the debate on Liberate weapon that ensues. On the JP server, Plus upgrade for Liberate (and some 15* series) arrives after Divide Quest release, making Stil a straight upgrade. However, the EN server puts Redux up before the quest exists, so Liberate turns out to be better after a couple runs for materials.
+									<br><br>
+									<b>One could not deny the perks of Stil weapons's Potential Ability, especially in UH quests.</b>It's possilble to convert it to PP battery, and playing the game well means extra defenses may not matter that much...
+								</p>									
+							</div>
+
+							<br><br>
+							<div> <!--Liberate-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/liberate_bow.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Liberate Bow
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S4 and S5<br>
+											<span class = "saf">Provides S5:Auxiliary Arrow as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Farm tons of meterials, obtain "Liberate Unlocker" and +35 Novel Bow, then check at Zieg for the upgrade.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									At +35, the R-ATK value is 2851. Liberate Bow is <b>the upgraded version of 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/novel_bow.png"></span>Novel Bow</b>, adding S5 support, 
+									higher R-ATK stats, improved Potential Ability and granting a different SAF. <span class = "wpot">“Liberated Fang”</span> grants 16% damage increase, 
+									+20% Critical Strike Chance, and 15% PP Reduction. Also, Liberate Bow is one of the two sources of S5:Auxiliary Arrow.								
+									<br><br>
+									Having only two slots for impactful SSAs means you got six slots for regular affixes. 
+									Together with its Potential Ability and SAF, Liberate Bow can be your go-to weapon to work on in order to 
+									explore the world of Bow Braver, and prepare for the grind to get either Arco Stil or Ayer/Cras Archer. 
+									You can also upgrade its Potential Ability to Plus <span class = "en-b">[Redux]</span> version for 23% damage increase!								
+								</p>
+							</div>
+
+							<br><br>
+							<div> <!--Lightstream-->
+
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/lighstream_obligaxion.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Lightstream Obligaxion
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, and S3<br>
+											<span class = "saf">Provides S1: Shoot Boost as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Combine a pleathora of each Falz weapon series (or drop the Celestial series), get some materials and Amphitrite Stone, then see if Zieg can lift you up from the sufferings.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2624 R-ATK at +35. Lightstream Obligaxion’s Potential Ability, <span class = "wpot">"Lightstream Resurrection"</span>, works as follows:
+									<ul>
+										<li>Increase your damage by 10%.</li>
+										<li>When your next PA causes your PP amount to go <b>below 10% of your Maximum PP</b>, it will refill the entire bar and grants a 3% damage buff (stacks multiplicatively) for the next 30 seconds; 2 minutes cooldown.</li>
+									</ul>									
+								</p>						
+							
+								<p class = "w3-justify">
+									An instant 200-300 PP can make a huge difference in certain encounters. This will require some good PP management. 
+									It can take a while to make, but definitely worth all the trouble. Furthermore, you can upgrade the Potential Ability to Plus 
+									<span class = "en-b">[Redux]</span> version, increasing the damage value to 17% while retaining the PP surge ability. 
+									It’s still a viable tool to push your damage, but the decision is on you today though with all those high-ends bow available out there.
+								</p>
+							</div>						
+							
+						</section>
+						
+						<button slot="title">The Viable</button>
+						<section>
+						
+							<p class = "w3-left" style = "background:white; border-radius: 3px; padding: 12px 12px; ">
+								These bullet bows are considered to be the “viable substitute” while you are trying to get the "best" bow. Some have received the upgrades, and some are somewhat accessible as well.
+							</p>
+						
+							<div> <!--Million/Krisa-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/million-krisa_lyrate.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Million/Krisa Lyrate
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, and S3<br>
+											<span class = "saf">Both provides Ability V as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												JP: Possible drop from various UH difficulty quests.<br>
+												EN: Legendary 15* Weapon Collection Folder
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									They are the same weapon by the way, having 2643 R-ATK at +35. They also share the exact same Potential Ability, 
+									<span class = "wpot">“Dazzling Splendor</span>, which has 10% chance to grant you the following buff based on conditions:								
+									<ul>
+										<li>50% reduced damage taken from enemy’s attack.</li>
+										<li>50% PP Consumption reduction upon using a Technique or PA.</li>
+										<li>100% increased Attack PP recovery when performing normal attack.</li>
+										<li>100 HP recovered when landing any attacks on the enemy.</li>
+									</ul>
+									In addition to the chance-based buffs, <b>Dazzling Splendor also provides 15% damage increased, hidden from the description.</b>									
+								</p>
+							
+								<p class = "w3-justify">
+									This weapon series is kinda obsolete in JP server at this point of time. However, for EN players that have returned to the game or just started anew, Million/Krisa Lyrate performs quite well while you are trying to get better weapons.
+								</p>
+							</div>
+							
+							<br><br>
+							<div> <!--Atlas Ex-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/atlas_ex_agria.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Atlas Agria Ex
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, S3, and S4<br>
+											<span class = "saf">Provides S4: Rapid-fire Arrow as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Find the Val weapon series and grab the Chronos stone from making it +35. Then, go get some more materials and weapon series for Zieg, so he can upgrade it for you.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2538 R-ATK at +35. Atlas Agria Ex’s Potential Ability, <span class = "wpot">“Immortal Soul”</span>, 
+									gives you up to 10% damage increases while <span class = "wpot">preventing you from dying ONCE per quest</span>. 
+									If that happens, it provides invincibility and heals you for a short moment. Due to SSA support, 
+									a certain combination of SSAs can give you massive damage boost, a good deal of PP Efficiency, or even act as a utility weapon. 
+									So, why not make it as a starter and begin your long-lasting journey with 
+									<span class = "ic-mid" id = "inline-img"><image src="/img/equipments/bow/val_agria.png"></span>Val Agria and 
+									<span class = "ic-mid" id = "inline-img"><image src="/img/equipments/bow/atlas_agria.png"></span>Atlas Agria?								
+									<br><br>
+									Furthermore, you can upgrade its potential to Plus <span class = "en-b">[Redux]</span> version, increasing the damage to 18%. Atlas Agria Ex remains relevant due to the death insurance while providing benefits from S1-S4 support.									
+								</p>
+							</div>
+
+							<br><br>
+							<div> <!--Austere NT-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/austere_bougen-nt.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Austere Bougen-NT
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, and S3<br>
+											<span class = "saf">Provides Shoot VI as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Collect all renewed, Corrupted World weapon series (Invade, Slave <span class = "en-n">[Raven]</span>, Nemesis) and visit Zieg to have him made one for you.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2430 R-ATK at +35. Austere Bougen-NT has three different Potential Abilities that you can choose from: 
+									<span class = "wpot">“Phantasmal Darkness, Darkness Shield or Darkness Ward”.</span> You can check more 
+									<a href = "https://pso2.arks-visiphone.com/wiki/Austere_Bogen-NT" target = "_blank" class = "link">here</a>. It also has a built-in 10% increase to your Natural PP Recovery, making it a solid choice for PP Recovery Weapon, rather than “actually” using it. Otherwise, the bow remains a solid weapon for long period farming.								
+									<br><br>
+									<b>In the JP server, only Phantasmal Darkness can be upgraded to the Plus <span class = "en-n">[Redux]</span> version while EN server only has it as available Potential Ability.</b> 
+									It now grants even more damage bonus based on your Photon Blast gauge, up to 20% while it is maxed. The only problem is getting your Photon Blast 
+									just in time before the quest is over. Other properties of the weapons remain the same though.
+								</p>							
+							</div>
+
+							<br><br>
+							<div> <!--Dim-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/dim_bow.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>	
+												Dim Bow
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, and S3<br>
+											<span class = "saf">Provides Shoot VI as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Obtain from Armada of Demise and Raging Falz Arms at UH or buy from Player Shops through Visiphone.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2212 R-ATK at +35. Dim Bow is pretty much a recolored Ray Bow. It arrives a bit late, to be honest. 
+									Its Potential Ability, <span class = "wpot">“Darkened Blessing”</span>, gives you 12% increased damage while reducing 10% damage taken from everything in the game. 
+									Being buyable is the highlight of the bow, and when you get the better ones, keep it, especially the one with 8-slot affixes. 
+									You may need it for the Shoot VI SAF, or a sacrifice for 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras.
+								</p>
+							</div>
+
+							<br><br>
+							<div> <!--Nike/Phobos-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/nike_arcus.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>
+												Nike Arcus
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1, S2, and S3<br>
+											<span class = "saf">Provides Phrase Weak as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Drop from The Primordial Glare of the Void UH, or buy it from Visiphone.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2365 R-ATK at +35. This is the revamped Phobos Arcus that comes with slightly higher R-ATK stats, 
+									supports two more SSAs, and has a different color theme. Apart from its edgy look and glowing spike, 
+									its Potential Ability, <span class = "wpot">“Mobility Anomaly”</span> provides the following bonuses.
+									<ul>
+										<li>6% increased damage.</li>
+										<li>After sheathing the weapon for 2 seconds, unsheathing the weapon again grants you another 14% damage increase buff for the next 14 seconds. The value is multiplicative, resulting in ~20.9%.</li>
+									</ul>
+									A blue ring appears when the Potential Ability is ready, turning to a red ring once it is active. Note that switching weapons removes the effect and the red ring persists until you sheath your weapon again. It’s ok when you move from a pack of enemy to another, but not really feasible in general, or the fact that we spam Step Kick way too often.
+								</p>
+							
+								<p class = "w3-justify">
+									Speaking of 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/phobos_arcus.png"></span><b>Phobos Arcus, 
+									the original version</b>,
+									you can still get it by exchanging Leontina’s Certificate B at Leontina or as a drop from various XH+ quests, such as Guide of Creation. The weapon only supports S2, has Sentence Shoot (+20 R-ATK, +4 PP) as its SAF, but the color theme is black-cyan instead, which is cooler than Nike for sure!
+								</p>	
+							</div>
+							
+						</section>
+						
+						<button slot="title">The Charger</button>		
+						<section>
+
+							<p class = "w3-left" style = "background:white; border-radius: 3px; padding: 12px 12px; ">
+								These bows are strictly used as PP recovery weapons. You can try using it as your main bullet bow, but it usually underperforms. Thus, I have decided to exclude them from the upgrade chart. Pick one.
+							</p>
+						
+							<div> <!--Nova-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/nova_gaels.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Gaels Nova
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S3 and S4<br>
+											<span class = "saf">Provides S3:Radiating Grace as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Potential drop from Mining Base Defense Training: VR at UH Difficulty and few UH difficulty quests.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2578 R-ATK at +35. This is the revamped version of 
+									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/orbit_gaels.png"></span>Gaels Orbit, 
+									which has lower R-ATK values, and lacks SSA support. You can choose its Potential Ability between <span class = "wpot">“Urgent Maneuver 1 or 2”.</span>
+									<ul>
+										<li><b>Version 1</b> increases your Natural PP Recovery by 200% while sheathed. When unsheathed, the natural recovery halts, but you gain 60% increased Attack PP Recovery, and 13% damage boost.</li>
+										<li><b>Version 2</b> decreases your Natural PP Recovery by 60% while sheathed. When unsheathed, it increases your natural recovery by 20%, Attack PP Recovery by 20%, and 8% damage boost.</li>
+									</ul>
+									A blue ring appears when the Potential Ability is ready, turning to a red ring once it is active. Note that switching weapons removes the effect and the red ring persists until you sheath your weapon again. It’s ok when you move from a pack of enemy to another, but not really feasible in general, or the fact that we spam Step Kick way too often.
+								</p>
+							
+								<p class = "w3-justify">
+									<b>For bow, just pick the first version.</b> Gaels Nova isn’t your primary weapon anyway, and the Potential Ability seems to be slightly worse than Gaels Mirage, so use whichever comes to you first. Anyhow, the most important thing is that Gaels Nova supports S4. There are options here, such as Radiant Response, Support Extension, Steel Resolve, Shared Ruin, and Radiant Eclipse.
+									<br><br>
+									What, you thought the T-ATK on this weapon would let you go Mage-bow in today's content? NOPE.	
+								</p>	
+							</div>
+							
+							<br><br>
+							<div> <!--Gaels-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/mirage_gaels.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/14_stars.png"></span>	
+												Gaels Mirage
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S3<br>
+											<span class = "saf">Provides Phrase Recovery as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Drop from Lvl. 91+ Big Vardha, Mining Base Defense Training: VR at UH, Divide Quest, or buy from Player Shops through Visiphone.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>							
+								<p class = "w3-justify">
+									It has 2150 R-ATK at +35. Its Potential Ability, <span class = "wpot">“Urgent Maneuver 3”</span>, works as follows:
+									<ul>
+										<li>When sheathed, your Natural PP Recovery speed increases by 250%. When it’s out, the recovery stops, but you gain +50% PP Attack Recovery.</li>
+										<li>Moreover, if you take it out when your PP is at max, you PA deals 12% increased damage!</li>										
+									</ul>
+									Gaels Mirage also gives you a T-ATK, too, but don’t expect too much. <b>Offensive techniques aren’t your main concern anyway</b>, and stop that idea about going TeBr or FoBr. Those are histories.
+								</p>
+							</div>
+
+							<br><br>
+							<div> <!--Genon-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/genon_ain.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Genon Ain
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S2 and S3<br>
+											<span class = "wpot">Provides Stamina VI as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+											Drops from Blizzard Banshee spawned in UH Naberius-related quests, or Sage Crest Exchange with Zieg.	
+											</td>
+										</tr>									
+									</tbody>	
+								</table>
+								<p class = "w3-justify">
+									Having 2484 R-ATK at +35, Genon Ain has been very special weapon since its release. The Potential Ability, 
+									<span class = "wpot">"Variating Redress"</span>, works as follows.
+								</p>
+								
+								<div class = "w3-center">
+									<image src="/img/gifs/yourbow_genondemo.gif" style = "width:30%;">
+									<p><b>Yeah, it's pretty bonker if you ask me.</b></p>
+								</div>		
+								
+								<p class = "w3-justify">
+									Gives you 8% increased damage and 45% PP Consumption Reduction. However, you take flat 90 damage every time you use whatever Photon Arts or Techniques.											
+									<b>The value of damage taken cannot be modified.</b>
+									<ul>
+										<li>This part is enabled once the quest starts.</li>
+										<li>The damage does not stagger your character.</li>
+										<li>The damage is a “red number”, just like how the enemies do to you in general. Thus, it can activate certain skills or abilities such as Hunter’s Automate Halfline and Cursed Radiance SSA.</li>
+										<li>If the next PA use results in lethal damage, you are left with 1 HP. When that happens, it stops working.</li>
+									</ul>
+								</p>						
+							
+								<p class = "w3-justify">
+									Now, after seeing the GIF above, you are probably wondering "is that kind of power even legal in PSO2?" 
+									YES. Yes, indeed an abusive one. Besides being a material for making Arco Stil, grabbing TWO 
+									<b>Cursed Radiance <span class = "en-n">[Lucent Adversity]</span></b> will allow Genon Ain to do two things:
+									<ul>
+										<li>Sacrifice at most 270 HP for near-instant 90% of your maximum PP recovered through spamming Narbata T0 or any fast execution bow PAs. The strat can solve the plaguing problem of bow efficiency, at a cost setting yourself up for an accidental suicide.</li>
+										<li>Affix the weapon with as much PP as you could possibly do in PSO2. With enough PP Reduction, Genon Ain can be used instead of bow charged Normal Attack for faster Banish Combo chaining, or even nullifying the cost. However, setting up weapon switching scheme is mandatory and can build up a very bad habit in the long run.</li>
+									</ul>
+								</p>
+								
+								<div class = "w3-center">
+									<image src="/img/gifs/yourbow_genonabuse.gif" style = "width:30%;">
+									<p><b>The beginning of whole new world.</b></p>
+								</div>								
+							
+								<p class = "w3-justify">
+									Does this mean that a PP Recovery weapon is unnecessary? Maybe. The strategy only works when you can lose your HP, so having Gaels Mirage as a “somewhat cheap, accessible” back up can help. 
+									Nevertheless, <b>Genon Ain will forever be a suicidal weapon in the hands of less-experienced players</b>, and two Cursed Radiance can be very costly especially for the newer ones. If you want to use it as a main weapon…								
+									<br><br>
+									<span class = "warn">I had tried using it extensively, and it wasn’t a pleasant experience despite the potential and the fun it offers… at least for Bow Braver. Just don't main it, alright?</span>									
+								</p>							
+							</div>
+							
+						</section>
+						
+						<button slot="title">The Special</button>
+						<section>
+							
+							<p class = "w3-left" style = "background:white; border-radius: 3px; padding: 12px 12px; ">
+								You probably won’t be using them as your main weapon anymore, but they have interesting gimmicks that should be mentioned!
+							</p>
+						
+							<div> <!--HCB-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/hard_cross_bullet.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Hard Cross Bullet
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1<br>
+											<span class = "saf">Provides S1:Red Petal Flash as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+											Drop from Veiled Fordruss or exchange it via Zieg with Sage Crests.	
+											</td>
+										</tr>									
+									</tbody>	
+								</table>
+								<p class = "w3-justify">
+									Having 2484 R-ATK at +35, Hard Cross Bullet has been a special, yet dubious weapon. The Potential Ability, 
+									<span class = "wpot">"Secret Blink"<span>, works as follows.
+									<ul>
+										<li>Increases your damage by 10%.</li>
+										<li><b>The first 3 chargeable PAs or bullet bow Normal Attacks used with a Hard Cross Bullet will be fired as charged</b>; aka “Bullet Counts”.</li>
+										<ul>
+											<li>It is disable while you are on the campship.</li>
+											<li>After sheathing the weapon for ~2 seconds, the potential ability will be ready, indicated by the blue photon circle around you.</li>
+											<li>The photon circle doesn’t tell how many Bullet Counts you have at that moment. Also, sheathing the weapon for at least 2 seconds always reset the counter back to 3.</li>
+											<li>Unchargeable PAs, which are Million Storm, Final Nemesis, and Chase Arrow do not consume the Bullet Counts.</li>
+											<li>Sheathing your weapons can be done in 3 ways shown below.</li>
+										</ul>
+									</ul>		
+								</p>
+								<table class="w3-table-all w3-striped w3-border">
+									<tr>
+										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
+											<image src="/img/gifs/yourbow_hcb-1.gif" style = "width:70%;"></image>
+										</td>
+										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
+											<image src="/img/gifs/yourbow_hcb-2.gif" style = "width:70%;"></image>
+										</td>
+									</tr>
+								</table>								
+							
+								<p class = "w3-justify">
+									Secret Blink, despite being one of the most iconic potential abilities of Bullet Bow, contradicts greatly with the playstyle. 
+									<b>The 2-seconds delay can throw you off Combo Rhythms</b>, and having to decide the PA orders can be infuriating sometimes.
+									<br><br>
+									To make it worse, 
+									<span class = "ic-midlarge" id = "inline-img"><img src = "/img/equipments/bow/puras_arco.png"></span>Arco Puras 
+									requires the weapon as its material, so I don't think it is viable in the current days. It’s either the S1:Red Petal Flash 
+									<span class = "en-n">[Petalgleam]</span> SAF printer or a decent Halloween cosplay material.
+								</p>
+							</div>
+							
+							<br><br>
+							<div> <!--Quelle-->
+								<table class="w3-table-all w3-border">
+									<thead>
+										<tr>
+											<th class = "w3-center" style = "width:20%;" colspan="2" rowspan="2">
+												<image src = "/img/equipments/bow/quelle_vesper.png" style = "padding:16px;">
+											</th>
+											<th class = "w3-center">
+											<h3><b>
+												<span class = "ic-midlarge" id = "inline-img"><img src = "/img/icons/rarity/15_stars.png"></span>	
+												Quelle Vesper
+											</b></h3></th>
+										</tr>
+										<tr>
+											<td class = "w3-center">SSA Slots: S1<br>
+											<span class = "saf">Provides S1:Immediate Intent as SAF</span></td>
+										</tr>
+									</thead>	
+									<tbody>	
+										<tr>
+											<td class = "w3-center" colspan = "3">
+												Potential drops from Driving in the Rain UH Difficulty, some other UH quests, and obtainable from Special Collection File.
+											</td>
+										</tr>									
+									</tbody>	
+								</table>
+								<p class = "w3-justify">
+									At +35, Quelle Vesper has 3102 R-ATK. Despite the attack number and the available SSA, Quelle Vesper's Potential Ability,
+									<span class = "wpot">"Midnight Wielder"</span>, causes the weapon to join the rank of "the Special" yet again. It works as follows:
+									<ul>
+										<li>Increase your damage by 16%.</li>
+										<li>Whenever your Banishing Arrow successfully detonates, it recovers 75 PP, but the damage is <b>reduced by 99%.</b></li>
+										<li>The PP recovery scales per enemy hit by Banishing Arrow, i.e. four enemies would result in 300 PP.</li>
+									</ul>		
+								</p>
+								<table class="w3-table-all w3-striped w3-border">
+									<tr>
+										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
+											<image src="/img/gifs/yourbow_vesper-1.gif" style = "width:70%;"></image>
+										</td>
+										<td class = "w3-center" style = "width:48%; padding:16px 16px;">
+											<image src="/img/gifs/yourbow_vesper-2.gif" style = "width:70%;"></image>
+										</td>
+									</tr>
+								</table>								
+							
+								<p class = "w3-justify">
+									Recalling the details of the PA, Banishing Arrow accumulates the damage you've done and delivers it for 50% by default or 65% if 
+									performed with Just Attack <span class = "en-n">[Perfect Attack]</span>. Therefore, <b>you are looking at 0.5% (0.5 x 0.01) or 0.65% (0.65 x 0.01)</b>, which is utterly depressing for the fact that Banishing Arrow is the core damage rotation of Bow Braver.
+									<br><br>
+									That fact alone already invalidated its usage for Bow Braver at this point. While some katana mains may find it useful as a CPA 
+									fodder, Fluxio/Rinzer Rulutea with S5: Anthesis Cultivation <span class = "en-n">[Augment Bloom]</span> works better. Besides, 
+									you’d better stop that idea of using Quelle Vesper as a PP battery. It might sound good on the paper, but it’s absolutely atrocious in practice.
+								</p>							
+							</div>							
+							
+						</section>
+					</fancy-tabs>
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">	
+				</div>
+
+				<div id = "weapon-ssa">
+					<h1 class="w3-text-green"><b>Weapon SSA</b></h1>
+					
+					<p class = "w3-justify">
+						<h3><b>The Available Options</b></h3>
+						You can use JP link or EN link to check the so-called “S-Class Special Abilities” or <span class = "en-n">[S-grade Augments]</span>.
+						The site contains a full list of them and where can you get it. There are tons that you can use and here are my suggestions.					
+					</p>
+					
+					<ul class = "w3-ul">
+						<li><b>1) Ignore Defensive SSA.</b> Dodging and positioning count as a defense.</li>
+						<li><b>2) Skip anything that increases Critical Strike Chance.</b> However, there are exceptions for a few SSAs.</li>
+						<li>3) Banish Combo can and will consume a lot of PP, so it might not be a great idea to put every SSA slot with the ones that give damage... unless you have it from other source or you are confident with PP management being a Bow Braver.</li>
+					</ul>
+					
+					<p class = "w3-justify">
+						With up to four slots supported for most weapons (only Lightweaver Cras series support five slots for now), here is the list of it, along with explanations for some. You never know which one you will get first, so just go exploring.
+					</p>
+
+					<fancy-tabs>
+						<button slot="title" selected>S1 Slot</button>
+						<section>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>R-ATK Up <span class = "en-n">[Fortified  Ranged]</span></b>: +30 R-ATK; added to your character base R-ATK stat. Can be exchanged.
+								<br><br>
+								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.
+							</p>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>Shoot Boost <span class = "en-n">[Ranged Amp]</span></b>: +1% Damage for every 60 R-ATK affixed onto your weapon. Gain another +2% Damage at 200 R-ATK or more.
+								<br><br>
+								The 2% damage gained from reaching 200 R-ATK is multiplicative to the percentage you get per 60 R-ATK. Therefore, at 200 R-ATK, you get 5.06% (1.03 x 1.02) increased damage, rather than exactly 5% increased damage.
+							</p>
+					
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>Red Petal Flash <span class = "en-n">[Petalgleam]</span></b>: +3% Damage for 30 seconds after inflicting 450,000 damage; active when Red Aura appears and refreshed whean dealing that much damage again.
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>Augment Intent <span class = "en-n">[Augment Will]</span></b>: +0.5% Damage per Special Ability [Augment] affixed on the weapon. It caps at 4% on an 8-slot weapon. (2) is 0.75% Damage per se, capping at 6% on an 8-slot weapon.
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>Photon Balance</b>: +4% Damage for PA/Techniques, +8% PP Consumption. (2) is +6% Damage for PA/Techniques, +4% PP Consumption.
+								<br><br>
+								Get at least one PP Reduction SSA to offset the increase, regardless of the variant. More PP Consumption of Bow PAs can break your Banish Combo if you have low PP to begin with.
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s1.png" id = "inline-img">
+								<b>Offensive Intent <span class = "en-n">[Aggressive Will]</span></b>: 2% damage increased. (2) is a 4%.
+							</p>
+
+						</section>
+						
+						<button slot="title">S2 Slot</button>
+						<section>
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<b>Skilled Intent <span class = "en-n">[Precision Will]</span></b>: +3% Critical Strike Damage. (2) is +4%.
+								<br><br>
+								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.
+							</p>	
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<b>Photon Reduction <span class = "en-n">[Photon Descent]</span></b>: 10% PP Consumption Reduction. (2) is 13%, while (3) is 15% reduction.
+							</p>		
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<b>Nature’s Reduction <span class = "en-n">[Petalsea Descent]</span></b>: Decrease PP Consumption by 12% when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active. (2) is 14%.							
+							</p>	
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<b>Rainbow’s Intent <span class = "en-n">[Rainbow Will]</span></b>: +5% Damage when any Aura from S1 is active.							
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s2.png" id = "inline-img">
+								<b>Skill Reduction <span class = "en-n">[Prowess in Descent]</span></b>: After a PA or Technique hits, PP Consumption is reduced for 30 seconds. Sometimes may greatly reduce PP Consumption. Has a Recast timer.							
+								<br><br>
+								A pale, blue stream aura engulfs your character upon activation. You have a 67% chance to get a 5% PP Reduction buff and a 33% chance for a 30% PP Reduction buff. The value results in ~12% PP Reduction on average. Peek at the PP bar when firing PA.
+								Note that switching weapons resets the skill effect. After 30 seconds, it has a 5-second cooldown before reactivation.
+							</p>							
+						</section>
+						
+						<button slot="title">S3 Slot</button>		
+						<section>
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Skilled Intent <span class = "en-n">[Precision Will]</span></b>: +4% Critical Strike Damage. (2) is 5%.
+								<br><br>
+								The net damage you get is Critical Strike Chance x Critical Strike Damage. If your chance is not equal to 100%, you will not get the full effect.								
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Radiant Strike <span class = "en-n">[Lustrous Strike]</span></b>: +20% PP Recovery on attacks. (2) is 23%, while (3) is 35% instead.
+							</p>
+
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Nature’s Melody <span class = "en-n">[Petalsea Song]</span></b>: Increases damage every second up to 5% when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active. (2) is 7%.
+							</p>	
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Nature’s Radiance <span class = "en-n">[Lustrous Petalsea]</span></b>: +28% to Attack PP Recovery when [Red Petal Flash], [Blue Ocean Flash], or [White Snow Flash] is active currently.
+							</p>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Rainbow’s Reduction <span class = "en-n">[Rainbow Descent]</span></b>: Provides 20% PP Reduction while any of the S1 Auras is active.
+							</p>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s3.png" id = "inline-img">
+								<b>Rainbow’s Reduction <span class = "en-n">[Rainbow Descent]</span></b>: Provides 20% PP Reduction while any of the S1 Auras is active.
+								<br><br>
+								This is one of the highest damage increase SSAs in the game. Note that it benefits more on some enemies where several parts are both “breakable” and “weak point”. As long as you put it on your secondary bow for breaking parts, it’s definitely a viable choice.
+							</p>
+							
+						</section>
+						
+						<button slot="title">S4 Slot</button>
+						<section>
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<b>Radiant Response  <span class = "en-n">[Photon V(essel) Adaptation]</span></b>: PP Efficiency increases based on your Maximum PP.
+							</p>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<b>Skilled Balance  <span class = "en-n">[Precise Balance]</span></b>: Reduce Critical Strike Chance by 50% but increase Critical Strike Damage by 6%.
+								<br><br>
+								Due to the huge penalty, be cautious when using it as BrHu, BrRa, BrSu, and BrLu. BrPh and BrEt can utilize it better because of the skills granting extra Critical Strike Chance.
+							</p>
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<b>Harmonized Rainbow  <span class = "en-n">[Rainbow Balance]</span></b>: Decrease Natural PP Recovery and PP Consumption by 30% when any Aura from S1 is active.
+								<br><br>
+								Note that the Natural PP Recovery occurs at 5 PP per 1 second. That part of the SSA (3.5 PP per 1 second NPPR when active) barely affects Bullet Bow gameplay.
+							</p>							
+							
+							<p class = "w3-left">
+								<image src="/img/icons/ssa/s4.png" id = "inline-img">
+								<b>Raising Pursuit  <span class = "en-n">[Escalating Pursuit]</span></b> When a PA/Technique hits, track the amount of damage dealt within the next four seconds, and increase the damage of your next PA/Technique based on the damage dealt.							
+								<br><br>
+								Dealing damage will start a yellow aura buff and accumulate the damage you deal in the next 4 seconds, gradually changing to pale red color. When it is ready, the next PA/tech you use will deliver an additional single-target attack for 30% of the accumulated damage, capped at 250000. It goes on cooldown for 10 seconds afterward. Depending on the enemy’s location you attack, the site multiplier can increase the damage beyond 250000.								
+								<br><br>
+								Note that damage dealt by Raising Pursuit contributes to Banishing Arrow’s damage accumulation while Banishing Arrow damage does not contribute to Raising Pursuit’s.
+							</p>
+						</section>
+						
+						<button slot="title">S5 Slot</button>
+						<section>
+							<p class = "w3-justify">
+								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<b>Anthesis Cultivation <span class = "en-n">[Augment Bloom]</span></b>: Doubles the effects of all stat-based special abilities affixed on your weapon.
+								<br><br>
+								The stats you gain from Anthesis Cultivation doesn’t apply to you while you are in the lobby. Furthermore, the stats are added to your character stats, so it doesn’t synergize with S1:Shoot/Strike/Tech Boost for a massive increase. Also, it’s a “universal” SSA any class can use.
+							</p>							
+
+							<p class = "w3-justify">
+								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<b>Mysterious Purpose <span class = "en-n">[Skillful Adept Will]</span></b>: Increase Critical Strike Chance by 20%. Critical Strike deals 2% more damage and recovers 1% of damage dealt as HP (capped at 30).
+								<br><br>
+								If you are a dedicated BrRa (especially that one), BrHu, or BrSu player, it may be better to take this over Auxiliary Arrow due to a very straightforward application. Note that the SSA is exclusive to Liberate Slash [Gunslash/Gunblade] and Lightweaver Cras Tier, so you may want to pull it out with affixing first before switching the weapon to bow, or anything else that you prefer.
+							</p>
+
+							<p class = "w3-justify">
+								<image src="/img/icons/ssa/s5.png" id = "inline-img">
+								<b>Auxiliary Arrow <span class = "en-n">[Homing Bolts]</span></b>: Summons a chasing bolt when a PA deals damage, further enhanced after a successfully avoiding attack with Step action.
+							</p>
+
+							<div class = "w3-center" style = "margin:auto; display:flex;">
+								<button onclick="myAccFunc('aux-arrow')" 
+								class="w3-center w3-button w3-light-grey w3-block w3-dark-grey">
+								It is one hell of a SSA...
+								</button>
+							</div>				
+							<div id="aux-arrow" class="w3-hide w3-border">
+							  <div class="w3-container"  style = "background:white">
+
+								<div class = "w3-center">
+									<image src="/img/dogeph.jpg" style = "width:50%; padding:16px 16px; "></image>
+								</div>			
+								
+								<p class = "w3-justify">
+									Whenever your PA deals damage to an enemy, your bullet bow fires a “lesser, lighter Chase Arrow” following the attack with a cooldown of 0.35 seconds and the power of 66. The game also treats it as “special Attack”, so several damage multipliers apply while being able to trigger a Banishing Arrow detonation timer. What a convoluted ability!								
+									<br><br>
+									If you “Step” and successfully avoid damage from any attack, a loud SFX similar to the Hero/Phantom Counter plays. For the next 15 seconds, the Auxiliary Arrow cooldown is halved, the power increases to 100; refresh again upon a successful Step.
+									<br><br>
+									Auxiliary Arrow has somewhat questionable interactions with Bow PAs. The effectiveness of Auxiliary Arrows scales with how many hits you can make against the enemy, and how well you can maintain the enhanced version. <b>The table below shows the interaction with a single use of bow PA.</b>	Otherwise, you need to time how long it takes to chain those PAs or performing Banish Combo, then use the interval (or the hit counts if any delay) to find our how many arrows it fires.								
+								</p>
+								
+								<table class="w3-table-all w3-striped w3-border w3-card-4 w3-centered">
+									<tr>
+										<th class = "w3-border" style = "width:25%">Photon Arts</th>
+										<th class = "w3-border" style = "width:38%">Normal Aux. Arrow</th>
+										<th style = "width:38%">Enhanced Aux. Arrow</th>
+									</tr>
+									<tr>
+										<td class = "w3-border">Banishing Arrow</td>
+										<td class = "w3-border" colspan = "2"><b>ZERO (0); both on hit and explosion</b></td>									
+									</tr>
+									<tr>
+										<td class = "w3-border">Penetrate Arrow</td>
+										<td class = "w3-border">1 hit on every 3-4 hits of Penetrate Arrow(s)</td>
+										<td class = "w3-center">1 hit on every 2 hits of Penetrate Arrow(s)</td>
+									</tr>
+									<tr>
+										<td class = "w3-border">Master Shot</td>
+										<td colspan = "2"><b>Always 1 hit</b></td>									
+									</tr>
+									<tr>
+										<td class = "w3-border">Torrential Arrow</td>
+										<td class = "w3-border">2 hits for uncharged<br>8 hits for charged</td>
+										<td class = "w3-border">4 hits for uncharged<br>8 hits for charged</td>										
+									</tr>
+									<tr>
+										<td class = "w3-border">Gravity Point</td>
+										<td class = "w3-border">3 hits for uncharged<br>5 hits for charged</td>
+										<td class = "w3-border">4 hits for uncharged<br>5 hits for charged</td>											
+									</tr>
+									<tr>
+										<td class = "w3-border">Kamikaze Arrow</td>
+										<td colspan = "2"><b>Always 1 hit</b></td>		
+									</tr>
+									<tr>
+										<td class = "w3-border">Last Nemesis</td>
+										<td colspan = "2"><b>Always 1 hit</b></td>										
+									</tr>
+									<tr>
+										<td class = "w3-border">Trit Shooter</td>
+										<td class = "w3-border">~6 hits</td>
+										<td class = "w3-border">~8 hits</td>										
+									</tr>
+									<tr>
+										<td class = "w3-border">Million Storm</td>
+										<td class = "w3-border">1 hit per<br>2 Million Storm hits</td>
+										<td class = "w3-border">1 hit per<br>2 Million Storm hits</td>											
+									</tr>	
+									<tr>
+										<td class = "w3-border" class = "w3-border">Chase Arrow</td>
+										<td class = "w3-border" colspan = "2"><b>Always 1 hit</b></td>											
+									</tr>		
+								</table>
+
+								<p class = "w3-justify">
+									As a result, the damage percentage of this S5 can vary, starting from the very low of 2%-ish up to 5% or slightly more. Only Liberate Bow and Lightweaver Cras Archer has it as SAF.
+								</p>								
+							  </div>
+							</div>								
+						</section>
+					</fancy-tabs>
+					
+					<br>
+					
+					
+					
+					<p class = "w3-justify">
+						<h3><b>The Omitted Ones</b></h3>					
+						These SSAs once existed in this guide and I removed them, I didn’t put it here in the first place or mentioned it elsewhere. Some discussions, science and math later, I think I should put them here just for the sake of explanation and completeness of the guide. So, here they are, separated from the above tabs.
+					</p>
+					
+					<button onclick="myAccFunc('omit-ssa')" class="w3-button w3-light-grey w3-block w3-left-align w3-dark-grey" id="clickthis">What are those OwO?</button>					
+					<div id="omit-ssa" class="w3-hide w3-border">
+					  <div class="w3-container"  style = "background:white">
+					  	<p class = "w3-left">
+							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<b>White Snow Flash <span class = "en-n">[Snowgleam]</span></b>: +20% Attack PP Recovery for 30 seconds after spending 150 PP; active when White Aura appears.
+							<br><br>
+							Snowgleam is still a viable choice for the old-meta class combinations, which are BrHu, BrRa, and BrSu. You can combo it with some other SSAs for greater benefit. Still, it doesn’t give you damage compared to the Red.
+						</p>				
+
+					  	<p class = "w3-left">
+							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<b>Collaborator Liberator 2 <span class = "en-n">[Comrade’s Blessing 2]</span></b>: Receive additional buffs based on the number of members in your party.
+							
+							<table class="w3-table-all w3-striped w3-border">
+								<tr>
+									<th class = "w3-center">2 Members</th>
+									<th class = "w3-center">3 Members</th>
+									<th class = "w3-center">4 Members</th>
+								</tr>
+								<tr>
+									<td class = "w3-center">10% PP Reduction</td>
+									<td class = "w3-center">+20% Crit. Chance***</td>
+									<td class = "w3-center">4% increased Damage</td>
+								</tr>
+							</table>
+							<span>
+							<a href = "https://twitter.com/syobostar_pso2/status/1326471038973038592" target = "_blank" class = "link">
+							*** Sources: this JP tweet in Sep, 2020.</a> The other two effects are taken from JP sWiki.
+							</span>
+							<br><br>								
+							The effect also applies if your party members are “Support NPCs”. The SSA works if and only if you play with a full party, giving you invaluable stats for a cost of a single SSA slot. However, once you play the game solo, this SSA becomes a deadweight on your weapon instantly. The Crit Chance might be lower, but one can expect between 10-20% though.
+						</p>
+						
+					  	<p class = "w3-left">
+							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<b>Eclipsing Decay <span class = "en-n">[Crippling Erode]</span></b>: Attacks that hit an enemy have a 25% chance to inflict Jellen status; -15% ATK stats and lasts for 10 seconds.
+							<br><br>
+							This is exclusive for those that want to utilize Jellen in their gameplay without being Phantom, Hunter (w/ War Attrach) and Formel Luster. Combine with other sources of defense, and everything is less of a danger to you, while letting you reap the benefit of the Phrase Decay affix. Note that you have to keep hitting the enemy, and the SSA competes with better S1 and makes you think twice about making a weapon with Phrase Decay.							
+						</p>
+
+					  	<p class = "w3-left">
+							<image src="/img/icons/ssa/s2.png" id = "inline-img">
+							<b>Heavenly Keeper 2 <span class = "en-n">[Sky-Earth Lucency 2]</span></b>: While on ground, boost Attack PP Recovery by 35% and Natural PP Recovery by 25%. While airborne, grants 15% PP Consumption Reduction.
+							<br><br>
+							The SSA still competes with the potent S2 ones, while forcing you to be more considerate about land and air movement. Bow is a ground weapon by default, but the “arrow-ballet” maneuver exists though. Some subclasses, such as BrRa and BrEt, may find this one helpful somehow.							
+						</p>
+						
+					  	<p class = "w3-left">
+							<image src="/img/icons/ssa/s4.png" id = "inline-img">
+							<b>Support Extension <span class = "en-n">[Support Applification]</span></b>:: Shifta and Deband's maximum duration becomes 120 seconds.
+							<br><br>
+							Non-BrLu players can put it any backup weapon with S4 slot. With the introduction of S8:Sky Dance's Boon, you can start the quest with max duration buff and have easier time maintaining it throughout the quests. 
+						</p>						
+
+
+					  	<p class = "w3-left">
+							And… the most cursed combo of all that I regret telling my friend who is a  Formel Luster main, which will spark some weird as heck idea for Bow Braver out there. I’m gonna regret talking about this one for sure.
+							<br><br>
+							<image src="/img/icons/ssa/s1.png" id = "inline-img">
+							<b>Lethal Intent <span class = "en-n">[Will of the Dying]</span></b>: +4% damage but lose 5% of your HP every 20 second, and  
+							<image src="/img/icons/ssa/s2.png" id = "inline-img"><image src="/img/icons/ssa/s3.png" id = "inline-img">
+							<b>Cursed Radiance <span class = "en-n">[Lucent Adversity]</span></b>: Recovers 15% of maximum PP when you take damage.
+							<br><br>
+							The combo generates PP every 20 seconds out of thin air or from getting slapped by any kind of damage. The combination forces the player to find a reliable way to periodically recover the lost HP while introducing a whacky playstyle. Such examples are the “100% Uptime Luster” or “Tank Bow” using BrEt to abuse it. Again, it may not be a worthy trade-off with the better S1-S3 options, yet no one is going to stop you from using it… until the effect set you up for an accidental suicide. 							
+						</p>
+						
+						<div class = "w3-center">
+							<image src="/img/dogeph.jpg" style = "width:50%;"></image>
+							<p><b>Use it at your own risk.</b></p>
+						</div>						
+						
+					  </div>
+					</div>	
+					
+					<br>
+					<p class = "w3-justify">
+						<h3><b>The Good Combo</b></h3>
+						Just in case you don’t want to think too much, I would suggest the two combinations below. Both have their ups and downs, requiring some workarounds and playstyle adjustments to properly live with them.				
+					</p>
+					
+					<fancy-tabs>
+						<button slot="title" selected>Aura/Gleam</button>
+						<section>
+							<table class="w3-table-all w3-striped w3-border">
+								<tr>
+									<th class = "w3-center" style = "width:20%;">Slots</th>
+									<th class = "w3-center" colspan = "2">Ability Name</th>																		
+								</tr>
+								<tr>
+									<td class = "w3-center">S1</td>
+									<td class = "w3-center" colspan = "2">Red Petal Flash OR White Snow Flash</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S2</td>
+									<td class = "w3-center">Photon Reduction (2/3)<br>OR Nature’s Reduction (2)</td>									
+									<td class = "w3-center">Rainbow’s Intent</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S3</td>
+									<td class = "w3-center">Nature’s Melody (2)<br>OR Nature’s Radiance</td>									
+									<td class = "w3-center">Rainbow’s Intent</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S4</td>
+									<td class = "w3-center" colspan = "2">Harmonized Rainbow</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S5</td>
+									<td class = "w3-center" colspan = "2">Auxiliary Arrow OR Anthesis Cultivation OR Mysterious Purpose</td>									
+								</tr>								
+							</table>
+							
+							<ul>	
+								<li>Usable on weapons that support S1-S3; better with S4 or S5.</li>
+								<li>For the S1, you choose between the following two based on your preference, how comfortable you are with them.</li>
+								<li>You will deal less damage and won’t have any PP Efficiency if the Aura Flash is inactive, so be quick with those conditions!</li>								
+							</ul>							
+
+							<p class = "justify">
+								Note that switching to any weapon will remove the aura effect and stop any SSA dependent on it immediately. However, if it is the same weapon (a different set of PA or not), the aura and the buffs remain. You can put extra Aura SSA on other weapons with S1 as well, if you really want to maintain it.							
+							</p>
+							
+						</section>
+						
+						<button slot="title">Your Choices</button>
+						<section>
+							<table class="w3-table-all w3-striped w3-border">
+								<tr>
+									<th class = "w3-center" style = "width:20%;">Slots</th>
+									<th class = "w3-center">Ability Name</th>																		
+								</tr>
+								<tr>
+									<td class = "w3-center">S1</td>
+									<td class = "w3-center">Augment Intent (2) OR Photon Balance (2) OR Shoot Boost</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S2</td>
+									<td class = "w3-center">Photon Reduction (2/3) OR Skill Reduction OR Skilled Intent 2</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S3</td>
+									<td class = "w3-center">Skilled Intent (2) OR Splintering Intent</td>										
+								</tr>
+								<tr>
+									<td class = "w3-center">S4</td>
+									<td class = "w3-center">Radiant Response OR Skilled Balance OR Raising Pursuit</td>									
+								</tr>
+								<tr>
+									<td class = "w3-center">S5</td>
+									<td class = "w3-center">Auxiliary Arrow OR Anthesis Cultivation OR Mysterious Purpose</td>										
+								</tr>								
+							</table>
+							
+							<ul>	
+								<li>Auxiliary Arrow almost doubles the number of hits you’ve done with a bullet bow for better debuff uptime. 
+								Therefore, it’s possible to use Eclipsing Decay <span class = "en-n">[Cripping Erode]</span> and 
+								utilize its benefit. Don't forget to put on Phrase Decay as well.</li>
+								<li>7s weapon with regular Augment Intent is fine, as losing 0.5% is neglectable. If it’s Augment Intent 2, then make it an 8s weapon.</li>
+								<li>Splintering Intent works if the enemy you are fighting has its targetable part classified as “breakable”. Otherwise, you get nothing.</li>
+								<li>Shoot Boost only works on any Bow that has at most 3 SSA slots and must support S1. 4 is also possible, but can be very expensive.</li>
+							</ul>		
+
+							<p class = "w3-justify">		
+								<b>When it comes to choosing S4, Radiant Response should be your first priority</b>. The PP Efficiency gained can go a long way with your bow career. On the other hand, S5 Auxiliary Arrow should be prioritized over the rest as the added damage from it greatly improves the viability and firepower of many PAs.
+								<br><br>
+								Other than that, S4:Skilled Balance can take place over S4:Radiant Response later for better damage. The rest is up to you.
+							</p>
+							
+						</section>					
+					</fancy-tabs>					
+					
+					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">	
+				</div>				
+				
+
+			</div>		
+			
+		</div>		
+		<!-- End of Content---->	
+
+		<!--Footer Part-->
+		<footer-component></footer-component>		
+		
+		<!-- Function scripts that require late load.-->
+		<script src = "/js/topScroll.js"></script>
+		<script src = "/js/mytabs.js"></script>
+		<script src = "/js/carousel.js"></script>
+		
+	</body>
+</html>

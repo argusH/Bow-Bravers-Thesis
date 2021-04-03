@@ -1,0 +1,7 @@
+Every icon in this category will be named as followed:
+
+seriestag-[name]-[part]-min.png
+
+Seriestage is for the category/series/line/.
+Name is the name split with dash.
+Part is specific for units.
