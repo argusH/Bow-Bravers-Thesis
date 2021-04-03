@@ -9,18 +9,195 @@
 		
 		<title> Photon Arts | Bow Braver's Thesis </title>	
 
-		<!-- Function scripts that require early load.-->	
-		<script src = "/js/addNav.js"></script> <!-- use Ext if you need to navigation bar.-->
-		<script src = "/js/addFoot.js"></script>		
-		<script src = "/js/basic.js"></script>				
+		<!-- necessart stuff -->
+		<script src = "js/basic.js"></script>
+		<link rel="stylesheet" href="css/selfW3.css">	
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Proza+Libre:wght@400;500;600;700;800&display=swap">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+<script>
+	//polyfill stuff
+	function execPolyfill() {
+
+	(function(){
+	// CustomElementsV1.min.js v1 polyfill from https://github.com/webcomponents/webcomponentsjs/tree/v1/src/CustomElements/v1.
+	/*
+	 Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+	 This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+	 The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+	 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+	 Code distributed by Google as part of the polymer project is also
+	 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+	*/
+	'use strict';(function(){function q(a){return l.test(a)&&-1===r.indexOf(a)}function e(){this.a=new Map;this.l=new Map;this.o=new Map;this.m=new Set;this.D=new MutationObserver(this.F.bind(this));this.f=null;this.L=!0;this.h=!1;this.g(document)}var g=document,f=window,r="annotation-xml color-profile font-face font-face-src font-face-uri font-face-format font-face-name missing-glyph".split(" "),l=/^[a-z][.0-9_a-z]*-[\-.0-9_a-z]*$/;e.prototype={J:function(a,b){function c(a){var b=m[a];if(void 0!==b&&
+	"function"!==typeof b)throw Error(d+" '"+a+"' is not a Function");return b}a=a.toString().toLowerCase();if("function"!==typeof b)throw new TypeError("constructor must be a Constructor");if(!q(a))throw new SyntaxError("The element name '"+a+"' is not valid.");if(this.a.has(a))throw Error("An element with name '"+a+"' is already defined");if(this.l.has(b))throw Error("Definition failed for '"+a+"': The constructor is already used.");var d=a,m=b.prototype;if("object"!==typeof m)throw new TypeError("Definition failed for '"+
+	a+"': constructor.prototype must be an object");var e=c("connectedCallback"),f=c("disconnectedCallback"),h=c("attributeChangedCallback");this.a.set(d,{name:a,localName:d,constructor:b,w:e,A:f,v:h,K:b.observedAttributes||[]});this.l.set(b,d);this.b(g.childNodes);if(e=this.o.get(d))e.resolve(void 0),this.o.delete(d)},get:function(a){return(a=this.a.get(a))?a.constructor:void 0},M:function(a){if(!l.test(a))return Promise.reject(new SyntaxError("The element name '"+a+"' is not valid."));if(this.a.has(a))return Promise.resolve();
+	var b={B:null};b.B=new Promise(function(a){b.resolve=a});this.o.set(a,b);return b.B},C:function(){this.h&&(console.warn("flush!!!"),this.m.forEach(function(a){this.s(a.takeRecords())},this))},H:function(a){this.f=a},g:function(a){a.c=new MutationObserver(this.s.bind(this));a.c.observe(a,{childList:!0,subtree:!0});this.h&&this.m.add(a.c)},I:function(a){a.c&&(a.c.disconnect(),a.c=null,this.h&&this.m.delete(a.c))},s:function(a){for(var b=0;b<a.length;b++){var c=a[b];"childList"===c.type&&(this.b(c.addedNodes),
+	this.G(c.removedNodes))}},b:function(a){for(var b=0;b<a.length;b++){var c=a[b];if(c.nodeType===Node.ELEMENT_NODE){this.I(c);c=g.createTreeWalker(c,NodeFilter.SHOW_ELEMENT,null,!1);do{var d=c.currentNode,e=this.a.get(d.localName);e&&(d.j||this.u(d,e,!0),d.j&&!d.i&&(d.i=!0,e&&e.w&&e.w.call(d)));d.shadowRoot&&this.b(d.shadowRoot.childNodes);if("LINK"===d.tagName){var f=function(){var a=d;return function(){a.removeEventListener("load",f);this.g(a.import);this.b(a.import.childNodes)}.bind(this)}.call(this);
+	d.import?f():d.addEventListener("load",f)}}while(c.nextNode())}}},G:function(a){for(var b=0;b<a.length;b++){var c=a[b];if(c.nodeType===Node.ELEMENT_NODE){this.g(c);c=g.createTreeWalker(c,NodeFilter.SHOW_ELEMENT,null,!1);do{var d=c.currentNode;if(d.j&&d.i){d.i=!1;var e=this.a.get(d.localName);e&&e.A&&e.A.call(d)}}while(c.nextNode())}}},u:function(a,b,c){a.__proto__=b.constructor.prototype;c&&(this.H(a),a.j=!0,new b.constructor,console.assert(null==this.f));c=b.K;if(b.v&&0<c.length)for(this.D.observe(a,
+	{attributes:!0,attributeOldValue:!0,attributeFilter:c}),b=0;b<c.length;b++){var d=c[b];if(a.hasAttribute(d)){var e=a.getAttribute(d);a.v(d,null,e)}}},F:function(a){for(var b=0;b<a.length;b++){var c=a[b];if("attributes"===c.type){var d=c.attributeName,e=c.oldValue,f=c.target,g=f.getAttribute(d);f.attributeChangedCallback(d,e,g,c.attributeNamespace)}}}};window.CustomElementsRegistry=e;e.prototype.define=e.prototype.J;e.prototype.get=e.prototype.get;e.prototype.whenDefined=e.prototype.M;e.prototype.flush=
+	e.prototype.C;e.prototype.polyfilled=e.prototype.L;e.prototype.enableFlush=e.prototype.h;var h=f.HTMLElement;f.HTMLElement=function(){var a=f.customElements;if(a.f){var b=a.f;a.f=null;return b}if(this.constructor)return a=a.l.get(this.constructor),g.b(a,!1);throw Error("unknown constructor. Did you call customElements.define()?");};f.HTMLElement.prototype=Object.create(h.prototype);Object.defineProperty(f.HTMLElement.prototype,"constructor",{value:f.HTMLElement});for(var h="Button Canvas Data Head Mod TableCell TableCol Anchor Area Base Body BR DataList Details Dialog Div DList Embed FieldSet Form Heading HR Html IFrame Image Input Keygen Label Legend LI Link Map Media Menu MenuItem Meta Meter Object OList OptGroup Option Output Paragraph Param Picture Pre Progress Quote Script Select Slot Source Span Style TableCaption Table TableRow TableSection Template TextArea Time Title Track UList Unknown".split(" "),
+	k=0;k<h.length;k++){var n=window["HTML"+h[k]+"Element"];n&&(n.prototype.__proto__=f.HTMLElement.prototype)}var t=g.createElement;g.b=function(a,b){var c=f.customElements,d=t.call(g,a),e=c.a.get(a.toLowerCase());e&&c.u(d,e,b);c.g(d);return d};g.createElement=function(a){return g.b(a,!0)};var u=g.createElementNS;g.createElementNS=function(a,b){return"http://www.w3.org/1999/xhtml"===a?g.createElement(b):u.call(document,a,b)};var p=Element.prototype.attachShadow;p&&Object.defineProperty(Element.prototype,
+	"attachShadow",{value:function(a){a=p.call(this,a);f.customElements.g(a);return a}});window.customElements=new e})();
+	}).call(this)
+	}
+
+	// Remove check when https://github.com/webcomponents/webcomponentsjs/issues/548 is fixed.
+	if (!!!window.customElements) {
+	  execPolyfill();
+</script>
+		
 	</head>
 	
 	<body>	
 	
 		<button onclick="topFunction()" id="topButton">Top</button>
 		
-		<!-- NAV Bar + Main img -->
-		<header-component></header-component>		
+<!-- NAV Bar + Main img; -->
+		<!-- Style Sheet Ref, slightly customized W3 scripts so it must be local-->
+		<!-- The Nav Bar -->
+		<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+			<a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+			<div class="w3-container">
+				<h3 class="w3-padding-64">
+					<b>Bow Braver's<br>Thesis</b>
+				</h3>
+			</div>
+			
+			<div class="w3-bar-block">
+				
+				<a href="https://argush.github.io/Bow-Bravers-Thesis/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Intro</a> 
+				<a href="summary.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Quick Summary</a> 
+				<a href="bowbraver.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Bow Braver?</a>
+				
+				<a onclick="myAccFunc('accSkills')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Braver Skills <i class="fa fa-caret-down"></i></a> 
+				<div id="accSkills" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="skills.html#skills-explanation" class="w3-bar-item w3-button">Skills Explanation</a>
+					<a href="skills.html#acquisition-order" class="w3-bar-item w3-button">Acquisition Order</a>
+					<a href="skills.html#remianing-points" class="w3-bar-item w3-button">Remaining Points</a>
+					<a href="skills.html#the-trees" class="w3-bar-item w3-button">The Trees</a>
+				</div>
+
+				<a onclick="myAccFunc('accSubclass')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Subclass <i class="fa fa-caret-down"></i></a> 				
+				<div id="accSubclass" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="subclass.html#viable-ones" class="w3-bar-item w3-button">Viable Ones</a>
+					<a href="subclass.html#subs-toavoid" class="w3-bar-item w3-button">Subs to Avoid</a>
+					<a href="subclass.html#multipliers" class="w3-bar-item w3-button">Multipliers</a>
+					<a href="subclass.html#non-brbow" class="w3-bar-item w3-button">Non-Br Bow Strat</a>
+				</div>
+				
+				<a onclick="myAccFunc('accPA')" class="w3-bar-item w3-button w3-hover-white">Bow PA <i class="fa fa-caret-down"></i></a> 				
+				<div id="accPA" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="#general-info" class="w3-bar-item w3-button">General Info</a>
+					<a href="#pa-indepth" class="w3-bar-item w3-button">PA In-Depth</a>
+					<a href="#attack-range" class="w3-bar-item w3-button">Attack Range</a>
+					<a href="#complex-pa" class="w3-bar-item w3-button">Complex PA</a>
+					<a href="#palette-setup" class="w3-bar-item w3-button">Palette Setup</a>
+					<a href="#adapting-techs" class="w3-bar-item w3-button">Adapting Techs</a>
+				</div>
+				
+				<a onclick="myAccFunc('accBasics')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">The Basics <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBasics" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="thebasics.html#speed-bowstrat" class="w3-bar-item w3-button">Speed Bow Strat</a>
+					<a href="thebasics.html#bow-maneuvers" class="w3-bar-item w3-button">Bow Maneuvers</a>
+					<a href="thebasics.html#aiming-modes" class="w3-bar-item w3-button">Aiming Modes</a>
+					<a href="thebasics.html#keybind-notes" class="w3-bar-item w3-button">Keybind Notes</a>
+				</div>
+
+				<a onclick="myAccFunc('accBanish')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">The Banish <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBanish" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="thebanish.html#combos-explained" class="w3-bar-item w3-button">Combos Explained</a>
+					<a href="thebanish.html#the-damnedchart" class="w3-bar-item w3-button">The Damned Chart</a>
+					<a href="thebanish.html#side-notes" class="w3-bar-item w3-button">Side Notes</a>
+					<a href="thebanish.html#subclass-specifics" class="w3-bar-item w3-button">Subclass Specifics</a>					
+				</div>				
+				
+				<a onclick="myAccFunc('accBow')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Your Bow <i class="fa fa-caret-down"></i></a> 				
+				<div id="accBow" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="yourbow.html#upgrading-101" class="w3-bar-item w3-button">Upgrading 101</a>
+					<a href="yourbow.html#what-do" class="w3-bar-item w3-button">What do?</a>
+					<a href="yourbow.html#the-lists" class="w3-bar-item w3-button">The Lists</a>
+					<a href="yourbow.html#weapon-ssa" class="w3-bar-item w3-button">Weapon SSA</a>
+				</div>	
+				
+				<a onclick="myAccFunc('accUnits')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Your Units <i class="fa fa-caret-down"></i></a> 				
+				<div id="accUnits" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="yourunits.html#selection-101" class="w3-bar-item w3-button">Selection 101</a>
+					<a href="yourunits.html#what-do" class="w3-bar-item w3-button">What do?</a>
+					<a href="yourunits.html#units-ssa" class="w3-bar-item w3-button">Units SSA</a>
+					<a href="yourunits.html#affixing" class="w3-bar-item w3-button">Affixing</a>
+				</div>	
+
+				<a onclick="myAccFunc('accEquip')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Others <i class="fa fa-caret-down"></i></a> 				
+				<div id="accEquip" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="others.html#extra-tools" class="w3-bar-item w3-button">Extra Tools</a>
+					<a href="others.html#rings-setup" class="w3-bar-item w3-button">Rings Setup</a>
+					<a href="others.html#crit-happens" class="w3-bar-item w3-button">Crit Happens</a>
+					<a href="others.html#mag" class="w3-bar-item w3-button">MAG</a>
+					<a href="others.html#drinks" class="w3-bar-item w3-button">Drinks</a>
+					<a href="others.html#food" class="w3-bar-item w3-button">Food</a>
+				</div>	
+								
+				<a onclick="myAccFunc('accOff')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Off-topics <i class="fa fa-caret-down"></i></a> 				
+				<div id="accOff" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="offtopic.html#pp-threshold" class="w3-bar-item w3-button">Why 200+ PP?</a>					
+					<a href="offtopic.html#ppefficiency-andyou" class="w3-bar-item w3-button">PP Efficiency & You</a>
+					<a href="offtopic.html#atk-todamage" class="w3-bar-item w3-button">ATK to Damage</a>		
+					<a href="offtopic.html#hybrid-braver" class="w3-bar-item w3-button">Hybrid Braver</a>		
+				</div>					
+				
+				<a href="gearexamples.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gear Examples</a>	
+
+				<a onclick="myAccFunc('accExtra')" href="javascript:void(0)" class="w3-bar-item w3-button w3-hover-white">Extras <i class="fa fa-caret-down"></i></a> 				
+				<div id="accExtra" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+					<a href="extras.html#the-media" class="w3-bar-item w3-button">The Media</a>
+					<a href="extras.html#other-guides" class="w3-bar-item w3-button">Other Guides</a>	
+				</div>	
+
+				<a href="credits.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Credits</a>	
+			</div>					
+		</nav>
+		
+		<!-- The Top Bar -->
+		<header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">	
+			<a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+			<b>Bow Braver's Thesis</b>
+		</header>
+		
+		<!-- Overlay on sidebar -->
+		<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+		
+		<div class="w3-main" style="margin-left:340px;margin-right:40px">
+			
+			<!-- Random Picture Carousel, add later.-->
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/argus-posing.png" alt = "1" width = "100%"></img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Archery</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Archery</h5>
+					<h3 class="w3-hide-medium w3-hide-small">Cranked to Eleven</h3>
+				</div>				
+			</div>
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/menacing-fight.png" alt = "2" width = "100%"></img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Bullshit</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Bullshit</h5>
+					<h3 class="w3-hide-medium w3-hide-small">To Its Core</h3>
+				</div>				
+			</div>
+			<div class = "imgSlides w3-display-container w3-center">
+				<img class = "w3-image w3-grayscale-min" src = "img/arnia-posing.png" alt = "3" width = "100%"></img>
+				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
+					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Practice</h1>
+					<h5 class="w3-hide-large" style="white-space:nowrap">Practice</h5>
+					<h3 class="w3-hide-medium w3-hide-small">And Git Gud</h3>
+				</div>				
+			</div>		
+		</div>		
+<!-- NAV Bar + Main img; -->	
 	
 		<!-- C O N T E N T Here -->
 		<div class="w3-main" style="margin-left:340px;margin-right:40px">		
@@ -1787,18 +1964,22 @@
 					</table>
 					<hr class="w3-round w3-center" style="width:100%; border:5px solid green">
 				</div>	
-			
-			
 			</div>				
 		</div>		
 		<!-- End of Content---->	
 
-		<!--Footer Part-->
-		<footer-component></footer-component>		
+<!--Footer Part; no DOM memes as usual...-->
+		<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:120px">
+				<p class="w3-right">Powered by 
+					<a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+					and the cursed soul of the guide writer UwU.
+				</p>
+		</div>
+<!--Footer Part; no DOM memes as usual...-->		
 		
-		<!-- Function scripts that require late load.-->
-		<script src = "/js/topScroll.js"></script>
-		<script src = "/js/mytabs.js"></script>
-		<script src = "/js/carousel.js"></script>
+		<!-- Function scripts that require late load. Should have been WEBPACK KEKW-->
+		<script src = "js/topScroll.js"></script>
+		<script src = "js/mytabs.js"></script>
+		<script src = "js/carousel.js"></script>
 	</body>
 </html>
