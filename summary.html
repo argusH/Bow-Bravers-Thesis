@@ -9,8 +9,14 @@
 		
 		<title> Summary | Bow Braver's Thesis </title>	
 
-		<!-- Function scripts that require early load.-->	
-		<script src = "/js/basic.js"></script>		
+		<!-- necessart stuff -->
+		<script src = "js/basic.js"></script>
+		<link rel="stylesheet" href="css/selfW3.css">	
+		<link rel="stylesheet" href="css/basic.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Proza+Libre:wght@400;500;600;700;800&display=swap">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
 	
 <script>
 //polyfill stuff
@@ -168,7 +174,7 @@ if (!!!window.customElements) {
 			
 			<!-- Random Picture Carousel, add later.-->
 			<div class = "imgSlides w3-display-container w3-center">
-				<img class = "w3-image w3-grayscale-min" src = "img/argus-posing.png" alt = "1" width = "100%"></img>
+				<img class = "w3-image w3-grayscale-min" src = "img/argus-posing.png" alt = "1" width = "100%"><img>
 				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
 					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Archery</h1>
 					<h5 class="w3-hide-large" style="white-space:nowrap">Archery</h5>
@@ -176,7 +182,7 @@ if (!!!window.customElements) {
 				</div>				
 			</div>
 			<div class = "imgSlides w3-display-container w3-center">
-				<img class = "w3-image w3-grayscale-min" src = "img/menacing-fight.png" alt = "2" width = "100%"></img>
+				<img class = "w3-image w3-grayscale-min" src = "img/menacing-fight.png" alt = "2" width = "100%"><img>
 				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
 					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Bullshit</h1>
 					<h5 class="w3-hide-large" style="white-space:nowrap">Bullshit</h5>
@@ -184,7 +190,7 @@ if (!!!window.customElements) {
 				</div>				
 			</div>
 			<div class = "imgSlides w3-display-container w3-center">
-				<img class = "w3-image w3-grayscale-min" src = "img/arnia-posing.png" alt = "3" width = "100%"></img>
+				<img class = "w3-image w3-grayscale-min" src = "img/arnia-posing.png" alt = "3" width = "100%"><img>
 				<div class="w3-display-middle w3-padding-large w3-border w3-wide w3-center w3-background w3-black w3-opacity-min">
 					<h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Practice</h1>
 					<h5 class="w3-hide-large" style="white-space:nowrap">Practice</h5>
@@ -212,8 +218,8 @@ if (!!!window.customElements) {
 					<p class = "w3-justify">
 						<h4>1) What’s Bow Braver?</h4>
 						Answer: <b>A 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/braver.png"></span>Braver that primarily uses 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/property/bow.png"></span>bow 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/braver.png"></span>Braver that primarily uses 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/property/bow.png"></span>bow 
 						to deal burst damage, preferably from medium range.</b> 
 						Excel against bosses; somewhat struggle against multiple enemies. 
 						Demands game knowledge, commitment, 
@@ -224,8 +230,8 @@ if (!!!window.customElements) {
 					<p class = "w3-justify">
 						<h4>2) Why split the weapons/guides? Isn’t it the same class?</h4>
 						Answer: 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/property/bow.png"></span><b>Bow and 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/property/katana.png"></span>Katana 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/property/bow.png"></span><b>Bow and 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/property/katana.png"></span>Katana 
 						approach to combat, mechanics, setup for equipment, and stat scaling are completely different.</b> The Katana Guide precedes the Bow Guide. Also, you will do fine being proficient with one weapon. Learning both means using considerable resources and dedication, and you are better off spending them on a single weapon.
 					</p>
 					
@@ -236,24 +242,24 @@ if (!!!window.customElements) {
 						<br>
 						<ul>
 							<li>Bow Braver revolves around 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/banishing_arrow.png"></span><b>Banishing Arrow</b>;
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/banishing_arrow.png"></span><b>Banishing Arrow</b>;
 								placing a marker on an enemy and detonates it a moment later after any damage done. Dubbed as 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/banish_combo.png"></span><b>Banish Combo</b>, you choose which Photon Arts to use, so it fits in the 3-seconds timer.</li>
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/banish_combo.png"></span><b>Banish Combo</b>, you choose which Photon Arts to use, so it fits in the 3-seconds timer.</li>
 							<li>Bow Braver shines the most during its signature skill called 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/class-skills/braver/rapid_shoot.png"></span><b>Rapid Shoot</b>,
+								<span class = "ic-mid" id = "inline-img"><img src = "img/class-skills/braver/rapid_shoot.png"></span><b>Rapid Shoot</b>,
 							massively increasing the damage output and improving PP recovery to offset the PP-thirsty Banish Combo.</li>
 							<li>Bow Braver has a myriad of PAs to deal with multiple enemies, but the charging mechanic and its awkwardness make it less effective. 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/penetrate_arrow.png"></span>Penetrate Arrow, 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/master_shot.png"></span>Master Shot, 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/torrential_arrow.png"></span>Torrential Arrow, 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/final_nemesis.png"></span>Final Nemesis, 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/sharp_bomb-t0.png"></span>Sharp Bomb T0, and 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/pa/bow/chase_arrow.png"></span>Chase Arrow, 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/penetrate_arrow.png"></span>Penetrate Arrow, 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/master_shot.png"></span>Master Shot, 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/torrential_arrow.png"></span>Torrential Arrow, 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/final_nemesis.png"></span>Final Nemesis, 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/sharp_bomb-t0.png"></span>Sharp Bomb T0, and 
+								<span class = "ic-mid" id = "inline-img"><img src = "img/pa/bow/chase_arrow.png"></span>Chase Arrow, 
 								are the most commonly used ones among all bow PAs.</li>
 							<li>Bow Braver has access to one of the most devastating, all-purpose Complex Photon Arts in the game: 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/others/cpa.png"></span><b>Cerulean Ballista.</b></li>
+								<span class = "ic-mid" id = "inline-img"><img src = "img/icons/others/cpa.png"></span><b>Cerulean Ballista.</b></li>
 							<li>Bow Braver can also use 
-								<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/property/katana.png"></span>Katana, but often as a utility weapon.</li>
+								<span class = "ic-mid" id = "inline-img"><img src = "img/icons/property/katana.png"></span>Katana, but often as a utility weapon.</li>
 						</ul>
 					</p>
 
@@ -271,12 +277,12 @@ if (!!!window.customElements) {
 						<h4>5) What subclass should I use?</h4>
 						Answer:
 						In the EP6 era, 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/etoile.png"></span><b>Etoile is often the “go-to” subclass for Bow Braver. Besides, 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/phantom.png"></span>Phantom and 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/luster.png"></span>Luster also works.</b> 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/hunter.png"></span>Hunter subclass remains relevant due to its defensive skills. 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/ranger.png"></span>Ranger and 
-						<span class = "ic-mid" id = "inline-img"><img src = "/img/icons/classes/summoner.png"></span>Summoner sub may seem outdated by today, but they remain viable for some. Regardless, the explanation for all combinations can be found in Subclass section.					
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/etoile.png"></span><b>Etoile is often the “go-to” subclass for Bow Braver. Besides, 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/phantom.png"></span>Phantom and 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/luster.png"></span>Luster also works.</b> 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/hunter.png"></span>Hunter subclass remains relevant due to its defensive skills. 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/ranger.png"></span>Ranger and 
+						<span class = "ic-mid" id = "inline-img"><img src = "img/icons/classes/summoner.png"></span>Summoner sub may seem outdated by today, but they remain viable for some. Regardless, the explanation for all combinations can be found in Subclass section.					
 						<br>				
 					</p>				
 
@@ -290,34 +296,34 @@ if (!!!window.customElements) {
 					<table class = "w3-table-all w3-border w3-centered">
 						<tr>
 							<td class = "w3-border" style = "width:34%">
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/brhu.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/brhu.png"></span><br>
 								<a href = "https://bit.ly/36JTwik" target = "_blank" class = "link">BrHu; both Servers</a><br>
 								(5 Br points, 5 Hu points left)
 							</td>
 							<td class = "w3-border" style = "width:33%">
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/brra.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/brra.png"></span><br>
 								<a href = "https://bit.ly/2VKvSvX" target = "_blank" class = "link">BrRa; both Servers</a><br>
 								(5 Br points, 5 Ra points left)
 							</td>
 							<td style = "width:33%">
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/brsu.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/brsu.png"></span><br>
 								<a href = "https://bit.ly/3mHYQs6" target = "_blank" class = "link">BrSu; Servers</a><br>
 								(5 Br, 7 Su points left)
 							</td>
 						</tr>
 						<tr>
 							<td class = "w3-border">
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/brph.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/brph.png"></span><br>
 								<a href = "https://bit.ly/2VFG2Or" target = "_blank" class = "link">BrPh; both Servers</a><br>
 								(10 Br, 67 Ph points left)
 							</td class = "w3-border">
 							<td class = "w3-border" >
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/bret.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/bret.png"></span><br>
 								<a href = "https://bit.ly/36I9mKq" target = "_blank" class = "link">BrEt; both Servers</a><br>
 								(9 Br, 5 Et points left)
 							</td>
 							<td>
-								<span class = "ic-large" id = "inline-img"><img src = "/img/icons/pairs/brlu.png"></span><br>
+								<span class = "ic-large" id = "inline-img"><img src = "img/icons/pairs/brlu.png"></span><br>
 								<a href = "https://bit.ly/3gcRlqO" target = "_blank" class = "link">BrLu; both Servers</a><br>
 								(9 Br, 26 Lu Left)
 							</td>
@@ -338,29 +344,29 @@ if (!!!window.customElements) {
 								There are TWO options that you can choose. Pick your preferred SSAs and slap on damage-increase or PP Efficiency affixes you want.
 									<ul>
 										<li>
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/lightweaver_cras_archer.png"></span><b>Lightweaver Cras Archer</b>
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/lightweaver_cras_archer.png"></span><b>Lightweaver Cras Archer</b>
 											for SSA slots and its gimmick.</li>
 										<li>
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/fluxio-rinzer_rulutea.png"></span><b>Fluxio/Rinzer Rulutea</b> 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/fluxio-rinzer_rulutea.png"></span><b>Fluxio/Rinzer Rulutea</b> 
 											for its cool buff or CPA fodder.</li>										
 									</ul>
 								</li>
 								
 								<li>
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/units/cras_dyne_rear.png"></span>
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/units/cras_ment_leg.png"></span>
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/units/cras_noom_arm.png"></span>
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/units/cras_dyne_rear.png"></span>
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/units/cras_ment_leg.png"></span>
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/units/cras_noom_arm.png"></span>
 									<b>Cras Units</b>
 									at +10 with SSAs, affixed with high R-ATK and PP abilities, along with some HP, PP and DEF.</li>
 								<li>
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/genon_ain.png"></span>Genon Ain w/ S2 and S3: Cursed Radiance 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/genon_ain.png"></span>Genon Ain w/ S2 and S3: Cursed Radiance 
 									as an extra PP bank.</li>
 								<li>
 									Any katana of your choice, such as 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/katana/liberate_katana.png"></span>Liberate Katana, 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/katana/stil_petra.png"></span>Petra Stil, 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/katana/lightweaver_cras_saber.png"></span>Lightweaver Cras Saber, and even 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/katana/fluxio_maj.png"></span>Fluxio/Rinzer Maj.</li>
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/katana/liberate_katana.png"></span>Liberate Katana, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/katana/stil_petra.png"></span>Petra Stil, 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/katana/lightweaver_cras_saber.png"></span>Lightweaver Cras Saber, and even 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/katana/fluxio_maj.png"></span>Fluxio/Rinzer Maj.</li>
 								<li>250+ PP. Level 200 DEX MAG.</li>
 								<li>Use L/Braver Power and R/C. Strike for rings. L/Jumping Dodge and the other two that you preferred is socketed to your units; all +20.</li>
 								<li>Any additional, off/all-class weapon that you want to abuse.</li>
@@ -378,24 +384,24 @@ if (!!!window.customElements) {
 									<ul>
 										<li>
 											OwO what are those? 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/atlas_ex_agria.png"></span>Atlas Ex and 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/lighstream_obligaxion.png"></span>Lightstream <span class = "en-n">[Trailblaze]</span> weapons? Keep using it. You may need to switch to 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/liberate_bow.png"></span>Liberate and 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/stil_arco.png"></span>Stil weapons sooner or later.</li>
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/atlas_ex_agria.png"></span>Atlas Ex and 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/lighstream_obligaxion.png"></span>Lightstream <span class = "en-n">[Trailblaze]</span> weapons? Keep using it. You may need to switch to 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/liberate_bow.png"></span>Liberate and 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/stil_arco.png"></span>Stil weapons sooner or later.</li>
 										<li>
 											Buy 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/dim_bow.png"></span>Dim Bow or 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/nike_arcus.png"></span>Nike Arcus 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/dim_bow.png"></span>Dim Bow or 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/nike_arcus.png"></span>Nike Arcus 
 											with nice abilities from Visiphone and put on some SSAs.</li>
 										<li>
 											EN Server players can also get 
-											<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/million-krisa_lyrate.png"></span>Millionaire/Croesus Rilate from 15* 
+											<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/million-krisa_lyrate.png"></span>Millionaire/Croesus Rilate from 15* 
 											Collection File.</li>
 									</ul>
 								</li>
 								<li>
 									Grab 
-									<span class = "ic-mid" id = "inline-img"><img src = "/img/equipments/bow/mirage_gaels.png"></span>Gaels Mirage 
+									<span class = "ic-mid" id = "inline-img"><img src = "img/equipments/bow/mirage_gaels.png"></span>Gaels Mirage 
 									as a utility weapon, if you can afford it.</li>
 								<li>Go make L/Bullet Bow Homing, R/ C. Strike Shoot, L/Jumping Dodge, and L/Atomizer Lover, getting them up to +20. You equip the first two and slot the rest to your units. The last one is up to you.</li>
 								<li>Dex MAG is preferred due to Braver MAG and being easier to raise. Otherwise, use R-ATK MAG for class flexibility.</li>
