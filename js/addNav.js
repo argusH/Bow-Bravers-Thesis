@@ -6,13 +6,6 @@ class Header extends HTMLElement {
 		this.innerHTML = `			
 
 		<!-- Style Sheet Ref, slightly customized W3 scripts so it must be local-->
-		
-		<link rel="stylesheet" href="css/selfW3.css">	
-		<link rel="stylesheet" href="css/basic.css">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Proza+Libre:wght@400;500;600;700;800&display=swap">	
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-				
 		<!-- The Nav Bar -->
 		<nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
 			<a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
